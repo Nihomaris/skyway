@@ -1,27 +1,29 @@
 {
-    "name": "gulp-js-sass-livereload",
-    "version": "1.0.0",
-    "description": "",
-    "main": "gulpfile.js",
-    "scripts": {
-        "start": "gulp",
-        "build": "gulp build",
-        "images": "gulp images",
-        "css": "gulp css",
-        "js": "gulp js"
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "gulp": "latest",
-        "gulp-autoprefixer": "latest",
-        "gulp-concat": "latest",
-        "gulp-connect": "latest",
-        "gulp-csso": "latest",
-        "gulp-plumber": "latest",
-        "gulp-sass": "latest",
-        "gulp-tinypng-nokey": "latest",
-        "gulp-uglify": "latest",
-        "gulp-watch": "latest"
-    }
+  "name": "gulp-js-sass-livereload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "images": "gulp images",
+    "css": "gulp css",
+    "js": "gulp js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
+    "gulp-csso": "latest",
+    "gulp-livereload": "^4.0.1",
+    "gulp-plumber": "latest",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "latest",
+    "gulp-tinypng-nokey": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest"
+  }
 }

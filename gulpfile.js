@@ -6,14 +6,16 @@ var gulp         = require('gulp'),
     uglify       = require('gulp-uglify'),
     tiny         = require('gulp-tinypng-nokey'),
     connect      = require('gulp-connect'),
-    plumber      = require('gulp-plumber')
-    autoprefixer = require('gulp-autoprefixer');
+    plumber      = require('gulp-plumber'),
+    autoprefixer = require('gulp-autoprefixer'),
+    rigger = require('gulp-rigger');
 
 var path = {
     build: {
         css:    './assets/css/',
         js:     './assets/js/',
         images: './assets/i/',
+        html: './',
     },
     src: {
     	images: './src/i/**/*',
@@ -24,17 +26,20 @@ var path = {
         	'./src/js/page/*.js',
         	'./src/js/*.js'
         ],
+        html: './src/tmp/*.html',
     },
+
     watch: {
         css: './src/scss/**/*.scss',
         js:  './src/js/*.js',
+        html: './src/tmp/*.html',
     }
 };
 
 //server
 gulp.task('connect', function() {
     connect.server({
-        port: 8080,
+        port: 8000,
         livereload: true
     });
 });
@@ -69,6 +74,13 @@ gulp.task('images', function() {
         .pipe(tiny())
         .pipe(gulp.dest(path.build.images));
 });
+//html
+gulp.task('html', function() {
+    gulp.src([path.src.html])
+        .pipe(rigger())
+        .pipe(gulp.dest(path.build.html))
+        .pipe(connect.reload());
+});
 
 //watcher
 gulp.task('watch', function(){
@@ -77,6 +89,9 @@ gulp.task('watch', function(){
     });
     watch([path.watch.js], function(event, cb) {
         gulp.start('js');
+    });
+    watch([path.watch.html], function(event, cb) {
+        gulp.start('html');
     });
 });
 

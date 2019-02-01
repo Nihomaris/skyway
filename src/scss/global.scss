@@ -137,6 +137,7 @@ input[type="text"]:focus {
 	height: 107px;
 	border-bottom: 1px solid rgba(255,255,255,0.8);
 }
+
 .main_header__line {
 	position: absolute;
 	background-color: #ffffff;
@@ -211,6 +212,19 @@ input[type="text"]:focus {
 	margin: 40px 185px 0 0;
 }
 
+.main_header--spy {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background: linear-gradient(to top, #448dbc1f, #448dbc);
+}
+.main_header__left--spy {
+	background: none;
+}
+.main_header__right--spy {
+	background: none;
+}
 /* ==========================================================================
 	MAIN MENU
 ========================================================================== */
@@ -227,7 +241,7 @@ input[type="text"]:focus {
    	background-image: url(../../assets/i/main_img.png);
   	background-size: cover;
   	background-repeat: no-repeat;
-  	z-index: 1000;
+  	z-index: 2000;
 }
 .main_menu_left {
 	position: relative;
@@ -271,14 +285,18 @@ input[type="text"]:focus {
 } 
 .main_menu_body__exit {
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16px;
+}
+.main_menu_body__exit img {
+	margin-left: 30px;
+	margin-bottom: -10px;
 }
 .main_menu_body__link {
 	font-family: Gilroy;
 	font-weight: 900;
 	letter-spacing: 3px;
 	font-size: 50px;
-	margin-bottom: 35px;
+	margin-bottom: 71px;
 }
 .main_menu_body__link:last-child {
 	margin-bottom: 0;
@@ -292,7 +310,7 @@ input[type="text"]:focus {
     height: 117px;
     display: block;
     padding-top: 42px;
-    padding-left: 210px;
+    padding-left: 27%;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -359,9 +377,6 @@ input[type="text"]:focus {
 	font-size: 30px;
 	font-weight: 900;
 	margin: 30px 0;
-}
-.main_menu__country_name span {
-	font-size: 15px;
 }
 .main_menu__country_link a, .main_menu__country_name a {
 	color: #ffffff;
