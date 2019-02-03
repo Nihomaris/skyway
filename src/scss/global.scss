@@ -15,6 +15,18 @@
 		About section
 		Blog section
 
+
+	COUNTRY PAGE
+		Top country banner
+		Pop destinations
+		Visa
+		About country
+	
+	TOUR PAGE
+		Top tour banner
+		About country
+		Tour shedule
+
 	MAIN FOOTER
 
 --------------------------------------------------------------*/
@@ -94,7 +106,7 @@ a:hover {text-decoration: none;color: #333333;}
 .montserrat_medium {font-family: Montserrat; font-weight: 400;}
 .montserrat_regular {font-family: Montserrat; font-weight: 500;}
 .montserrat_semibold {font-family: Montserrat; font-weight: 700;}
-.montserrat_bold {font-family: Montserrat; font-weight: bold;}
+.montserrat_bold {font-family: Montserrat; font-weight: 800;}
 .montserrat_black {font-family: Montserrat; font-weight: 900;}
 
 .btn {
@@ -107,10 +119,17 @@ a:hover {text-decoration: none;color: #333333;}
 	background-color: #ffffff;
 	border-radius: 50px;
 }
-.btn span { margin-left: 16px; }
+.btn img { margin-left: 16px; }
+
+.btn__white {}
+.btn__transparent {
+	color: #fff;
+    background-color: rgba(255,255,255,.4);
+}
 
 .container {
 	padding: 0 183px;
+	overflow: hidden;
 }
 
 input[type="text"]{
@@ -223,6 +242,13 @@ input[type="text"]:focus {
 	background: none;
 }
 .main_header__right--spy {
+	background: none;
+}
+
+.main_header__right--country {
+	background: none;
+}
+.main_header__left--country {
 	background: none;
 }
 /* ==========================================================================
@@ -614,13 +640,34 @@ input[type="text"]:focus {
 	font-size: 13px; 
 	color: #66a1c8; 
 }
+.content_header__arrow {
+	display: inline-block;
+}
+.content_header__arrow:last-child {
+	margin-left: 15px;
+}
 
+.content_header--country {
+	padding-top: 0;
+}
+.content_header__intro--country {
+	color: #ffffff;
+}
+.content_header__name--country {
+	color: #ffffff;
+}
+.content_header__left--country { float: left; width: 50%; }
+.content_header__right--country { width: 50%; position: relative; float: left; }
+.content_header__right--country p {
+	color: #ffffff;
+	font-size: 17px;
+}
 /* 								Pop tours
 ------------------------------------------------------------- */
 
 .pop_tours {
 	padding-bottom: 130px;
-	height: 1205px;
+	min-height: 1205px;
 }
 
 .main_tour_block {
@@ -801,9 +848,6 @@ input[type="text"]:focus {
 	font-size: 30px;
 }
 
-.default_tour_block:last-child {
-	margin-right: 0;
-}
 .default_tour_block {
 	display: block;
 	float: left;
@@ -811,6 +855,9 @@ input[type="text"]:focus {
 	height: 335px;
 	margin-right: 2%;
 	border-radius: 10px;
+}
+.default_tour_block--last {
+	margin-right: 0;
 }
 .default_tour_block__top {
 	position: relative;
@@ -875,8 +922,8 @@ input[type="text"]:focus {
 	position: relative;
 	width: 100%;
 	height: 654px;
-	background-image: url(../../assets/i/about.png);
 	background-size: cover;
+	background-repeat: no-repeat;
 }
 .about_section__parts {
 	height: 236px;
@@ -935,10 +982,7 @@ input[type="text"]:focus {
 	color: rgba(255,255,255,.7);
     font-size: 13px;
 }
-.about_section__descr_btn {
-	color: #ffffff;
-	background-color: rgba(255, 255, 255, 0.4);
-}
+.about_section__descr_btn {}
 
 
 /* 								Blog section
@@ -1011,6 +1055,472 @@ input[type="text"]:focus {
 	padding-bottom: 18px;
 	color: #2f435682;
 	text-align: center;
+}
+
+/* ==========================================================================
+	COUNTRY PAGE
+========================================================================== */
+
+/* 								Top country banner
+------------------------------------------------------------- */
+
+.top_banner {
+	position: relative;
+	height: 768px;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgba(0,0,0,0.5);
+}
+.top_banner__bg {
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+.banner_slider {
+	padding-top: 46px;
+}
+.banner__breadcrumbs {}
+.banner__path {
+	font-family: Montserrat;
+	font-weight: 400;
+	font-size: 13px;
+	color: #ffffff;
+}
+.banner__path_ico {
+	margin: 0 11px;
+}
+.banner__path--current {
+	color: rgba(255,255,255,0.6);
+}
+.banner_slider_container {
+	position: relative;
+	padding-top: 74px;
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.banner_slider__name {
+	color: #ffffff;
+	font-size: 72px;
+}
+.banner_slider__separator {
+	display: block;
+	width: 60px;
+	margin: 15px auto 25px auto;
+	border-bottom: 2px solid #ffffff;
+}
+.banner_slider__text {
+	width: 100%;
+	color: #ffffff;
+	font-size: 13px;
+	text-align: center;
+}
+.banner_slider__text p {
+	display: inline-block;
+	max-width: 380px;
+}
+.banner_slider__label {
+	font-size: 15px;
+	color: #ffffff;
+	margin-top: 28px;
+}
+.banner_slider__left_ctrl {
+	position: absolute;
+	top: 60%;
+	left: 0;
+}
+.banner_slider__right_ctrl {
+	position: absolute;
+	top: 60%;
+	right: 0;
+}
+.banner_contacts {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.4);
+	height: 124px;
+	width: 100%;
+	border-top: 1px solid #ffffff;
+}
+.banner_contacts__container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-top: 45px;
+}
+
+
+/* 								Pop destinations
+------------------------------------------------------------- */
+
+.pop_destinations {
+	height: 660px;
+}
+.default_tour_block_info--blue {
+	background-color: rgba(0,124,186,.5);
+}
+.default_tour_block--fullwidth {
+	width: 33%;
+	margin-right: 1px;
+}
+.default_tour_block__descr {
+	display: table;
+	height: 140px;
+	width: 100%;
+	color: #ffffff;
+	font-size: 13px;
+	text-align: center;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-color: rgba(0,124,186,.5);
+}
+.default_tour_block__descr p {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 35px;
+}
+
+/* 								Visa
+------------------------------------------------------------- */
+
+.visa {
+	margin-top: 80px;
+	position: relative;
+	width: 100%;
+	height: 198px;
+	background-image: url(../../assets/i/visa_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.visa__passport {
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+	width: 262px;
+	height: 244px;
+	background-image: url(../../assets/i/passport.png);
+}
+.visa__detail_block {
+	width: 265px;
+	height: 100%;
+	padding-top: 52px;
+	margin-left: 50%;
+}
+.visa__btn {
+	margin-top: 32px;
+	padding: 12px 26px;
+	background-color: rgba(255,255,255,0.4);
+	color: #ffffff
+}
+.visa__btn img {
+	margin-left: 10px;
+	margin-top: 2px;
+}
+.visa__descr {
+	color: #ffffff;
+	font-size: 17px;
+}
+
+/* 								About country
+------------------------------------------------------------- */
+
+.about_country {
+	min-height: 900px;
+}
+.info_block {
+	display: block;
+	float: left;
+	width: 33%;
+	min-height: 245px;
+	padding-top: 55px;
+
+}
+.info_block__icon {
+	width: 90px;
+	height: 90px;
+	border-radius: 100%;
+	border: 2px solid #f0efef;
+	text-align: center;
+	padding-top: 20px;
+}
+.info_block:nth-child(3) .info_block__icon { padding-top: 25px; }
+.info_block:nth-child(4) .info_block__icon { padding-top: 15px; }
+.info_block:nth-child(7) .info_block__icon { padding-top: 28Иpx; }
+.info_block__descr {
+	margin-top: 60px;
+	font-size: 27px;
+}
+.info_block__descr span {
+	font-size: 13px;
+	color: #66a1c8;
+}
+
+.about_country_section {
+	position: relative;
+    width: 100%;
+    height: 654px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about_country_section__header {
+	height: 236px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.8);
+    padding-left: 183px;
+    padding-top: 80px;
+}
+.about_country_section__descr {
+    padding-top: 48px;
+}
+.about_country_section__descr_text {
+	max-width: 374px;
+	margin-bottom: 37px;
+	color: rgba(255,255,255,.7);
+	font-size: 13px;
+}
+.about_country_section__descr_btn {
+	color: #fff;
+    background-color: rgba(255,255,255,.4);
+}
+.about_country_section__descr_left {width: 50%; float: left;}
+.about_country_section__descr_right {width: 50%; float: left;}
+
+/* 								Tour shedule
+------------------------------------------------------------- */
+
+.tour_shedule {}
+.tour_shedule__right {
+	text-align: right;
+}
+.tour_shedule_all_btn {
+	display: block;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 13px;
+    color: #66a1c8;
+}
+.tour_shedule_all_btn img {
+    margin-bottom: -4px;
+    margin-left: 15px;
+}
+
+.tour_shedule__days {
+	padding-top: 40px;
+}
+.tour_shedule__day {
+	
+}
+.tour_shedule__name {
+	padding: 22px 0 22px 56px;
+	font-size: 27px;
+	border: 1px solid #dedfe5;
+	border-radius: 5px;
+}
+.tour_shedule__name span {
+	color: #66a1c8;
+	margin-right: 8px;
+}
+.tour_shedule__separator {
+	/*display: none;*/
+	height: 1px;
+	background-color: #dedfe5;
+	width: 5000px;
+	margin: 0 -100%;
+}
+.tour_shedule__day_detail {
+	padding: 34px 0 34px 56px;
+	border: 1px solid #dedfe5;
+	border-radius: 5px;
+}
+
+.tour_shedule__top {
+	font-size: 17px;
+	color: #448dbc;
+}
+.tour_shedule__top span {
+	margin: 0 24px;
+}
+.tour_shedule__body {
+	margin-top: 60px;
+}
+.tour_shedule__body li {
+	list-style: none;
+}
+ul li::before {
+  content: "\2022";
+  color: #448dbc;
+  display: inline-block;
+  font-size: 40px;
+  line-height: 0;
+  margin-right: 26px;
+}
+/* ==========================================================================
+	TOUR PAGE
+========================================================================== */
+
+/* 								Top tour banner
+------------------------------------------------------------- */
+.top_banner_country {
+	position: relative;
+    height: 768px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,.5);
+}
+.banner_country {
+	padding-top: 39px;
+}
+.banner_country__container {
+	position: relative;
+	padding-top: 60px;
+	text-align: center;
+	max-width: 700px;
+	margin: 0 auto;
+}
+.banner_country__name {
+	color: #fff;
+	font-size: 62px;
+	line-height: 100%;
+}
+
+.banner_country__info {
+	width: 100%;
+	text-align: center;
+	color: #ffffff;
+	font-size: 34px;
+	margin-top: 31px;
+}
+.banner_country__price {
+	width: 50%;
+	float: left;
+	text-align: right;
+	padding-right: 33px;
+	white-space: nowrap;
+}
+.banner_country__duration {
+	width: 50%;
+	float: left;
+	text-align: left;
+	padding-left: 33px;
+	border-left: 1px solid #ffffff;
+	white-space: nowrap;
+}
+.banner_country__price span {
+	font-size: 20px;
+}
+.banner_country__duration  span {
+	font-size: 20px;
+}
+.banner_country__btn {
+	margin-top: 41px;
+}
+.banner_country__label {
+	width: 100%;
+	margin-top: 56px;
+	text-align: center;
+	color: #ffffff;
+}
+.banner_country__label p {
+	display: inline-block;
+	max-width: 353px;
+	font-size: 13px;
+}
+
+.order_btn {
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	bottom: 140px;
+	width: 90px;
+	height: 90px;
+	background-color: #448dbc;
+	border-radius: 100%;
+}
+.order_btn__container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-top: 20px;
+}
+.order_btn__ico {}
+.order_btn__text {
+	position: absolute;
+	color: #ffffff;
+	width: 59px;
+	font-size: 17px;
+	left: 0;
+	right: 0;
+	top: 50%;
+	margin: -10px auto 0 auto;
+}
+
+.banner_details {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.4);
+    height: 118px;
+    width: 100%;
+    border-top: 1px solid #fff;
+    padding-top: 21px;
+}
+.banner_details__container {}
+.banner_details__part {
+	float: left;
+    width: 199px;
+}
+.banner_details__ico {
+	display: block;
+    float: left;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border: 2px solid #787d7e;
+    border-radius: 100%;
+    padding-top: 18px;
+}
+.banner_details__text {
+	padding-top: 15px;
+	padding-left: 10px;
+	font-size: 14px;
+	color: #ffffff;
+	float: left;
+}
+.banner_details__left_ctrl {
+	position: absolute;
+    top: 50px;
+    left: 55px;
+}
+.banner_details__right_ctrl {
+	position: absolute;
+    top: 50px;
+    right: 55px;
+}
+
+/* 								About country
+------------------------------------------------------------- */
+
+.about_tour {
+	min-height: 600px;
+	border-bottom: 1px solid #e0e1e5;
+}
+.about_country_text {
+	padding-top: 40px;
+	font-size: 13px;
+	color: #2b2a2a;
+}
+.about_country_text__left {
+	float: left;
+	width: 50%;
+	padding-right: 26px;
+}
+.about_country_text__right {
+	float: left;
+	width: 50%;
+	padding-right: 26px;
 }
 
 /* ==========================================================================
@@ -1099,9 +1609,7 @@ input[type="text"]:focus {
 	list-style: none;
 }
 .main_footer__site_map_btn {
-	color: #ffffff;
 	font-weight: 800;
-	background-color: rgba(255,255,255,.4);
     padding: 10px 14px 12px 27px;
     margin-top: 24px;
 }
