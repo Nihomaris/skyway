@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Skyway | Main page</title>
         <link rel="stylesheet" href="assets/css/styles.min.css">
     </head>
@@ -25,22 +25,40 @@
     				</div>
     			</div>
     			<div class="main_banner__description">
-    				<h3 class="main_banner__intro" >Как же ты прекрасен</h3>
-    				<h1 class="main_banner__country">Казахстан</h1>
-    				<p class="main_banner__text" >Знакомство с южной столицей Казахстана, ее<br>прошлым и настоящим, уникальной природой и любимыми<br>меставми отдыха горожан - все это в одной экскурсии<br>на инновационном виде транспорта - экологически<br>чистом, полностью электрическом автобусе!</p>
-                    <div class="main_banner__descr_bottom">
-    				    <a class="btn main_banner__detail" href="#">Подробнее<img src="/assets/i/triangle.png" alt=""></a>
-                        <div class="main_banner__slide_control">
-                            <span class="main_banner__slide_control--active">01</span>
-                            <span>02</span>
-                            <span>03</span>
-                            <span>04</span>
+                    <div class="main_banner__bg"></div>
+                    <div class="main_banner__description_container">
+        				<h3 class="main_banner__intro" >Как же ты прекрасен</h3>
+        				<h1 class="main_banner__country">Казахстан</h1>
+        				<p class="main_banner__text" >Знакомство с южной столицей Казахстана, ее<br>прошлым и настоящим, уникальной природой и любимыми<br>меставми отдыха горожан - все это в одной экскурсии<br>на инновационном виде транспорта - экологически<br>чистом, полностью электрическом автобусе!</p>
+                        <div class="main_banner__descr_bottom">
+        				    <a class="btn main_banner__detail" href="#">Подробнее<img src="./assets/i/triangle.png" alt=""></a>
+                            <div class="main_banner__slide_control">
+                                <span class="main_banner__slide_control--active">01</span>
+                                <span>02</span>
+                                <span>03</span>
+                                <span>04</span>
+                            </div>
                         </div>
                     </div>
     			</div>
     		</article>
 
     		<article class="main_bottom">
+                <div class="main_slider_control">
+                    <div class="main_slider_country" style="background-image: url(./assets/i/uz.png);">
+                        Узбекистан<span>▶</span>
+                    </div>
+                    <div class="main_slider_country main_slider_country--active" style="background-image: url(./assets/i/kz.png);">
+                        Казахстан<span>▶</span>
+                    </div>
+                    <div class="main_slider_country" style="background-image: url(./assets/i/kg.png);">
+                        Кыргызстан<span>▶</span>
+                    </div>
+                    <div class="main_slider_more">
+                        Еще<span>▶</span>
+                    </div>
+                    <div class="main_slider__bg"></div>
+                </div>
     			<div class="main_contacts_left">
     				<div class="main_contacts__mail_phone">
     					<span class="main_contacts__phone">7 727 222 33 70</span><br>
@@ -58,56 +76,45 @@
                         </a>
                     </div>
     			</div>
-                <div class="main_slider_control">
-                    <div class="main_slider_country" style="background-image: url(./assets/i/uz.png);">
-                        Узбекистан<span>▶</span>
-                    </div>
-                    <div class="main_slider_country main_slider_country--active" style="background-image: url(./assets/i/kz.png);">
-                        Казахстан<span>▶</span>
-                    </div>
-                    <div class="main_slider_country" style="background-image: url(./assets/i/kg.png);">
-                        Кыргызстан<span>▶</span>
-                    </div>
-                    <div class="main_slider_more">
-                        Еще<span>▶</span>
-                    </div>
-                </div>
+                
     		</article>
     	</section>
 
     	//= ./components/pop_tours.html
 
-    	<section class="about_section" style="background-image: url(../../assets/i/about.png);">
+    	<section class="about_section" style="background-image: url(./assets/i/about.png);">
             <div class="about_section__parts">
-                <article class="about_section__part">
-                    <div class="about_section__icon">
-                        <img src="./assets/i/geotag.png" alt="geotag">
-                    </div>
-                    <div class="about_section__text"><p>Награда National Tourism Awards 2018</p></div>
-                </article>
-                <article class="about_section__part">
-                    <div class="about_section__icon">
-                        <img src="./assets/i/80.png" alt="80">
-                    </div>
-                    <div class="about_section__text"><p>80 000 туристов выбрали нашу компанию</p></div>
-                </article>
-                <article class="about_section__part">
-                    <div class="about_section__icon">
-                        <img src="./assets/i/pata.png" alt="PATA">
-                    </div>
-                    <div class="about_section__text"><p>Член PATA (Pacific Area Travel Association)</p></div>
-                </article>
-                <article class="about_section__part">
-                    <div class="about_section__icon">
-                        <img src="./assets/i/expo.png" alt="expo">
-                    </div>
-                    <div class="about_section__text"><p>Официальный туроператор Astana EXPO 2017</p></div>
-                </article>
+                <div class="about_section_container">
+                    <article class="about_section__part">
+                        <div class="about_section__icon">
+                            <img src="./assets/i/geotag.png" alt="geotag">
+                        </div>
+                        <div class="about_section__text"><p>Награда National Tourism Awards 2018</p></div>
+                    </article>
+                    <article class="about_section__part">
+                        <div class="about_section__icon">
+                            <img src="./assets/i/80.png" alt="80">
+                        </div>
+                        <div class="about_section__text"><p>80 000 туристов выбрали нашу компанию</p></div>
+                    </article>
+                    <article class="about_section__part">
+                        <div class="about_section__icon">
+                            <img src="./assets/i/pata.png" alt="PATA">
+                        </div>
+                        <div class="about_section__text"><p>Член PATA (Pacific Area Travel Association)</p></div>
+                    </article>
+                    <article class="about_section__part">
+                        <div class="about_section__icon">
+                            <img src="./assets/i/expo.png" alt="expo">
+                        </div>
+                        <div class="about_section__text"><p>Официальный туроператор Astana EXPO 2017</p></div>
+                    </article>
+                </div>
             </div>
             <div class="about_section__descr">
                 <img src="./assets/i/sky_logo.png" alt="skyway-logo" class="about_section__descr_logo">
-                <p class="about_section__descr_text">Знакомство с южной столицей Казахстана, ее прошлым и настоящим, уникальной природой и любимыми местами отдыха горожан — все это в одной экскурсии на инновационном виде транспорта – экологически  чистом, полностью электрическом автобусе!</p>
-                <a href="#" class="btn btn__transparent about_section__descr_btn">Подробнее<img src="/assets/i/triangle.png" alt=""></a>
+                <p class="montserrat_light about_section__descr_text">Знакомство с южной столицей Казахстана, ее прошлым и настоящим, уникальной природой и любимыми местами отдыха горожан — все это в одной экскурсии на инновационном виде транспорта – экологически  чистом, полностью электрическом автобусе!</p>
+                <a href="#" class="btn btn__transparent about_section__descr_btn">Подробнее<img src="./assets/i/triangle.png" alt=""></a>
             </div>
         </section>
 
