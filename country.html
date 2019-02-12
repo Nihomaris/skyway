@@ -2,40 +2,41 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Skyway | Country page</title>
         <link rel="stylesheet" href="assets/css/styles.min.css">
     </head>
     <body>
-    	<section class="top_banner" style="background-image: url(/assets/i/country_bg.png);">
+    	<section class="top_banner" style="background-image: url(./assets/i/country_bg.png);">
             <div class="top_banner__bg">
 
-                <header class="main_header main_header--country">
+                <header id="menu_toggle" class="main_header main_header--country">
                     <div class="main_header__left main_header__left--country">
-                        <img class="main_header__logo" src="/assets/i/sky_logo.png">
+                        <img class="main_header__logo" src="./assets/i/sky_logo.png">
                         <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
                     </div>
                     <div class="main_header__right main_header__right--country">
                         <div class="main_header__search"><input type="text" placeholder="Найти..." class="main_header__search_input"></div>
-                        <img class="main_header__hamburger" src="/assets/i/menu.png">
+                        <img id="menu_toggle" class="main_header__hamburger" src="./assets/i/menu.png">
                     </div>
                     <div id="header-line" class="main_header__line"></div>
                 </header>
-                <!-- <header class="main_header main_header--spy">
+                <header style="display: none;" id="header_spy" class="main_header main_header--spy">
                     <div class="main_header__left main_header__left--spy">
-                        <img class="main_header__logo" src="/assets/i/sky_logo.png">
+                        <img class="main_header__logo" src="./assets/i/sky_logo.png">
                         <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
                     </div>
                     <div class="main_header__right main_header__right--spy">
                         <div class="main_header__search"><input type="text" placeholder="Найти..." class="main_header__search_input"></div>
-                        <img class="main_header__hamburger" src="/assets/i/menu.png">
+                        <img class="main_header__hamburger" src="./assets/i/menu.png">
                     </div>
                     <div class="main_header__line"></div>
-                </header> -->
+                </header>
 
-                <div class="container banner_slider">
+                <div class="banner_slider">
                     <div class="banner__breadcrumbs">
                         <span class="banner__path">Главная</span>
-                        <span class="banner__path_ico"><img src="/assets/i/triangle.png" alt=""></span>
+                        <span class="banner__path_ico"><img src="./assets/i/triangle.png" alt=""></span>
                         <span class="banner__path banner__path--current">Казахстан</span>
                     </div>
                     <div class="banner_slider_container">
@@ -48,12 +49,13 @@
                         <div class="banner_slider__label">
                             <span class="montserrat_bold">Факт #28</span>
                         </div>
-                        <div class="banner_slider__left_ctrl"><img src="/assets/i/arrow_l.png"></div>
-                        <div class="banner_slider__right_ctrl"><img src="/assets/i/arrow_r.png"></div>
+                        <div class="banner_slider__right_ctrl"><img src="./assets/i/arrow_r.png"></div>
+                        <div class="banner_slider__left_ctrl"><img src="./assets/i/arrow_l.png"></div>
+                        
                     </div>                                    
                 </div>
 
-                <div class="container banner_contacts">
+                <div class="banner_contacts">
                     <div class="banner_contacts__container">
                         <div class="main_contacts__mail_phone">
                             <span class="main_contacts__phone">7 727 222 33 70</span><br>
@@ -101,15 +103,15 @@
                     <div class="main_tour_block_descr">
                         <p>154 км вдоль реки Чарын в Казахстане. Каньон располагается в 195 км восточнее Алматы, недалеко от границы с Китаем. Каньон входит в территорию Чарынского национального парка</p>
                     </div>
-                    <div class="main_tour_block__switch">
-                        <span class="main_tour_block_switcher main_tour_block_switcher--active"></span>
-                        <span class="main_tour_block_switcher"></span>
-                        <span class="main_tour_block_switcher"></span>
-                        <span class="main_tour_block_switcher"></span>
+                    <div class="switch_container main_tour_block__switch">
+                        <span class="switcher main_tour_block_switcher switcher--active"></span>
+                        <span class="switcher main_tour_block_switcher"></span>
+                        <span class="switcher main_tour_block_switcher"></span>
+                        <span class="switcher main_tour_block_switcher"></span>
                     </div>
-                    <div class="main_tour_block_arrow_switch">
-                        <div class="main_tour_block_arrow"><img src="./assets/i/arrow_l.png" alt="Prev"></div>
-                        <div class="main_tour_block_arrow"><img src="./assets/i/arrow_r.png" alt="Next"></div>
+                    <div class="arrow_switch_container main_tour_block_arrow_switch">
+                        <div class="arrow_switcher main_tour_block_arrow"><img src="./assets/i/arrow_l.png" alt="Prev"></div>
+                        <div class="arrow_switcher main_tour_block_arrow"><img src="./assets/i/arrow_r.png" alt="Next"></div>
                     </div>
                 </div>
             </article>
@@ -178,7 +180,7 @@
             
         </section>
 
-        <section class="container pop_destinations">
+        <section class="grid_container pop_destinations">
 
             <header class="content_header">
                 <div class="content_header__left">
@@ -186,12 +188,12 @@
                     <h2 class="content_header__name">Популярные направления</h2>
                 </div>
                 <div class="content_header__right">
-                    <div class="content_header__arrow content_header__arrow--disable"><img src="/assets/i/arrow_blue_left_disable.png" alt=""></div>
-                    <div class="content_header__arrow"><img src="/assets/i/arrow_blue_right.png" alt=""></div>
+                    <div class="content_header__arrow content_header__arrow--disable"><img src="./assets/i/arrow_blue_left_disable.png" alt=""></div>
+                    <div class="content_header__arrow"><img src="./assets/i/arrow_blue_right.png" alt=""></div>
                 </div>
             </header>
 
-            <article class="default_tour_block default_tour_block--fullwidth">
+            <article class="default_tour_block">
                 <div class="default_tour_block__top" style="background-image: url(./assets/i/banner3.png);">
                     <div class="default_tour_block__descr">
                         <p class="montserrat_light">Знакомство с южной столицей Казахстана, ее прошлым и настоящим, уникальной природой и любимыми местами отдыха горожан.</p>
@@ -207,7 +209,7 @@
                 </div>
             </article>
 
-            <article class="default_tour_block default_tour_block--fullwidth">
+            <article class="default_tour_block">
                 <div class="default_tour_block__top" style="background-image: url(./assets/i/banner2.png);">
                     <div class="default_tour_block__descr">
                         <p class="montserrat_light"></p>
@@ -223,7 +225,7 @@
                 </div>
             </article>
 
-            <article class="default_tour_block default_tour_block--fullwidth">
+            <article class="default_tour_block default_tour_block--last">
                 <div class="default_tour_block__top" style="background-image: url(./assets/i/banner5.png);">
                     <div class="default_tour_block__descr">
                         <p class="montserrat_light"></p>
@@ -246,11 +248,11 @@
             <div class="visa__passport"></div>
             <div class="visa__detail_block">
                 <div class="montserrat_semibold visa__descr"><span class="montserrat_light">Помощь в получении визы.</span><br>Легко и просто, попробуйте!</div>
-                <a href="" class="btn visa__btn">Подробнее<img src="/assets/i/triangle.png" alt=""></a>
+                <a href="" class="btn visa__btn">Подробнее<img src="./assets/i/triangle.png" alt=""></a>
             </div>
         </section>
         
-        <section class="container about_country">
+        <section class="grid_container about_country">
 
             <header class="content_header">
                 <div class="content_header__left">
@@ -261,7 +263,7 @@
 
             <article class="info_block">
                 <div class="info_block__icon">
-                    <img src="/assets/i/ico_space.png" alt="">
+                    <img src="./assets/i/ico_space.png" alt="">
                 </div>
                 <div class="montserrat_regular info_block__descr">
                     <p><span class="montserrat_bold">9-е место по площади</span><br>2 725 000км²</p>
@@ -269,7 +271,7 @@
             </article>
             <article class="info_block">
                 <div class="info_block__icon">
-                    <img src="/assets/i/ico_population.png" alt="">
+                    <img src="./assets/i/ico_population.png" alt="">
                 </div>
                 <div class="montserrat_regular info_block__descr">
                     <p><span class="montserrat_bold">Население</span><br>16,6 млн человек</p>
@@ -277,7 +279,7 @@
             </article>
             <article class="info_block">
                 <div class="info_block__icon">
-                    <img src="/assets/i/ico_capital.png" alt="">
+                    <img src="./assets/i/ico_capital.png" alt="">
                 </div>
                 <div class="montserrat_regular info_block__descr">
                     <p><span class="montserrat_bold">Столица</span><br>Астана</p>
@@ -285,7 +287,7 @@
             </article>
             <article class="info_block">
                 <div class="info_block__icon">
-                    <img src="/assets/i/ico_lang.png" alt="">
+                    <img src="./assets/i/ico_lang.png" alt="">
                 </div>
                 <div class="montserrat_regular info_block__descr">
                     <p><span class="montserrat_bold">Официальные языки</span><br>Kazakh, Russian</p>
@@ -293,7 +295,7 @@
             </article>
             <article class="info_block">
                 <div class="info_block__icon">
-                    <img src="/assets/i/ico_time.png" alt="">
+                    <img src="./assets/i/ico_time.png" alt="">
                 </div>
                 <div class="montserrat_regular info_block__descr">
                     <p><span class="montserrat_bold">Время по Гринвичу</span><br>+05:00, +06:00</p>
@@ -301,7 +303,7 @@
             </article>
             <article class="info_block">
                 <div class="info_block__icon">
-                    <img src="/assets/i/ico_currency.png" alt="">
+                    <img src="./assets/i/ico_currency.png" alt="">
                 </div>
                 <div class="montserrat_regular info_block__descr">
                     <p><span class="montserrat_bold">Валюта</span><br>Казахстанский тенге</p>
@@ -310,21 +312,21 @@
 
         </section>
 
-        <section class="about_country_section" style="background-image: url(/assets/i/about_country.png);">
-            <div class="container about_country_section__header">
+        <section class="about_country_section" style="background-image: url(./assets/i/about_country.png);">
+            <div class="about_country_section__header">
 
-                <header class="content_header content_header--country">
-                    <div class="content_header__left content_header__left--country">
-                        <h3 class="content_header__intro content_header__intro--country">Skyway</h3>
-                        <h2 class="content_header__name content_header__name--country">О Казахстане</h2>
+                <header class="about_country_header">
+                    <div class="about_country_header__left">
+                        <h3 class="about_country_header__intro">Skyway</h3>
+                        <h2 class="about_country_header__name">О Казахстане</h2>
                     </div>
-                    <div class="content_header__right--country">
+                    <div class="about_country_header__right">
                         <p class="montserrat_medium">Веками по этой земле проходила система древних караванных дорог, ведущих из Китая в страны лижнего Востока и Европы</p>
                     </div>
                 </header>
 
             </div>
-            <div class="container about_country_section__descr">
+            <div class="about_country_section__descr">
                 <div class="about_country_section__descr_left">
                     <p class="montserrat_light about_country_section__descr_text">
                         Казахстан расположен в самом центре Евразии. Здесь необычным образом переплелись между собой древность и современность, восточные традиции и западный модерн.
@@ -340,7 +342,7 @@
                     Для туристов предлагается большое количество маршрутов путешествий по всей территории Казахстана. В благодатном оазисе южных степей, на стыке кочевой и оседлой цивилизаций существовали древнейшие города мира.</p>
                 </div>
                 
-                <a href="#" class="btn about_country_section__descr_btn">Подробнее<span>▶</span></a>
+                <a href="#" class="btn about_country_section__descr_btn">Подробнее<img src="./assets/i/triangle.png" alt=""></a>
             </div>
         </section>
 
@@ -493,7 +495,7 @@
         
                 </footer>
         
-                <section style="display: none;" class="main_menu"> 
+                <section style="display: none;" id="main_menu" class="main_menu"> 
                     <section class="main_menu_left">
         
                         <header class="main_menu_header">
@@ -508,7 +510,7 @@
                             <div class="main_menu_body__link"><a href="#">О нас</a></div>
                             <div class="main_menu_body__link"><a href="#">Агентствам</a></div>
                             <div class="main_menu_body__link"><a href="#">Контакты</a></div>
-                            <div class="main_menu_body__exit"><a href="javascript:void(0);">Выйти из меню <img src="./assets/i/exit.png" alt="exit-menu" title="exit-menu"></a></div>
+                            <div class="main_menu_body__exit"><a id="close_main_menu" href="javascript:void(0);">Выйти из меню <img src="./assets/i/exit.png" alt="exit-menu" title="exit-menu"></a></div>
                         </div>
         
                         <div class="main_menu_footer">
@@ -561,7 +563,7 @@
                         </article>
         
                         <article class="main_menu__more">
-                            <div class="main_menu__more_link"><a href="#">Больше стран</a></div>
+                            <div class="montserrat_bold main_menu__more_link"><a href="#">Больше стран</a></div>
                         </article>
                     </section>   
                 </section>
