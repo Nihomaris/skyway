@@ -3,247 +3,191 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Skyway | Main page</title>
+        <title>Skyway | Article page</title>
         <link rel="stylesheet" href="assets/css/styles.min.css">
     </head>
     <body>
 
-    	<section id="top-section" class="top_section">
-            
-            <header class="main_header">
-                <div class="main_header__left">
-                    <img class="main_header__logo" src="./assets/i/sky_logo.png">
-                    <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
-                </div>
-                <div class="main_header__right">
-                    <div class="main_header__right_container">
+    	<section class="top_banner" style="background-image: url(./assets/i/country_bg.png);">
+            <div class="top_banner__bg">
+
+                <header id="menu_toggle" class="main_header main_header--country">
+                    <div class="main_header__left main_header__left--country">
+                        <img class="main_header__logo" src="./assets/i/sky_logo.png">
+                        <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
+                    </div>
+                    <div class="main_header__right main_header__right--country">
                         <div class="main_header__search"><input type="text" placeholder="Найти..." class="main_header__search_input"></div>
                         <img id="menu_toggle" class="main_header__hamburger" src="./assets/i/menu.png">
                     </div>
-                </div>
-                <div class="main_header__bg"></div>
-                <div id="header-line" class="main_header__line"></div>
-            </header>
-            <header style="display: none;" id="header_spy" class="main_header main_header--spy">
-                <div class="main_header__left main_header__left--spy">
-                    <img class="main_header__logo" src="./assets/i/sky_logo.png">
-                    <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
-                </div>
-                <div class="main_header__right main_header__right--spy">
-                    <div class="main_header__search"><input type="text" placeholder="Найти..." class="main_header__search_input"></div>
-                    <img class="main_header__hamburger" src="./assets/i/menu.png">
-                </div>
-                <div class="main_header__line"></div>
-            </header>
+                    <div id="header-line" class="main_header__line"></div>
+                </header>
+                <header style="display: none;" id="header_spy" class="main_header main_header--spy">
+                    <div class="main_header__left main_header__left--spy">
+                        <img class="main_header__logo" src="./assets/i/sky_logo.png">
+                        <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
+                    </div>
+                    <div class="main_header__right main_header__right--spy">
+                        <div class="main_header__search"><input type="text" placeholder="Найти..." class="main_header__search_input"></div>
+                        <img class="main_header__hamburger" src="./assets/i/menu.png">
+                    </div>
+                    <div class="main_header__line"></div>
+                </header>
 
-    		<article class="main_banner">
-    			<div class="main_banner__video">
-    				<div class="main_banner__switch">
-    					<span class="main_banner__switcher main_banner__switcher--active"></span>
-    					<span class="main_banner__switcher"></span>
-    					<span class="main_banner__switcher"></span>
-    				</div>
-    				<div class="main_banner__controller">
-    					<div class="main_banner__start_btn"></div>
-                        <div class="main_banner__speaker"></div>
-    				</div>
-    			</div>
-    			<div class="main_banner__description">
-                    <div class="main_banner__bg"></div>
-                    <div class="main_banner__description_container">
-        				<h3 class="main_banner__intro" >Как же ты прекрасен</h3>
-        				<h1 class="main_banner__country">Казахстан</h1>
-        				<p class="main_banner__text" >Знакомство с южной столицей Казахстана, ее<br>прошлым и настоящим, уникальной природой и любимыми<br>меставми отдыха горожан - все это в одной экскурсии<br>на инновационном виде транспорта - экологически<br>чистом, полностью электрическом автобусе!</p>
-                        <div class="main_banner__descr_bottom">
-        				    <a class="btn main_banner__detail" href="#"><div class="anim"></div>
-                                <span>Подробнее<img src="./assets/i/triangle.png" alt=""></span></a>
-                            <div class="main_banner__slide_control">
-                                <span class="main_banner__slide_control--active">01</span>
-                                <span>02</span>
-                                <span>03</span>
-                                <span>04</span>
-                            </div>
-                        </div>
+                <div class="banner_slider">
+                    <div class="banner__breadcrumbs">
+                        <span class="banner__path">Главная</span>
+                        <span class="banner__path_ico"><img src="./assets/i/triangle.png" alt=""></span>
+                        <span class="banner__path banner__path--current">Восточный Казахстан</span>
                     </div>
-    			</div>
-    		</article>
-
-    		<article class="main_bottom">
-                <div class="main_slider_control">
-                    <div class="main_slider_country" style="background-image: url(./assets/i/uz.png);">
-                        Узбекистан<img src="./assets/i/triangle.png" alt="">
-                    </div>
-                    <div class="main_slider_country main_slider_country--active" style="background-image: url(./assets/i/kz.png);">
-                        Казахстан<img src="./assets/i/triangle.png" alt="">
-                    </div>
-                    <div class="main_slider_country" style="background-image: url(./assets/i/kg.png);">
-                        Кыргызстан<img src="./assets/i/triangle.png" alt="">
-                    </div>
-                    <div class="main_slider_more">
-                        Еще<img src="./assets/i/triangle.png" alt="">
-                    </div>
-                    <div class="main_slider__bg"></div>
+                    <div class="banner_slider_container">
+                        <img src=s"./assets/i/logo_title_small.png" alt="">
+                        <h1 class="gilroy_bolder banner_slider__name">Популярные базары Алматы</h1>
+                        <div class="banner_slider__separator"></div>
+                        <div class="banner_slider__text">
+                            <p class="montserrat_medium">The Caspian Sea is the largest inland body of water in the world at 371,000 sq km and it borders Kazakhstan on the west. It is rich in sturgeon, a fish prized for its world’s famous caviar.</p>
+                        </div> 
+                        <div class="tags">
+                            <a href="#">гастротур</a>
+                            <a href="#">алматы</a>
+                            <a href="#">гид</a>
+                        </div>                         
+                    </div>                               
                 </div>
-    			<div class="main_contacts_left">
-    				<div class="main_contacts__mail_phone">
-    					<span class="main_contacts__phone">7 727 222 33 70</span><br>
-    					<span class="main_contacts__mail">infoskyway@soon.kz</span>
-    				</div>
-                    <div class="main_contacts__social_block">
-                        <a class="main_contacts__social" href="#">
-                            <img src="./assets/i/facebook.png" alt="facebook">
-                        </a>
-                        <a class="main_contacts__social" href="#">
-                            <img src="./assets/i/instagram.png" alt="instagram">
-                        </a>
-                        <a class="main_contacts__social" href="#">
-                            <img src="./assets/i/whatsapp.png" alt="whatsapp">
-                        </a>
+
+                <div class="banner_contacts">
+                    <div class="banner_contacts__container">
+                        <div class="main_contacts__mail_phone">
+                            <span class="main_contacts__phone">7 727 222 33 70</span><br>
+                            <span class="main_contacts__mail">infoskyway@soon.kz</span>
+                        </div>
+                        <div class="main_contacts__social_block">
+                            <a class="main_contacts__social" href="#">
+                                <img src="./assets/i/facebook.png" alt="facebook">
+                            </a>
+                            <a class="main_contacts__social" href="#">
+                                <img src="./assets/i/instagram.png" alt="instagram">
+                            </a>
+                            <a class="main_contacts__social" href="#">
+                                <img src="./assets/i/whatsapp.png" alt="whatsapp">
+                            </a>
+                        </div>
                     </div>
-    			</div>
-                
-    		</article>
-    	</section>
-
-    	<section class="grid_container pop_tours">
-    	
-    	    <header class="content_header">
-    	        <div class="content_header__left">
-    	            <h3 class="content_header__intro">Skyway популярное</h3>
-    	            <h2 class="content_header__name">Популярные туры</h2>
-    	        </div>
-    	        <div class="content_header__right">
-    	            <a class="content_header_all_btn" href="#">Все туры <img src="./assets/i/arrow_blue.png" alt="all-tours"></a>
-    	        </div>
-    	    </header>
-    	
-    	    <article class="main_tour_block">
-    	        <div class="main_tour_block__top">
-    	            <div class="main_tour_block__name_container">
-    	                <h2 class="main_tour_block__name gilroy_bolder">Чарынский<br>каньон</h2>
-    	            </div>
-    	            <div class="main_tour_block__detail_container">
-    	                <a class="btn main_tour_block__detail" href="#"><div class="anim"></div><span>Подробнее<img src="/assets/i/triangle.png" alt=""></span></a>
-    	                <div class="main_tour_block__day_price">6 дней<span>|</span>125 678т</div>
-    	            </div>
-    	        </div>
-    	        <div class="main_tour_block__bottom">
-    	            <div class="main_tour_block_descr">
-    	                <p>154 км вдоль реки Чарын в Казахстане. Каньон располагается в 195 км восточнее Алматы, недалеко от границы с Китаем. Каньон входит в территорию Чарынского национального парка</p>
-    	            </div>
-    	            <div class="switch_container main_tour_block__switch">
-    	                <span class="switcher main_tour_block_switcher switcher--active"></span>
-    	                <span class="switcher main_tour_block_switcher"></span>
-    	                <span class="switcher main_tour_block_switcher"></span>
-    	                <span class="switcher main_tour_block_switcher"></span>
-    	            </div>
-    	            <div class="arrow_switch_container main_tour_block_arrow_switch">
-    	                <div class="arrow_switcher main_tour_block_arrow"><img src="./assets/i/arrow_l.png" alt="Prev"></div>
-    	                <div class="arrow_switcher main_tour_block_arrow"><img src="./assets/i/arrow_r.png" alt="Next"></div>
-    	            </div>
-    	        </div>
-    	    </article>
-    	
-    	    <article class="hit_tour_block">
-    	        <div class="hit_tour_block__img">
-    	            <div class="hit_tour_block__top">
-    	                <span class="hit_tour_block__label montserrat_black">хит</span>
-    	                <div class="hit_tour_block__info">
-    	                    <div class="hit_tour_block__info_text">
-    	                        6 дней
-    	                    </div>
-    	                    <div class="hit_tour_block__info_text line_through">
-    	                        165 789т
-    	                    </div>
-    	                    <div class="hit_tour_block__info_text montserrat_black">
-    	                        125 768т
-    	                    </div>
-    	                </div>
-    	            </div>
-    	        </div>
-    	        <div class="hit_tour_block__bottom">
-    	            <h2 class="hit_tour_block__name">Обзорная экскурсия по Алматы</h2>
-    	        </div>
-    	    </article>
-    	    
-    	
-    	    <article class="default_tour_block">
-    	        <div class="default_tour_block__top" style="background-image: url(./assets/i/banner3.png);">
-    	            <div class="default_tour_block_info">
-    	                <div class="default_tour_block_text">
-    	                 6 дней<span>|</span>125 678т
-    	                </div>
-    	            </div>         
-    	        </div>
-    	        <div class="default_tour_block__bottom">
-    	            <h2 class="default_tour_block__name">Большое алматинское озеро</h2>
-    	        </div>
-    	    </article>
-    	
-    	    <article class="default_tour_block">
-    	        <div class="default_tour_block__top" style="background-image: url(./assets/i/banner2.png);">
-    	            <div class="default_tour_block_info">
-    	                <div class="default_tour_block_text">
-    	                 6 дней<span>|</span>125 678т
-    	                </div>
-    	            </div>         
-    	        </div>
-    	        <div class="default_tour_block__bottom">
-    	            <h2 class="default_tour_block__name">Путешествие в старый мир</h2>
-    	        </div>
-    	    </article>
-    	
-    	    <article class="default_tour_block default_tour_block--last">
-    	        <div class="default_tour_block__top" style="background-image: url(./assets/i/banner5.png);">
-    	            <div class="default_tour_block_info">
-    	                <div class="default_tour_block_text">
-    	                 6 дней<span>|</span>125 678т
-    	                </div>
-    	            </div>         
-    	        </div>
-    	        <div class="default_tour_block__bottom">
-    	            <h2 class="default_tour_block__name">Великие горы Казахстана</h2>
-    	        </div>
-    	    </article>
-    	    
-    	</section>
-
-    	<section class="about_section" style="background-image: url(./assets/i/about.png);">
-            <div class="about_section__parts">
-                <div class="about_section_container">
-                    <article class="about_section__part">
-                        <div class="about_section__icon">
-                            <img src="./assets/i/geotag.png" alt="geotag">
-                        </div>
-                        <div class="about_section__text"><p>Награда National Tourism Awards 2018</p></div>
-                    </article>
-                    <article class="about_section__part">
-                        <div class="about_section__icon">
-                            <img src="./assets/i/80.png" alt="80">
-                        </div>
-                        <div class="about_section__text"><p>80 000 туристов выбрали нашу компанию</p></div>
-                    </article>
-                    <article class="about_section__part">
-                        <div class="about_section__icon">
-                            <img src="./assets/i/pata.png" alt="PATA">
-                        </div>
-                        <div class="about_section__text"><p>Член PATA (Pacific Area Travel Association)</p></div>
-                    </article>
-                    <article class="about_section__part">
-                        <div class="about_section__icon">
-                            <img src="./assets/i/expo.png" alt="expo">
-                        </div>
-                        <div class="about_section__text"><p>Официальный туроператор Astana EXPO 2017</p></div>
-                    </article>
                 </div>
-            </div>
-            <div class="about_section__descr">
-                <img src="./assets/i/sky_logo.png" alt="skyway-logo" class="about_section__descr_logo">
-                <p class="montserrat_light about_section__descr_text">Знакомство с южной столицей Казахстана, ее прошлым и настоящим, уникальной природой и любимыми местами отдыха горожан — все это в одной экскурсии на инновационном виде транспорта – экологически  чистом, полностью электрическом автобусе!</p>
-                <a href="#" class="btn btn__transparent about_section__descr_btn"><div class="anim"></div><span>Подробнее<img src="./assets/i/triangle.png" alt=""></span></a>
             </div>
         </section>
+        
+        <section class="article_intro">
+            <div class="article_intro__container">
+                <h2 class="gilroy_bolder article_intro__title">«Цены на все поднимаются, а вот зарплата не растет!» </h2>
+                <p class="montserrat_medium article_intro__text">Наверное, каждый из нас нередко такое слышит. Хотя все зависит от того, где отовариваться. Не каждый ведь может позволить себе ходить по модным бутикам в торговых центрах. Для тех, кому не по карману шмотки от кутюр, есть и другие выходы из ситуаций. Например, базары. Мы расскажем вам о рынках города и их особенностях.</p>
+            </div>
+        </section>
+        
+        <section class="article_content">
+            <h2 class="gilroy_bolder article_content__title">Барахолка</h2>
+            <p class="montserrat_medium article_content__text">Самый большой и наиболее популярный из базаров Алматы – это, безусловно, барахолка. Думаю, каждый из горожан хоть раз в жизни побывал там. Шум, толпа, головокружение, тележки, давка. Ситуация там чуть лучше вокзала, на который прибыло несколько поездов сразу. Барахолка состоит из нескольких рынков, расположенных неподалеку друг от друга. Алатау, Болашак, Байсат, Кулагер, Олжа, Кенжехан. В этих рынках найдете все, что угодно, только для этого потребуется много сил, выносливости и времени. Многие бутики расположены в открытых контейнерах, что не очень удобно.</p>
 
+            <h2 class="gilroy_bolder article_content__title">Алтын Орда</h2>
+            <p class="montserrat_medium article_content__text">Рынок Алтын Орда славится самыми приемлемыми и выгодными ценами. Находится практически за городом, на пути из Алматы в Каскелен. Жителям окраины города очень удобно пользоваться услугами этого рынка. Одежда, хозяйственные товары, продукты – все под рукой, и по самым низким ценам!</p>
+            
+            <img src="./assets/i/content_img1.png" class="article_content__image" alt="market">
+
+            <h2 class="gilroy_bolder article_content__title">Зеленый базар</h2>
+            <p class="montserrat_medium article_content__text">Базары есть и внутри города. До них добраться легче, но цены немного выше, чем на барахолке или в Алтын Орде. На зеленом базаре все расположено по порядку: товары одного типа в одном ряду, другие – в следующем. Одежду или товары, которые можно купить в обычных магазинах, здесь можно не искать, цены не сильно отличаются от магазинских, иногда даже бывают дороже. А вот за хозяйственными товарами – милости просим!</p>
+
+            <h2 class="gilroy_bolder article_content__title">Никольский базар</h2>
+            <p class="montserrat_medium article_content__text">На пересечении улиц Карасай батыра и Байтурсынова находится небольшой Никольский базар. Все, как и в других рынках, только в малых размерах и количествах. Большим ассортиментом одежды он не отличается, зато книг там пруд пруди! Продаются новые и подержанные книги по очень низким ценам. Можно найти самые редкие и содержательные книги, за которые в книжных магазинах отдашь приличную сумму. Каждый может внести свой вклад и продать уже ненужную книгу, чтобы она могла перейти в другие руки. Своеобразный буккросинг получается.</p>
+
+            <h2 class="gilroy_bolder article_content__title">Тастак</h2>
+            <p class="montserrat_medium article_content__text">Базары в районе Тастака похожи на барахолку, только размером поменьше. Раньше, когда ещё не было магазинов стройматериалов, их покупали именно там. В принципе, и сейчас можно там отовариваться, так как цены дешевле магазинных. А ещё, в народе бытует молва, что на этом базаре вы найдёте самый вкусный шашлык в городе. Думаю, стоит побывать там, хотя бы для того, чтобы отведать отменный шашлык :) Хороший товар можно найти и на базаре, за меньшую сумму. Так что, если в дорогущих бутиках цены стали еще выше, торопитесь за покупками на базары. И на рынках есть все качественное, стоит лишь приложить усилия и поискать! Удачных покупок :)</p>
+        
+            <div class="info_icons">
+                <div class="info_icons__block">
+                    <div class="info_icons__img info_icons__img--calendar" src="./assets/i/calendar.png" alt="calendar"></div>
+                    <span class="info_icons__text">окт 14, 2018</span>
+                    <div class="clear"></div>
+                </div>
+                <div class="info_icons__block">
+                    <div class="info_icons__img info_icons__img--eye" src="./assets/i/eye.png" alt="eye"></div>
+                    <span class="info_icons__text">12345</span>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="share">
+                <div class="share__container">
+                    
+                    <div class="share__ico" style="background-image: url(./assets/i/vector/social/face.svg);"></div>
+                    <!-- <div class="share__ico" style="background-image: url(./assets/i/vector/social/in.svg);"></div>
+                    <div class="share__ico" style="background-image: url(./assets/i/vector/social/insta.svg);"></div> -->
+                    <div class="share__ico" style="background-image: url(./assets/i/vector/social/skype.svg);"></div>
+                    <div class="share__ico" style="background-image: url(./assets/i/vector/social/whatsapp.svg);"></div>
+
+                    <div class="share__text">
+                        <span class="montserrat_medium">Поделиться<br>этой публикацией</span> 
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </section>
+        
+        
+
+        <section class="grid_container pop_tours">
+        
+            <header class="content_header">
+                <div class="content_header__left">
+                    <h3 class="content_header__intro">Skyway популярное</h3>
+                    <h2 class="content_header__name">Туры в Алматы</h2>
+                </div>
+                <div class="content_header__right">
+                    <a class="content_header_all_btn" href="#">Все туры <img src="./assets/i/arrow_blue.png" alt="all-tours"></a>
+                </div>
+            </header>
+            
+            <article class="default_tour_block">
+                <div class="default_tour_block__top" style="background-image: url(./assets/i/banner3.png);">
+                    <div class="default_tour_block_info">
+                        <div class="default_tour_block_text">
+                         6 дней<span>|</span>125 678т
+                        </div>
+                    </div>         
+                </div>
+                <div class="default_tour_block__bottom">
+                    <h2 class="default_tour_block__name">Большое алматинское озеро</h2>
+                </div>
+            </article>
+        
+            <article class="default_tour_block ">
+                <div class="default_tour_block__top" style="background-image: url(./assets/i/banner2.png);">
+                    <div class="default_tour_block_info">
+                        <div class="default_tour_block_text">
+                         6 дней<span>|</span>125 678т
+                        </div>
+                    </div>         
+                </div>
+                <div class="default_tour_block__bottom">
+                    <h2 class="default_tour_block__name">Путешествие в старый мир</h2>
+                </div>
+            </article>
+        
+            <article class="default_tour_block default_tour_block--last">
+                <div class="default_tour_block__top" style="background-image: url(./assets/i/banner5.png);">
+                    <div class="default_tour_block_info">
+                        <div class="default_tour_block_text">
+                         6 дней<span>|</span>125 678т
+                        </div>
+                    </div>         
+                </div>
+                <div class="default_tour_block__bottom">
+                    <h2 class="default_tour_block__name">Великие горы Казахстана</h2>
+                </div>
+            </article>
+            
+        </section>
+        
         <section class="grid_container blog_section">
            <header class="content_header">
                 <div class="content_header__left">

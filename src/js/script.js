@@ -36,10 +36,14 @@ jQuery(document).ready(function($) {
 	
 	/* Переключение меню */
 	$('#menu_toggle').on('click', function() {
-		$('#main_menu').css('display', 'block')
+		$('#main_menu').css('display', 'block');
+		$('body').css('overflow', 'hidden');
+
 	})
 	$('#close_main_menu').on('click', function() {
-		$('#main_menu').css('display', 'none')
+		$('#main_menu').css('display', 'none');
+		$('body').css('overflow', '');
+
 	})
    	
 	/* Фиксированный хэдер */
