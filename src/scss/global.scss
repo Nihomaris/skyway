@@ -9,8 +9,11 @@
 		links
 		Switchers
 		Info icons
+		Info blocks
+		More btn
 		Share block
 		Containers
+
 		
 
 	MAIN HEADER
@@ -24,12 +27,15 @@
 		About section
 		Blog section
 
-
 	COUNTRY PAGE
 		Top country banner
 		Pop destinations
 		Visa
 		About country
+
+	DESTINATION PAGE
+		About destination
+		About info
 	
 	TOUR PAGE
 		Top tour banner
@@ -38,6 +44,13 @@
 		Tour shedule
 		Tour includes
 		Tour hotels
+		Other tours
+		Lead form
+
+	PLACE PAGE
+		Top place banner
+		About place
+		Places
 
 	GALLERY PAGE
 		Gallery showcase
@@ -49,7 +62,9 @@
 	ARTICLE
 		Article intro
 		Article content
-		Article share
+
+	ABOUT PAGE
+		Reviews
 
 	MAIN FOOTER
 
@@ -304,6 +319,58 @@ input[type="text"]:focus {
 	margin-top: 15px;
 }
 
+/* 								Info blocks
+------------------------------------------------------------- */
+
+.info_block {
+	display: block;
+	float: left;
+	width: 33%;
+	min-height: 278px;
+	padding-top: 55px;
+
+}
+.info_block__icon {
+	width: 90px;
+	height: 90px;
+	border-radius: 100%;
+	border: 2px solid #f0efef;
+	text-align: center;
+	padding-top: 20px;
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.info_block__descr {
+	margin-top: 50px;
+	font-size: 27px;
+}
+.info_block__descr span {
+	font-size: 13px;
+	color: #66a1c8;
+}
+
+
+/* 								More btn
+------------------------------------------------------------- */
+
+.more {
+	padding: 80px 0 170px 0;
+	text-align: center;
+}
+.more__link {
+	color: #66a1c8;
+	font-size: 13px;
+}
+.more img {
+	margin-left: 14px;
+    margin-bottom: -4px;
+}
+
+
+
+
 /* 								Share block
 ------------------------------------------------------------- */
 
@@ -361,6 +428,7 @@ input[type="text"]:focus {
 	width: 100%;
 	height: 107px;
 	border-bottom: 1px solid rgba(255,255,255,0.8);
+	background-color: rgba(0,0,0,0.4);
 }
 
 .main_header__line {
@@ -373,14 +441,13 @@ input[type="text"]:focus {
 	right: 0;
 }
 .main_header__left {
-	position: absolute;
+	position: relative;
 	display: block;
-	top: 0;
-	left: 0;
+	float: left;
 	width: 50%;
 	height: 100%;
 	z-index: 200; 
-	background-color: rgba(0,0,0,0.4);
+	/*background-color: rgba(0,0,0,0.4);*/
  }
 .main_header__logo {
 	margin: 28px 0 0 27%;
@@ -403,20 +470,21 @@ input[type="text"]:focus {
 	font-weight: 800;
 }
 .main_header__right {
-	position: absolute;
+	position: relative;
 	display: block;
-	top: 0;
-	right: 0;
+	float: left;
 	width: 50%;
 	height: 100%;
 	z-index: 200; 
  }
+.main_header__right_container {
+	position: relative;
+	z-index: 300; 
+}
 .main_header__bg { 
 	position: absolute;
-	width: 50%;
+	width: 100%;
 	height: 100%;
-	top: 0;
-	right: 0;
 	background-color: rgba(0,124,186,0.5); 
 	z-index: 100;
 }
@@ -528,9 +596,14 @@ input[type="text"]:focus {
 	font-weight: 800;
 }
 .main_menu_body {
+	display: table;
+    width: 100%;
+    height: 65%;
 	padding: 8% 0 0 27%;
 } 
 .main_menu_body__exit {
+	display: table-row;
+	vertical-align: middle;
 	font-weight: bold;
 	font-size: 16px;
 }
@@ -539,6 +612,8 @@ input[type="text"]:focus {
 	margin-bottom: -10px;
 }
 .main_menu_body__link {
+	display: table-row;
+	vertical-align: middle;
 	font-family: Gilroy;
 	font-weight: 900;
 	letter-spacing: 3px;
@@ -553,15 +628,12 @@ input[type="text"]:focus {
 }
 .main_menu_body__link a:hover {}
 .main_menu_footer {
-	position: absolute;
+	position: relative;
     height: 117px;
     display: block;
     padding-top: 42px;
     padding-left: 27%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+   
 }
 .main_menu_footer__contacts {
 	display: block;
@@ -667,6 +739,9 @@ input[type="text"]:focus {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.mobile_menu_right__country--hidden {
+	display: none;
+}
 .mobile_menu__more { 	
 	cursor: pointer;
 	top: 0;
@@ -709,6 +784,7 @@ input[type="text"]:focus {
 .main_banner {
 	border-bottom: 1px solid #ffffff;
 	height: 548px;
+	background-color: rgba(0,0,0,0.4);
 }
 
 .main_banner__video { 
@@ -717,7 +793,7 @@ input[type="text"]:focus {
 	float: left; 
 	height: 100%; 
 	width: 50%; 
-	background-color: rgba(0,0,0,.4);
+	/*background-color: rgba(0,0,0,.4);*/
 }
 .main_banner__switch {
 	position: absolute;
@@ -772,6 +848,7 @@ input[type="text"]:focus {
 	height: 100%; 
 	width: 50%; 
 	box-sizing: border-box;
+	overflow: hidden;
 }
 .main_banner__bg {
 	position: absolute;
@@ -784,12 +861,17 @@ input[type="text"]:focus {
 }
 .main_banner__description_container {
 	position: absolute;
+	display: none;
 	top: 0;
 	right: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 300;
 	padding: 78px 0 0 81px;
+	transition: opacity 0.4s ease-out;
+}
+.main_banner__description_container--active {
+	display: block;
 }
 .main_banner__intro {
 	font-family: Montserrat;
@@ -832,6 +914,7 @@ input[type="text"]:focus {
 .main_bottom {
 	width: 100%;
 	height: 117px;
+	background-color: rgba(0,0,0,0.4);
 }
 .main_contacts_left { 
 	position: relative;
@@ -841,7 +924,7 @@ input[type="text"]:focus {
 	float: left;
 	padding-top: 42px;
 	padding-left: 210px;
-	background-color: rgba(0,0,0,.4);
+	/*background-color: rgba(0,0,0,.4);*/
 }
 .main_contacts__mail_phone {
 	float: left;
@@ -884,7 +967,8 @@ input[type="text"]:focus {
 	background-repeat: no-repeat;
 	z-index: 80;
 }
-.main_slider_country--active { z-index: 40; }
+.main_slider_country__name { z-index: 90; }
+.main_slider_country--active { background-image: none!important; }
 .main_slider_country img, .main_slider_more img {
 	margin-left: 12px;
 }
@@ -983,7 +1067,7 @@ input[type="text"]:focus {
 
 .pop_tours {
 	padding-bottom: 130px;
-	min-height: 1205px;
+	height: auto;
 }
 
 .main_tour_block {
@@ -995,6 +1079,7 @@ input[type="text"]:focus {
 	background-size: cover;
 	border-radius: 10px;
 	margin-bottom: 13px;
+	height: 450px;
 }
 .main_tour_block__top {
 	height: 280px;
@@ -1079,6 +1164,7 @@ input[type="text"]:focus {
 	margin-left: 1%;
 	border-radius: 10px;
 	margin-bottom: 13px;
+	height: 450px;
 }
 .hit_tour_block__img {
 	border-top-right-radius: 10px;
@@ -1148,14 +1234,13 @@ input[type="text"]:focus {
 	display: block;
 	float: left;
 	width: 100%;
-	min-width: 280px;
+	/*min-width: 280px;*/
 	height: 335px;
 	margin-right: 2%;
+	margin-bottom: 13px;
 	border-radius: 10px;
 }
-.default_tour_block {
-	margin-bottom: 13px;
-}
+
 .default_tour_block--last {
 	margin-right: 0;
 }
@@ -1376,7 +1461,7 @@ input[type="text"]:focus {
 	background-color: rgba(0,0,0,0.5);
 }
 .top_banner__bg {
-	height: 100%;
+	height: auto;
 	background-color: rgba(68, 141, 188, 0.3);
 }
 .banner_slider {
@@ -1529,33 +1614,6 @@ input[type="text"]:focus {
 .about_country {
 	min-height: 900px;
 }
-.info_block {
-	display: block;
-	float: left;
-	width: 33%;
-	min-height: 245px;
-	padding-top: 55px;
-
-}
-.info_block__icon {
-	width: 90px;
-	height: 90px;
-	border-radius: 100%;
-	border: 2px solid #f0efef;
-	text-align: center;
-	padding-top: 20px;
-}
-.info_block:nth-child(3) .info_block__icon { padding-top: 25px; }
-.info_block:nth-child(4) .info_block__icon { padding-top: 15px; }
-.info_block:nth-child(7) .info_block__icon { padding-top: 28px; }
-.info_block__descr {
-	margin-top: 50px;
-	font-size: 27px;
-}
-.info_block__descr span {
-	font-size: 13px;
-	color: #66a1c8;
-}
 
 .about_country_section {
 	position: relative;
@@ -1590,6 +1648,33 @@ input[type="text"]:focus {
 }
 .about_country_section__descr_left {width: 50%; float: left;}
 .about_country_section__descr_right {width: 50%; float: left;}
+
+
+/* ==========================================================================
+	DESTINATION PAGE
+========================================================================== */
+
+/* 								About destination
+------------------------------------------------------------- */
+
+.about_destination_section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,.6);
+    border-top: 1px solid #fff;
+}
+
+/* 								About info
+------------------------------------------------------------- */
+
+.about_destination_info {
+	padding-top: 30px;
+}
+
+	
 
 
 /* ==========================================================================
@@ -1675,6 +1760,14 @@ input[type="text"]:focus {
 	height: 90px;
 	background-color: #448dbc;
 	border-radius: 100%;
+}
+.order_btn__spy { 
+	display: none;
+	position: fixed; 
+	bottom: 20px;
+	right: 20px;
+	top: unset;
+	z-index: 1000;
 }
 .order_btn__container {
 	position: relative;
@@ -1788,11 +1881,24 @@ input[type="text"]:focus {
 	text-align: right;
 }
 .tour_shedule_all_btn {
+	cursor: pointer;
 	display: block;
     font-family: Montserrat;
     font-weight: 800;
     font-size: 13px;
     color: #66a1c8;
+}
+.tour_shedule_all__open {
+	display: inline-block;
+}
+.tour_shedule_all__close {
+	display: none;
+}
+.tour_shedule_all_btn--open .tour_shedule_all__open {
+	display: none;
+}
+.tour_shedule_all_btn--open .tour_shedule_all__close {
+	display: inline-block;
 }
 .tour_shedule_all_btn img {
     margin-bottom: -4px;
@@ -1813,11 +1919,19 @@ input[type="text"]:focus {
 	border: 1px solid #dedfe5;
 	border-radius: 5px;
 }
-.tour_shedule__name img {
+.tour_shedule__arrow {
 	position: absolute;
+	width: 9px;
+	height: 5px;
 	top: 50%;
 	right: 24px;
 	margin-top: -3px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../../assets/i/triangle_down.png);
+}
+.tour_shedule__arrow--active {
+	background-image: url(../../assets/i/triangle_up.png);
 }
 .tour_shedule__name span {
 	color: #66a1c8;
@@ -1960,6 +2074,274 @@ input[type="text"]:focus {
 .tour_hotel_descr__label { color: #448dbc; font-size: 17px; }
 .tour_hotel_descr__text { font-size: 15px; color: #4d4c4c; }
 
+
+/* 								Other tours
+------------------------------------------------------------- */
+
+.other_tours { 
+	padding-left: 183px; 
+	padding-right: 183px;
+	max-width: 1365px;
+	margin: 0 auto;
+	height: auto;
+}
+.other_tours_container {
+	height: auto;
+
+}
+.other_tour_block {
+	display: block;
+	float: left;
+	width: 32%;
+	/*min-width: 280px;*/
+	height: 335px;
+	margin-right: 2%;
+	margin-bottom: 13px;
+	border-radius: 10px;
+}
+.other_tour_block:nth-child(3) { margin-right: 0; }
+.other_tour_block:nth-child(6) { margin-right: 0; }
+
+.other_tour_block__top {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 220px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.other_tour_block__bottom {
+	display: table;
+	width: 100%;
+	height: 120px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-left: 1px solid silver;
+	border-right: 1px solid silver;
+	border-bottom: 1px solid silver;
+}
+.other_tour_block__name {
+	/*padding: 10px 10% 0 10%;
+	
+	font-size: 25px;*/
+	font-family: Gilroy;
+    font-weight: 100;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 40px;
+    font-size: 30px;
+}
+.other_tour_block_info {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	display: table;
+	width: 100%;
+	height: 80px;
+	border-top: 1px solid silver;
+	font-size: 18px;
+}
+.other_tour_block_text {
+	font-family: Gilroy;
+	font-weight: 900;
+	font-size: 17px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: #ffffff;
+}
+.other_tour_block_text span {
+    margin: 0 26px;
+}
+
+/* 								Lead form
+------------------------------------------------------------- */
+
+.tour_lead {
+	position: relative;
+}
+
+.tour_lead .close {
+	display: inline-block;
+	color: #eeeeee;
+	position: absolute;
+	top: 15px;
+	right: -15px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.tour_lead .content_header {
+	position: relative;
+	padding-top: 95px;
+	height: 226px;
+}
+.tour_lead .content_header__name {
+    font-size: 30px;
+}
+.tour_lead .content_header__left:before {
+    left: -10px;
+}
+.tour_lead__bg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 1500;
+}
+.tour_lead__form_container {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 450px;
+	height: 500px;
+	margin-top: -250px;
+	padding: 0 45px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	z-index: 1550;
+}
+.tour_lead__form_container input[type=text] {
+	width: 100%;
+	border: 1px solid silver;
+	padding: 10px 15px;
+	border-radius: 5px;
+	color: #5595c1;
+}
+.tour_lead__form_container input[type="text"]::placeholder {
+	color: #5595c1;
+}
+.tour_lead__input {
+	margin-bottom: 45px;
+}
+.tour_lead__btn {
+	border: none;
+}
+
+/* ==========================================================================
+	PLACE PAGE
+========================================================================== */
+
+/* 								Top place banner
+------------------------------------------------------------- */
+
+.top_banner_place {
+	position: relative;
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,.5);
+}
+.banner_place {
+	padding-top: 46px;
+}
+.banner_place__container {
+	position: relative;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	text-align: center;
+	max-width: 700px;
+	margin: 0 auto;
+}
+.banner_place__name {
+	color: #fff;
+	font-size: 62px;
+	line-height: 100%;
+}
+
+/* 								About place
+------------------------------------------------------------- */
+
+.about_place {
+	max-width: 1365px;
+	margin: 0 auto;
+	min-height: 600px;
+	border-bottom: 1px solid #e0e1e5;
+	padding: 0 183px;
+}
+/* 								Places
+------------------------------------------------------------- */
+
+.pop_places {
+	padding-left: 183px;
+	padding-right: 183px;
+	max-width: 1365px;
+	margin: 0 auto;
+	height: auto;
+}
+.pop_places_container { height: auto; }
+.pop_place_block {
+	display: block;
+    float: left;
+    width: 32%;
+    height: 335px;
+    margin-right: 2%;
+    margin-bottom: 13px;
+    border-radius: 10px;
+}
+.pop_place_block:nth-child(3) { margin-right: 0; }
+.pop_place_block:nth-child(6) { margin-right: 0; }
+
+.pop_place_block__top {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 220px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pop_place_block_info {
+	display: table;
+	opacity: 0;
+	height: 100%;
+	background-color: rgba(9, 69, 133, 0.6);
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	transition: opacity 0.3s ease-out;
+}
+.pop_place_block_text {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 13px;
+	color: #ffffff;
+	padding: 0 20px;
+}
+.pop_place_block__bottom {
+	display: table;
+    width: 100%;
+    height: 120px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+}
+.pop_place_block__name {
+	font-family: Gilroy;
+    font-weight: 100;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 40px;
+    font-size: 30px;
+}
+
+.pop_place_block:hover .pop_place_block_info {
+	opacity: 1;
+}
+
 /* ==========================================================================
 	GALLERY PAGE
 ========================================================================== */
@@ -2099,7 +2481,7 @@ input[type="text"]:focus {
 	left: 0;
 	height: 50%;
 	width: 100%;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.5);
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
@@ -2142,19 +2524,6 @@ input[type="text"]:focus {
 }
 .articles_list__ico--eye {
 	background-image: url(../../assets/i/vector/icons/eye_w.svg);
-}
-
-.articles_list__more {
-	padding: 80px 0 170px 0;
-	text-align: center;
-}
-.articles_list__link {
-	color: #66a1c8;
-	font-size: 13px;
-}
-.articles_list__link img {
-	margin-left: 14px;
-    margin-bottom: -4px;
 }
 
 /* ==========================================================================
@@ -2207,7 +2576,47 @@ input[type="text"]:focus {
 	padding: 30px 0;
 }
 
+/* ==========================================================================
+	ABOUT PAGE
+========================================================================== */
 
+/* 								Reviews
+------------------------------------------------------------- */
+
+.reviews {
+	padding: 0 183px;
+}
+.reviews__container {
+	border: 1px solid #e3e4e4;
+	padding: 0 45px;
+	height: auto;
+}
+.reviews__block {
+	float: left;
+	width: 50%;
+	padding: 45px;
+	text-align: center;
+}
+.reviews__date {
+	font-size: 14px;
+	color: #595f6f;
+}
+.reviews__text {
+	font-size: 14px;
+	color: #595f6f;
+	padding: 40px 0;
+}
+.reviews__autor {
+	color: #448dbc;
+	font-size: 17px;
+}
+.reviews__line {
+	display: inline-block;
+	margin-top: 20px;
+	width: 35px;
+	height: 2px;
+	background-color: #448dbc;
+}
 
 /* ==========================================================================
 	MAIN FOOTER
@@ -2395,18 +2804,34 @@ input[type="text"]:focus {
 
 	.banner_details__container { width: 616px; }
 
-	.pop_tours { min-height: 1700px; }
+	
 	.default_tour_block { 
-		width: 48%; 
-		min-width: 250px;
+		width: 49%; 
+		/*min-width: 250px;*/
 	}
 
+	.default_tour_block:nth-child(5) { margin-right: 0; }
 	.default_tour_block--last { display: none; }
 	
+	.pop_place_block { width: 49%; margin-right: 2%; }
+	.pop_place_block:nth-child(3) { margin-right: 2%; }
+	.pop_place_block:nth-child(6) { margin-right: 2%; }
+	.pop_place_block:nth-child(even) { margin-right: 0; }
+
+	.other_tour_block { width: 49%; margin-right: 2%; }
+	.other_tour_block:nth-child(3) { margin-right: 2%; }
+	.other_tour_block:nth-child(6) { margin-right: 2%; }
+	.other_tour_block:nth-child(even) { margin-right: 0; }
+
+	.hit_tour_block { margin-left: 0; }
+
+	.about_place { min-height: 660px; padding: 0 75px; }
+
 	.about_tour { min-height: 660px; padding: 0 75px; }
 	.tour_shedule { padding: 0 75px; }
 	.tour_includes { padding: 0 75px; }
 	.tour_gallery__header { padding-right: 75px; padding-left: 75px; }
+	.reviews { padding-right: 75px; padding-left: 75px; }
 	
 	.gallery__right_block { display: none; }
 	.gallery__left_block { width: 100%; }
@@ -2421,6 +2846,8 @@ input[type="text"]:focus {
 		padding-top: 30px;
 	}
 	
+	.about_place { min-height: 660px; padding: 0 75px; }
+
 	.category_nav { width: 656px; }
 
 	.info_block__descr { font-size: 20px; }
@@ -2428,7 +2855,10 @@ input[type="text"]:focus {
 	.about_country_section__header { padding-left: 8%; padding-right: 8%; }
 	.about_country_section__descr { padding-left: 8%; padding-right: 8%; }
 	
+	.pop_places { padding-left: 75px; padding-right: 75px; }
+
 	.tour_hotels { padding: 0 75px;	}
+	.other_tours { padding-left: 75px; padding-right: 75px; }
 	.tour_hotel_banner { width: 100%; }
 	.tour_hotel_descr { width: 100%; margin-top: 43px; }
 	
@@ -2475,7 +2905,7 @@ input[type="text"]:focus {
 
 	.banner_details__container { width: 815px; }
 
-	.pop_tours { min-height: 1205px; }
+	
 	.main_tour_block { 
 		width: 58%; 
 		min-width: 280px;
@@ -2483,17 +2913,30 @@ input[type="text"]:focus {
 	}
 	.hit_tour_block { 
 		width: 41%; 
+		margin-left: 1%;
 		min-width: 280px;
 		max-width: 580px;
 	}
 	.default_tour_block { 
 		width: 32%; 
-		min-width: 280px;
+		/*min-width: 280px;*/
 	}
-
+	
+	.default_tour_block:nth-child(5) { margin-right: 2%; }
 	.default_tour_block--last { display: block; }
 	
+	.pop_place_block { width: 31%; }
+	.pop_place_block:nth-child(even) { margin-right: 2%; }
+	.pop_place_block:nth-child(3) { margin-right: 0; }
+	.pop_place_block:nth-child(6) { margin-right: 0; }
+
+	.other_tour_block { width: 31%; }
+	.other_tour_block:nth-child(even) { margin-right: 2%; }
+	.other_tour_block:nth-child(3) { margin-right: 0; }
+	.other_tour_block:nth-child(6) { margin-right: 0; }
+
 	.about_tour { min-height: 600px; }
+	.about_place { min-height: 600px; }
 
 	.about_section_container {
 		margin: 0 auto;
@@ -2549,7 +2992,7 @@ input[type="text"]:focus {
 }
 
 @media (min-width: 1360px) {
-	.grid_container { width: 1365px; padding: 0 183px; }
+	.grid_container { width: 1365px; padding-left: 183px; padding-right: 183px; }
 	.container { padding: 0 183px; }
 	
 	.subscribe_block__logo { display: block; }
@@ -2563,14 +3006,19 @@ input[type="text"]:focus {
 		padding-right: 17%;
 	}
 
+	.about_place { padding: 0 183px; }
+
 	.about_tour { padding: 0 183px; }
 	.tour_shedule { padding: 0 183px; }
 	.tour_includes { padding: 0 183px; }
 	.tour_hotels { padding: 0 183px; }
+	.pop_places { padding-left: 183px; padding-right: 183px; }
+	.other_tours { padding-left: 183px; padding-right: 183px; }
 	.tour_gallery__header { padding-right: 183px; padding-left: 183px; }
 	.article_intro { padding: 0 183px; max-width: 1365px;}
 	.article_intro__container { padding: 130px 76px 100px 76px; }
 	.article_content { max-width: 1365px; }
+	.reviews { padding: 0 183px; }
 
 	.main_footer__menu_nav { margin-right: 60px; }
 	.main_footer__menu_contacts li { padding-left: 26px; }
@@ -2580,7 +3028,7 @@ input[type="text"]:focus {
 
 @media (max-width: 768px) {
 	
-	.grid_container { padding: 0 10%; }
+	.grid_container { padding-left: 10%; padding-right: 10%; }
 	.container { padding: 0 10%; }
 	.main_header__logo { margin-left: 10%; }
 	.main_header__search { margin-left: 10%; }
@@ -2596,7 +3044,7 @@ input[type="text"]:focus {
 	
 	.main_menu { max-height: unset; height: auto; overflow: scroll; }
 	.main_menu_left { width: 100%; height: auto; }
-	.main_menu_body { padding: 8% 0 8% 15%; 	}
+	.main_menu_body { padding: 8% 0 8% 15%; height: 430px; }
 	.main_menu_right { display: none; width: 100%; height: auto; }
 	.mobile_menu_right { display: block; }
 	.main_menu_footer { position: relative; padding-left: 10%; }
@@ -2618,11 +3066,17 @@ input[type="text"]:focus {
 	.banner_tour__duration { padding-left: 20px; }
 	.banner_tour__label { display: none; }
 	
+	.about_place { height: auto; padding-bottom: 75px; padding-left: 10%; padding-right: 10%; }
+
 	.about_tour { height: auto; padding-bottom: 75px; padding-left: 10%; padding-right: 10%; }
 	.about_country_text { height: auto; }
 	.about_country_text__left { width: 100%; margin-bottom: 35px; float: none;  padding-right: 0; }
 	.about_country_text__right { width: 100%; float: none;  padding-right: 0; }
 	
+	.reviews { padding: 0 10%; }
+	.reviews__block { width: 100%; }
+
+
 	.category_nav { width: 480px; }
 	.category_block { width: 160px; }
 
@@ -2643,7 +3097,7 @@ input[type="text"]:focus {
 	.main_bottom { height: 264px; }
 	.main_slider_control { float: none; width: 100%; height: 132px; }
 	.main_slider_country, .main_slider_more { padding-top: 58px; }
-	.main_slider__bg { display: none; }
+	/* .main_slider__bg { display: none; } */
 	.main_contacts_left { 
 		float: none; 
 		width: 100%; 
@@ -2661,7 +3115,7 @@ input[type="text"]:focus {
  	.content_header__right { bottom: 20px; }
  	.content_header__name { font-size: 30px; }
 	
-	.pop_tours { padding-bottom: 113px; min-height: 2000px; }
+	.pop_tours { padding-bottom: 113px; }
 	.main_tour_block, .hit_tour_block { 
 		width: 100%;
 		float: none;
@@ -2671,9 +3125,17 @@ input[type="text"]:focus {
 	}
 	
 	.default_tour_block { width: 49%; }
-	.default_tour_block:nth-child(odd) { margin-right: 0;  }
+	.default_tour_block:nth-child(5) { margin-right: 0; }
 	.default_tour_block--last { display: none; }
 	
+	.pop_place_block { width: 100%; }
+	.pop_places_container { max-width: 450px; margin: 0 auto; }
+
+	.other_tour_block { width: 100%; }
+	.other_tours_container { max-width: 450px; margin: 0 auto; }
+
+	.pop_places_container { max-width: 450px; margin: 0 auto; }
+
 	.visa__passport { left: 2%; }
 	.visa__detail_block { margin-left: 50%; } 
 	
@@ -2708,6 +3170,8 @@ input[type="text"]:focus {
 	.tour_include, .tour_not_include { width: 100%; float: none; margin-bottom: 52px; }
 	
 	.tour_hotels { padding: 0 10%; }
+	.other_tours { padding-left: 10%; padding-right: 10%; }
+	.pop_places { padding-left: 10%; padding-right: 10%; }
 	.tour_hotel_banner { width: 100%; }
 	.tour_hotel_descr { width: 100%; margin-top: 43px; padding-left: 0; }
 	
@@ -2733,8 +3197,9 @@ input[type="text"]:focus {
 	.articles_list__block--first { margin-left: 0; }
 	.articles_list__block--last { display: none; }
 	.articles_list__block:nth-child(even) {	margin-left: 1%;}
-	.articles_list__more { padding: 20px 0 80px; }
-	
+
+	.more { padding: 20px 0 80px; }
+
 	.subscribe_block { padding-top: 40px; padding-left: 0; padding-right: 0; }
 	.subscribe_block__logo { display: none; }
 	.subscribe_block__title { float: none; font-size: 26px; margin: 0 auto; }
@@ -2749,15 +3214,16 @@ input[type="text"]:focus {
 	
 }
 @media (max-width: 716px) {
-	.main_header__left { width: 70%; }
+	.main_header__left { width: 70%; background-color: rgba(0,124,186,.5);}
 	.main_header__right { width: 30%; }
 	.main_header__hamburger { margin-right: 30%; margin-top: 43px; }
 	.main_header__search { display: none; }
 	.main_header__leng { display: none; }
+	.main_header__left--spy { background-color: transparent; }
 
 	.default_tour_block { 
 		width: 100%; 
-		min-width: 280px;
+		/*min-width: 280px;*/
 	}
 	.main_tour_block_arrow_switch {
 	    right: 14px;
@@ -2799,16 +3265,17 @@ input[type="text"]:focus {
 
 @media (max-width: 480px) {
 	.container, .grid_container {
-	    padding: 0 5%;
+	    padding-left: 5%;
+	    padding-right: 5%;
 	}
 	
 	.main_header__search { display: none; }
-	.main_slider_country span { display: none; }
+	.main_slider_country span img{ display: none; }
 	
 	.mobile_menu_right__country { width: 100%; }
 	.mobile_menu__more_link { margin-left: -17px; }
 
-	.pop_tours { min-height: 1850px; }
+	
 	.main_banner { height: 460px; }
 	.main_banner__description_container { padding-top: 30px; }
 	.main_banner__country { font-size: 50px; margin-top: 20px; }
@@ -2829,6 +3296,8 @@ input[type="text"]:focus {
 	.hit_tour_block__info_text { margin-left: 10px; font-size: 15px; }
 	.hit_tour_block__info {	right: 15px; }
 	.main_tour_block__name_container { padding-top: 30px; }
+	.main_tour_block { height: 410px; }
+	.hit_tour_block { height: 410px; }
 	.main_tour_block__top { height: 240px; }
 	.hit_tour_block__top { height: 240px; }
 	.default_tour_block__top { height: 200px; }
@@ -2855,6 +3324,24 @@ input[type="text"]:focus {
 
 	.share__text { display: none; }
 	.share__container { padding: 15px 20px; }
+
+	.about_tour { padding-left: 5%; padding-right: 5%; }
+	.tour_gallery__header { padding-left: 5%; padding-right: 5%; }
+	.tour_shedule { padding-left: 5%; padding-right: 5%; }
+	.tour_includes { padding-left: 5%; padding-right: 5%; }
+	.tour_hotels { padding-left: 5%; padding-right: 5%; }
+	.other_tours { padding-left: 5%; padding-right: 5%; }
+	.pop_places { padding-left: 5%; padding-right: 5%; }
+	.reviews { padding-left: 5%; padding-right: 5%; }
+
+	.reviews__block { padding-left: 0; padding-right: 0; }
+
+	.other_tour_block__top { height: 200px; }
+	.other_tour_block__name { padding-left: 20px; padding-right: 20px; }
+
+	.pop_place__top { height: 200px; }
+	.pop_place__name { padding-left: 20px; padding-right: 20px; }
+
 
 	.tour_hotel_banner { min-height: 330px; }
 	.tour_hotel_banner__info { height: 120px; }
