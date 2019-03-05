@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Skyway | Destination list</title>
+        <title>Skyway | About page</title>
         <link rel="stylesheet" href="assets/css/styles.min.css">
     </head>
     <body>
 
-    	<section class="top_banner" style="background-image: url(./assets/i/about_bg.png);">
+    	<section  id="top-section" class="top_banner" style="background-image: url(./assets/i/about_bg.png);">
             <div class="top_banner__bg">
 
                 <header class="main_header main_header--country">
@@ -73,6 +73,71 @@
 
         </section>
 
+        <section class="about_company">
+            <header class="content_header">
+                <div class="content_header__left">
+                    <h3 class="content_header__intro">Skyway</h3>
+                    <h2 class="content_header__name"><nobr>О компании</nobr></h2>
+                </div>
+                <div class="content_header__right">
+                    <div class="about_description">
+                        <p class="montserrat_regular">Мы готовы предоставить собственный комфортабельный транспорт во время путешествия, у нас есть профессиональные гиды и переводчики говорящих на разных языках. Мы работаем 24/7 и предоставляем визовую поддержку.</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </header>
+            
+            <div class="about_company__parts">
+                <div class="about_company_container">
+                    <article class="about_company__part">
+                        <div class="about_company__icon">
+                            <img src="./assets/i/geotag_blue.png" alt="geotag">
+                        </div>
+                        <div class="about_company__text"><p>Награда National Tourism Awards 2018</p></div>
+                    </article>
+                    <article class="about_company__part">
+                        <div class="about_company__icon">
+                            <img src="./assets/i/80_blue.png" alt="80">
+                        </div>
+                        <div class="about_company__text"><p>80 000 туристов выбрали нашу компанию</p></div>
+                    </article>
+                    <article class="about_company__part">
+                        <div class="about_company__icon">
+                            <img src="./assets/i/pata_blue.png" alt="PATA">
+                        </div>
+                        <div class="about_company__text"><p>Член PATA (Pacific Area Travel Association)</p></div>
+                    </article>
+                    <article class="about_company__part">
+                        <div class="about_company__icon">
+                            <img src="./assets/i/expo_blue.png" alt="expo">
+                        </div>
+                        <div class="about_company__text"><p>Официальный туроператор Astana EXPO 2017</p></div>
+                    </article>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" style="background-image: url(./assets/i/services_bg.jpg);">
+
+            <div class="services_section__header">
+                <header class="services_header">
+                    <div class="services_header__left">
+                        <h3 class="services_header__intro">Skyway услуги</h3>
+                        <h2 class="services_header__name">Наши услуги</h2>
+                    </div>
+                    <div class="services_header__right">
+                        <p class="montserrat_medium">Наша команда SkyWay Travel стала победителем в номинации «Лучшая туристская компания 2018» в рамках ежегодной премии «National Tourism Awards»</p>
+                    </div>
+                </header>
+            </div>
+
+            <div class="services_section__descr">
+                
+            </div>
+
+        </section>
+
         <section class="reviews">
             <header class="content_header">
                 <div class="content_header__left">
@@ -80,12 +145,12 @@
                     <h2 class="content_header__name">О нас говорят</h2>
                 </div>
                 <div class="content_header__right">
-                    <div class="content_header__arrow content_header__arrow--disable"><img src="./assets/i/arrow_blue_left_disable.png" alt=""></div>
-                    <div class="content_header__arrow"><img src="./assets/i/arrow_blue_right.png" alt=""></div>
+                    <div id="reviews-prev-slide" class="content_header__arrow content_header__arrow--left"></div>
+                    <div id="reviews-next-slide" class="content_header__arrow content_header__arrow--right"></div>
                 </div>
             </header>
             
-            <div class="reviews__container">
+            <div id="reviews-slider" class="reviews__container">
                 <div class="reviews__block">
                     <div class="reviews__date">
                         <span class="montserrat_light">11/01/2018</span>
@@ -111,8 +176,32 @@
                         <span class="reviews__line"></span>
                     </div>
                 </div>
+                
+                <div class="reviews__block">
+                    <div class="reviews__date">
+                        <span class="montserrat_light">11/01/2018</span>
+                    </div>
+                    <div class="reviews__text">
+                        <p class="montserrat_regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </div>
+                    <div class="reviews__autor">
+                        <span class="montserrat_medium">Татьяна Иванова</span><br>
+                        <span class="reviews__line"></span>
+                    </div>
+                </div>
 
-                <div class="clear"></div>
+                <div class="reviews__block">
+                    <div class="reviews__date">
+                        <span class="montserrat_light">11/01/2018</span>
+                    </div>
+                    <div class="reviews__text">
+                        <p class="montserrat_regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </div>
+                    <div class="reviews__autor">
+                        <span class="montserrat_medium">Татьяна Иванова</span><br>
+                        <span class="reviews__line"></span>
+                    </div>
+                </div>
             </div>
             
         </section>

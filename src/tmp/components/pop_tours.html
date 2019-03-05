@@ -21,23 +21,31 @@
             </div>
         </div>
         <div class="main_tour_block__bottom">
-            <div class="main_tour_block_descr">
-                <p>154 км вдоль реки Чарын в Казахстане. Каньон располагается в 195 км восточнее Алматы, недалеко от границы с Китаем. Каньон входит в территорию Чарынского национального парка</p>
+            <div id="main-tour-descr-block" class="main_tour_block_descr">
+                <!-- Блок формируется в WP -->
+                <div class="main_tour_block_text">
+                    <p>154 км вдоль реки Чарын в Казахстане. Каньон располагается в 195 км восточнее Алматы, недалеко от границы с Китаем. Каньон входит в территорию Чарынского национального парка</p>
+                </div>
+                <!-- Блок формируется в WP -->
+                <div class="main_tour_block_text">
+                    <p>Астана – современный город, который привлекателен для туристов и комфортен для проживания жителей и гостей столицы Казахстана, с благоприятной окружающей средой. Астана стала столицей нового Казахстана в 1998 году в силу целого ряда причин. </p>
+                </div>
+                <div class="main_tour_block_text">
+                    <p>Развитию ремесленничества и кустарного промысла, расцвету торговли в городах, прежде традиционно занятых исключительно животноводством и сельским хозяйством, способствовали караванные пути через Большую Степь.</p>
+                </div>
+                <div class="main_tour_block_text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dicta facilis, atque dolorum maxime ipsam nam quasi voluptatibus obcaecati dolore repellendus ex magnam, quibusdam voluptate temporibus magni ratione dolores! Facere.</p>
+                </div>
             </div>
-            <div class="switch_container main_tour_block__switch">
-                <span class="switcher main_tour_block_switcher switcher--active"></span>
-                <span class="switcher main_tour_block_switcher"></span>
-                <span class="switcher main_tour_block_switcher"></span>
-                <span class="switcher main_tour_block_switcher"></span>
-            </div>
-            <div class="arrow_switch_container main_tour_block_arrow_switch">
-                <div class="arrow_switcher main_tour_block_arrow"><img src="./assets/i/arrow_l.png" alt="Prev"></div>
-                <div class="arrow_switcher main_tour_block_arrow"><img src="./assets/i/arrow_r.png" alt="Next"></div>
+            <div style="display: none;" id="main-tour-switchers" class="switch_container main_tour_block__switch"></div>
+            <div style="display: none;" id="main-tour-controller" class="arrow_switch_container main_tour_block_arrow_switch">
+                <div id="main-tour-controller-left" class="arrow_switcher main_tour_block_arrow"><img src="./assets/i/arrow_l.png" alt="Prev"></div>
+                <div id="main-tour-controller-right"class="arrow_switcher main_tour_block_arrow"><img src="./assets/i/arrow_r.png" alt="Next"></div>
             </div>
         </div>
     </article>
 
-    <article class="hit_tour_block">
+    <a href="#" class="hit_tour_block">
         <div class="hit_tour_block__img">
             <div class="hit_tour_block__top">
                 <span class="hit_tour_block__label montserrat_black">хит</span>
@@ -57,7 +65,7 @@
         <div class="hit_tour_block__bottom">
             <h2 class="hit_tour_block__name">Обзорная экскурсия по Алматы</h2>
         </div>
-    </article>
+    </a>
     
 
     <a href="#" class="default_tour_block">

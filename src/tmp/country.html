@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="assets/css/styles.min.css">
     </head>
     <body>
-    	<section class="top_banner" style="background-image: url(./assets/i/country_bg.png);">
+    	<section id="top-section" class="top_banner" style="background-image: url(./assets/i/country_bg.png);">
             <div class="top_banner__bg">
 
                 //= ./components/header_country.html
@@ -21,16 +21,39 @@
                     <div class="banner_slider_container">
                         <img src="./assets/i/logo_title_small.png" alt="">
                         <h1 class="gilroy_bolder banner_slider__name">Казахстан</h1>
-                        <div class="banner_slider__separator"></div>
-                        <div class="banner_slider__text">
-                            <p class="montserrat_medium">The Caspian Sea is the largest inland body of water in the world at 371,000 sq km and it borders Kazakhstan on the west. It is rich in sturgeon, a fish prized for its world’s famous caviar.</p>
+                        <div>
+                            <div class="banner_slider__separator"><span id="fact-separator-timer"></span></div>
+                            <div id="fact-text-blocks">
+                                <!-- Блок формируется в WP -->
+                                <div class="banner_slider__fact">
+                                    <div class="banner_slider__text">
+                                        <p class="montserrat_medium">The Caspian Sea is the largest inland body of water in the world at 371,000 sq km and it borders Kazakhstan on the west. It is rich in sturgeon, a fish prized for its world’s famous caviar.</p>
+                                    </div>
+                                    <div class="banner_slider__label">
+                                        <span class="montserrat_bold">Факт #28</span>
+                                    </div>
+                                </div>
+                                <!-- Блок формируется в WP -->
+                                <div class="banner_slider__fact">
+                                    <div class="banner_slider__text">
+                                        <p class="montserrat_medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, laudantium aut sed eaque amet beatae vero aperiam sequi sint facilis vel optio, praesentium odio iste repellat deleniti eum, veritatis illum.</p>
+                                    </div>
+                                    <div class="banner_slider__label">
+                                        <span class="montserrat_bold">Факт #29</span>
+                                    </div>
+                                </div>
+                                <div class="banner_slider__fact">
+                                    <div class="banner_slider__text">
+                                        <p class="montserrat_medium">The Caspian Sea is the largest inland body of water in the world at 371,000 sq km and it borders Kazakhstan on the west. It is rich in sturgeon, a fish prized for its world’s famous caviar.</p>
+                                    </div>
+                                    <div class="banner_slider__label">
+                                        <span class="montserrat_bold">Факт #30</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fact-block-next" class="banner_slider__right_ctrl"><img src="./assets/i/arrow_r.png"></div>
+                            <div id="fact-block-prev" class="banner_slider__left_ctrl"><img src="./assets/i/arrow_l.png"></div>
                         </div>
-                        <div class="banner_slider__label">
-                            <span class="montserrat_bold">Факт #28</span>
-                        </div>
-                        <div class="banner_slider__right_ctrl"><img src="./assets/i/arrow_r.png"></div>
-                        <div class="banner_slider__left_ctrl"><img src="./assets/i/arrow_l.png"></div>
-                        
                     </div>                                    
                 </div>
 
@@ -71,7 +94,7 @@
                 </div>
             </header>
 
-            <article class="default_tour_block">
+            <a href="#" class="default_tour_block">
                 <div class="default_tour_block__top" style="background-image: url(./assets/i/banner3.png);">
                     <div class="default_tour_block__descr">
                         <p class="montserrat_light">Знакомство с южной столицей Казахстана, ее прошлым и настоящим, уникальной природой и любимыми местами отдыха горожан.</p>
@@ -85,9 +108,9 @@
                 <div class="default_tour_block__bottom">
                     <h2 class="default_tour_block__name">Ташкент</h2>
                 </div>
-            </article>
+            </a>
 
-            <article class="default_tour_block">
+            <a href="#" class="default_tour_block">
                 <div class="default_tour_block__top" style="background-image: url(./assets/i/banner2.png);">
                     <div class="default_tour_block__descr">
                         <p class="montserrat_light"></p>
@@ -101,9 +124,9 @@
                 <div class="default_tour_block__bottom">
                     <h2 class="default_tour_block__name">Каракол</h2>
                 </div>
-            </article>
+            </a>
 
-            <article class="default_tour_block default_tour_block--last">
+            <a href="#" class="default_tour_block default_tour_block--last">
                 <div class="default_tour_block__top" style="background-image: url(./assets/i/banner5.png);">
                     <div class="default_tour_block__descr">
                         <p class="montserrat_light"></p>
@@ -117,9 +140,9 @@
                 <div class="default_tour_block__bottom">
                     <h2 class="default_tour_block__name">Бухара</h2>
                 </div>
-            </article>
+            </a>
 
-
+            <div class="clear"></div>
         </section>
 
         <section class="visa">

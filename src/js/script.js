@@ -4,10 +4,14 @@
 	MAIN SCRIPTS
 
 	MAIN PAGE
+	
+	COUNTRY PAGE
 
 	TOUR PAGE
 
+	GALLERY
 
+	VISA
 --------------------------------------------------------------*/
 
 /* ==========================================================================
@@ -88,7 +92,7 @@ jQuery(document).ready(function($) {
 	    	newDescr.addClass('main_banner__description_container--active');
 	    }
 
-		  	
+		 
     })
 
     /* Переключение блоков стран в меню */
@@ -107,7 +111,193 @@ jQuery(document).ready(function($) {
 		hiddenCountry.removeClass('mobile_menu_right__country--hidden');
     })
 
+    /* Переключение текста в главном туре на витрине */
+    var descrBlocks = $('#main-tour-descr-block').children();
+	var activeBlockNum = 0;
+    var descrObject = [];
+
+    if(descrBlocks.length) {
+
+		if(descrBlocks.length > 1) {
+			/* Отображаем описание */
+			descrBlocks.first().show();
+			/* Отображаем контроллеры */
+			$('#main-tour-switchers').show();
+			$('#main-tour-controller').show();
+
+			descrBlocks.map(function(i, item) { 
+				
+				/* Созд */
+				var switcher = $('<span class="switcher main_tour_block_switcher"></span>');
+				if(i === 0) { switcher.addClass('switcher--active'); }
+
+				$('#main-tour-switchers').append(switcher);
+				descrObject.push({description: $(item), switcher: switcher})
+			})
+			
+			$('#main-tour-controller-left, #main-tour-controller-right').on('click', function() {
+				
+				var id = $(this).attr('id');
+				var currentBlockNum = activeBlockNum;
+				var currentObject = descrObject;
+				var nextBlockNum; 
+
+				if(id === 'main-tour-controller-left') {
+
+					if(activeBlockNum === 0) {
+						nextBlockNum = currentObject.length - 1;
+					} else {
+						nextBlockNum = currentBlockNum - 1; 
+					}
+
+				} 
+				if (id === 'main-tour-controller-right') {
+
+					if(activeBlockNum === currentObject.length - 1) {
+						nextBlockNum = 0;
+					} else {
+						nextBlockNum = currentBlockNum + 1;
+					}
+
+				}
+				
+				currentObject[currentBlockNum].description.hide();
+				currentObject[currentBlockNum].switcher.removeClass('switcher--active');
+				currentObject[nextBlockNum].description.show();
+				currentObject[nextBlockNum].switcher.addClass('switcher--active');
+
+				activeBlockNum = nextBlockNum;
+
+			})
+		} else {
+			/* Отображаем описание */
+			descrBlocks.first().show();
+		}
+
+    }
+	
 });
+
+
+/* ==========================================================================
+	COUNTRY PAGE
+========================================================================== */
+
+jQuery(document).ready(function($) {
+	
+	var factsObj = [];
+	var factText = $('#fact-text-blocks').children();
+
+	if(factText.length) {
+		if(factText.length > 1) {
+
+			factText.map(function(i, item) { factsObj.push($(item)); });
+			
+			/* Инициализация слайдера фактов */
+			var factController = new FactController(factsObj);
+			
+			/* ручное переключение */
+			$('#fact-block-next').on('click', function() {
+				factController.nextFact();
+			})
+			$('#fact-block-prev').on('click', function() {
+				factController.prevFact();
+			})
+			
+		} else {
+			/* При инициализации первый факт отображается */
+			$('#fact-separator-timer').css('width', '100%');
+			factText.first().show();
+		}
+	}
+
+	function FactController(facts) {
+		this.facts = facts;
+		this.activeFact = 0; // по умолчанию активен 1й по очереди факт
+		this.PREV = 'fact-block-prev';
+		this.NEXT = 'fact-block-next';
+		this.loading = null;
+		this.intervalNum = null;
+		this.seconds = 7000;
+
+		/* При инициализации первый факт отображается */
+		facts[0].show();
+		
+		this.stopLoad = function() {
+			if(this.loading) {
+				this.loading.stop();
+				this.loading = null
+				clearInterval(this.intervalNum);
+				this.intervalNum = null;
+			}
+		}
+		this.startLoad = function() {
+			var self = this;
+			var separator = $('#fact-separator-timer');
+			separator.css('width', 0);
+			return separator.animate({'width': '100%'}, self.seconds, function() {
+				self.loading = null;
+				self.switchFact(self.NEXT);
+			});
+		}
+		
+		this.switchFact = function(type) {
+			var newNum = 0;
+			
+			switch(type) {
+				case this.PREV:
+					if(this.activeFact === 0) {
+						newNum = this.facts.length - 1;
+					} else {
+						newNum = this.activeFact - 1;
+					}
+					break;
+				case this.NEXT:
+					if(this.activeFact === this.facts.length - 1) {
+						newNum = 0;
+					} else {
+						newNum = this.activeFact + 1;
+					}
+					break;
+				default:
+					newNum = 0;
+					break;
+			}
+			
+			this.facts[this.activeFact].hide();
+			this.facts[newNum].show();
+
+			this.activeFact = newNum;
+		}
+		
+		this.init = function() {
+			var self = this;
+
+			this.intervalNum = setInterval(function() {
+				self.loading = self.startLoad();
+			}, 7200)
+		}
+		
+		this.loading = this.startLoad();
+		this.init();
+		
+	}
+	
+	FactController.prototype.nextFact = function() {
+			this.stopLoad();
+			this.switchFact(this.PREV)
+			this.loading = this.startLoad();
+			this.init();
+	}
+	FactController.prototype.prevFact = function() {
+			this.stopLoad();
+			this.switchFact(this.NEXT)
+			this.loading = this.startLoad();
+			this.init();
+	}
+
+});
+
 
 
 /* ==========================================================================
@@ -176,5 +366,98 @@ jQuery(document).ready(function($) {
 	$('#close-lead').on('click', function() {
 		$('#lead-form').hide();
 	})
+
+});
+
+
+/* ==========================================================================
+	GALLERY
+========================================================================== */
+
+
+jQuery(document).ready(function($) {
+	
+	// Открытие фотограций
+	$('.gallery__photo a').fancybox();
+	$('.gallery_list__photo a').fancybox();
+
+	// Слайдер галлереи
+	var slides = 2;
+
+	if($(window).width() < 992) {
+		slides = 1;
+	} 
+
+	$('#gallery-slider').slick({
+		infinite: true,
+  		slidesToShow: slides,
+ 		slidesToScroll: 1
+ 	})
+
+	 	$('#gallery-prev-slide').on('click', function() {
+			$('.slick-prev.slick-arrow').click();
+	 	})
+	 	$('#gallery-next-slide').on('click', function() {
+			$('.slick-next.slick-arrow').click();
+	 	})
+
+});
+
+
+/* ==========================================================================
+	ABOUT PAGE
+========================================================================== */
+
+jQuery(document).ready(function($) {
+
+	// Слайдер галлереи
+	var slides = 2;
+
+	if($(window).width() < 768) {
+		slides = 1;
+	} 
+
+	$('#reviews-slider').slick({
+		infinite: true,
+  		slidesToShow: slides,
+ 		slidesToScroll: 1
+ 	})
+
+ 	$('#reviews-prev-slide').on('click', function() {
+		$('#reviews-slider .slick-prev').click();
+ 	})
+ 	$('#reviews-next-slide').on('click', function() {
+		$('#reviews-slider .slick-next').click();
+ 	})
+
+});
+
+
+/* ==========================================================================
+	VISA
+========================================================================== */
+
+jQuery(document).ready(function($) {
+
+	// Переключение окна фильтров стран
+	$('#visa-filter-btn').on('click', function() {
+		
+		var status = $(this).find('.top_banner_place--active');
+		
+		if(status.length) {
+			$('#visa-filter').hide();
+			status.removeClass('top_banner_place--active');
+		} else {
+			$('#visa-filter').show();
+			status.addClass('top_banner_place--active');
+		}
+		
+	})
+
+	$('#sidebar-close').on('click', function() {
+		$('#visa-filter').hide();
+		$('#visa-filter-btn').removeClass('top_banner_place--active');
+	})
+	
 
 });

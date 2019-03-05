@@ -19,9 +19,18 @@ var path = {
     },
     src: {
     	images: './src/i/**/*',
-        css:    './src/scss/global.scss',
+        css: [
+            './src/scss/libs/slick.scss',
+            './src/scss/libs/slick-theme.scss',
+            './src/scss/libs/slick-theme.scss',
+            './src/scss/libs/fancybox-1.3.4.scss',
+            './src/scss/*.scss',
+        ],
         js: [
-        	'./src/js/libs/*.js',
+            './src/js/libs/jquery-3.1.1.min.js',
+            './src/js/libs/mousewheel-3.0.4.pack.js',
+            './src/js/libs/fancybox-1.3.4.js',
+            './src/js/libs/slick.min.js',
         	'./src/js/module/*.js',
         	'./src/js/page/*.js',
         	'./src/js/*.js'
@@ -30,7 +39,7 @@ var path = {
     },
 
     watch: {
-        css: './src/scss/**/*.scss',
+        css: './src/scss/*.scss',
         js:  './src/js/*.js',
         html: './src/tmp/*.html',
     }
@@ -46,7 +55,7 @@ gulp.task('connect', function() {
 
 //sass
 gulp.task('css', function() {
-    gulp.src([path.src.css])
+    gulp.src(path.src.css)
         .pipe(plumber())
         .pipe(concat('styles.min.css'))
         .pipe(sass())
