@@ -57,25 +57,7 @@
                     </div>                                    
                 </div>
 
-                <div class="banner_contacts">
-                    <div class="banner_contacts__container">
-                        <div class="main_contacts__mail_phone">
-                            <span class="main_contacts__phone">7 727 222 33 70</span><br>
-                            <span class="main_contacts__mail">infoskyway@soon.kz</span>
-                        </div>
-                        <div class="main_contacts__social_block">
-                            <a class="main_contacts__social" href="#">
-                                <img src="./assets/i/facebook.png" alt="facebook">
-                            </a>
-                            <a class="main_contacts__social" href="#">
-                                <img src="./assets/i/instagram.png" alt="instagram">
-                            </a>
-                            <a class="main_contacts__social" href="#">
-                                <img src="./assets/i/whatsapp.png" alt="whatsapp">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                //= ./components/contacts.html
             </div>
         </section>
 
@@ -89,60 +71,76 @@
                     <h2 class="content_header__name">Популярные направления</h2>
                 </div>
                 <div class="content_header__right">
-                    <div class="content_header__arrow content_header__arrow--disable"><img src="./assets/i/arrow_blue_left_disable.png" alt=""></div>
-                    <div class="content_header__arrow"><img src="./assets/i/arrow_blue_right.png" alt=""></div>
+                    <div id="dest-prev-slide" class="content_header__arrow content_header__arrow--left"></div>
+                    <div id="dest-next-slide" class="content_header__arrow content_header__arrow--right"></div>
                 </div>
             </header>
-
-            <a href="#" class="default_tour_block">
-                <div class="default_tour_block__top" style="background-image: url(./assets/i/banner3.png);">
-                    <div class="default_tour_block__descr">
-                        <p class="montserrat_light">Знакомство с южной столицей Казахстана, ее прошлым и настоящим, уникальной природой и любимыми местами отдыха горожан.</p>
-                    </div>
-                    <div class="default_tour_block_info default_tour_block_info--blue">
-                        <div class="default_tour_block_text">
-                         6 мест<span>|</span>12 туров
+            
+            <div id="dest-block-slider" class="default_dest__container">
+                <a href="#" class="default_dest_block">
+                    <div class="default_dest_block__top" style="background-image: url(./assets/i/banner3.png);">
+                        <div class="default_dest_block__descr">
+                            <p class="montserrat_light">Знакомство с южной столицей Казахстана, ее прошлым и настоящим, уникальной природой и любимыми местами отдыха горожан.</p>
                         </div>
-                    </div>  
-                </div>
-                <div class="default_tour_block__bottom">
-                    <h2 class="default_tour_block__name">Ташкент</h2>
-                </div>
-            </a>
-
-            <a href="#" class="default_tour_block">
-                <div class="default_tour_block__top" style="background-image: url(./assets/i/banner2.png);">
-                    <div class="default_tour_block__descr">
-                        <p class="montserrat_light"></p>
+                        <div class="default_dest_block_info default_dest_block_info--blue">
+                            <div class="default_dest_block_text">
+                             6 мест<span>|</span>12 туров
+                            </div>
+                        </div>  
                     </div>
-                    <div class="default_tour_block_info default_tour_block_info--blue">
-                        <div class="default_tour_block_text">
-                         6 мест<span>|</span>12 туров
-                        </div>
-                    </div>  
-                </div>
-                <div class="default_tour_block__bottom">
-                    <h2 class="default_tour_block__name">Каракол</h2>
-                </div>
-            </a>
-
-            <a href="#" class="default_tour_block default_tour_block--last">
-                <div class="default_tour_block__top" style="background-image: url(./assets/i/banner5.png);">
-                    <div class="default_tour_block__descr">
-                        <p class="montserrat_light"></p>
+                    <div class="default_dest_block__bottom">
+                        <h2 class="default_dest_block__name">Ташкент</h2>
                     </div>
-                    <div class="default_tour_block_info default_tour_block_info--blue">
-                        <div class="default_tour_block_text">
-                         6 мест<span>|</span>12 туров
-                        </div>
-                    </div>  
-                </div>
-                <div class="default_tour_block__bottom">
-                    <h2 class="default_tour_block__name">Бухара</h2>
-                </div>
-            </a>
+                </a>
 
-            <div class="clear"></div>
+                <a href="#" class="default_dest_block">
+                    <div class="default_dest_block__top" style="background-image: url(./assets/i/banner2.png);">
+                        <div class="default_dest_block__descr">
+                            <p class="montserrat_light"></p>
+                        </div>
+                        <div class="default_dest_block_info default_dest_block_info--blue">
+                            <div class="default_dest_block_text">
+                             6 мест<span>|</span>12 туров
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="default_dest_block__bottom">
+                        <h2 class="default_dest_block__name">Каракол</h2>
+                    </div>
+                </a>
+
+                <a href="#" class="default_dest_block">
+                    <div class="default_dest_block__top" style="background-image: url(./assets/i/banner5.png);">
+                        <div class="default_dest_block__descr">
+                            <p class="montserrat_light"></p>
+                        </div>
+                        <div class="default_dest_block_info default_dest_block_info--blue">
+                            <div class="default_dest_block_text">
+                             6 мест<span>|</span>12 туров
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="default_dest_block__bottom">
+                        <h2 class="default_dest_block__name">Бухара</h2>
+                    </div>
+                </a>
+
+                <a href="#" class="default_dest_block">
+                    <div class="default_dest_block__top" style="background-image: url(./assets/i/banner5.png);">
+                        <div class="default_dest_block__descr">
+                            <p class="montserrat_light"></p>
+                        </div>
+                        <div class="default_dest_block_info default_dest_block_info--blue">
+                            <div class="default_dest_block_text">
+                             6 мест<span>|</span>12 туров
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="default_dest_block__bottom">
+                        <h2 class="default_dest_block__name">Бухара</h2>
+                    </div>
+                </a>
+            </div>
         </section>
 
         <section class="visa">
@@ -198,7 +196,7 @@
                     <p><span class="montserrat_bold">Валюта</span><br>Казахстанский тенге</p>
                 </div>
             </article>
-
+            <div class="clear"></div>
         </section>
 
         <section class="about_country_section" style="background-image: url(./assets/i/about_country.png);">

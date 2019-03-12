@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Skyway | Article list</title>
+        <title>Skyway | Tours list page</title>
         <link rel="stylesheet" href="assets/css/styles.min.css">
     </head>
     <body>
 
-    	<section  id="top-section" class="top_banner" style="background-image: url(./assets/i/blog_bg.png);">
+    	<section  id="top-section" class="top_banner" style="background-image: url(./assets/i/tours_bg.jpg);">
             <div class="top_banner__bg">
 
                 <header class="main_header main_header--country">
@@ -38,15 +38,12 @@
                     <div class="banner__breadcrumbs">
                         <span class="banner__path">Главная</span>
                         <span class="banner__path_ico"><img src="./assets/i/triangle.png" alt=""></span>
-                        <span class="banner__path banner__path--current">Это интересно</span>
+                        <span class="banner__path banner__path--current">Туры и экскурсии</span>
                     </div>
                     <div class="banner_slider_container">
                         <img src=s"./assets/i/logo_title_small.png" alt="">
-                        <h1 class="gilroy_bolder banner_slider__name">Это интересно</h1>
-                        <div class="banner_slider__separator"></div>
-                        <div class="banner_slider__text">
-                            <p class="montserrat_medium">The Caspian Sea is the largest inland body of water in the world at 371,000 sq km and it borders Kazakhstan on the west. It is rich in sturgeon, a fish prized for its world’s famous caviar.</p>
-                        </div>                        
+                        <h1 class="gilroy_bolder banner_slider__name">Туры и экскурсии</h1>
+                        <div class="banner__separator"></div>                     
                     </div>                               
                 </div>
 
@@ -70,250 +67,189 @@
                     </div>
                 </div>
             </div>
+
         </section>
-        
-        <section class="category_nav">
-            <div class="category_block" style="background-image: url(./assets/i/cat1.png);">
-                <div class="category_block__name"><span class="montserrat_bold">О природе</span></div>
-                <div class="category_block__container">
-                    <div class="category_block__bg">
-                        <span class="montserrat_regular">О природе<img src="./assets/i/triangle.png" alt=""></span>
+
+        <section class="tours_list">
+            <aside class="filter">
+                <div class="filter__container">
+                    <div class="filter__block">
+
+                        <a class="filter__elem filter__elem--title filter__elem--active" href="javascript:void(0);">Туры</a>
+                        <a class="filter__elem filter__elem--title filter__elem--disable" href="javascript:void(0);">Экскурсии</a>
+
+                        <div class="filter__space"></div>
+                        
+                        <ul>
+                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);">Казахстан</a></li>
+                            <li><a class="filter__elem filter__elem--active" href="javascript:void(0);">Астана</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Алматы</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Шымкент</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Туркестан</a></li>
+                        </ul>
+                        <ul>
+                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);">Узбекистан</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Ташкент</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Самарканд</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Бухара</a></li>
+                        </ul>
+                        <ul>
+                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);">Кыргызстан</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Бишкек</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Ош</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Алаколь</a></li>
+                        </ul>
+                        
+                        <div class="filter__space"></div>
+
+                        <ul>
+                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);">Тип тура</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Eco</a></li>
+                            <li><a class="filter__elem filter__elem--active" href="javascript:void(0);">Culture</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">City</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Active</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">History</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Gastro</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Science</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Religion</a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);">Event</a></li>
+                        </ul>
+                        
                     </div>
-                    <div class="category_block__down"></div>
                 </div>
-            </div>
-            <div class="category_block category_block--active" style="background-image: url(./assets/i/cat2.png);">
-                <div class="category_block__name"><span class="montserrat_bold">О культуре</span></div>
-                <div class="category_block__container">
-                    <div class="category_block__bg">
-                        <span class="montserrat_regular">О культуре<img src="./assets/i/triangle.png" alt=""></span>
+                <div id="sidebar-close" class="filter_close">x</div>
+            </aside>
+            <div class="tour_list_blocks">
+                <header class="content_header">
+                    <div class="content_header__left">
+                        <h3 class="content_header__intro">Skyway</h3>
+                        <h2 class="content_header__name">Туры и экскурсии</h2>
                     </div>
-                    <div class="category_block__down"></div>
+                </header>
+                <div class="tour_list_blocks__container">
+
+                    <a href="#" class="tour_list_block">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                            <div class="tour_list_block_info">
+                                <div class="tour_list_block_text">
+                                 6 дней<span>|</span>Тур по Астане
+                                </div>
+                            </div>         
+                        </div>
+                        <div class="tour_list_block__bottom">
+                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                        </div>
+                    </a>
+                    <a href="#" class="tour_list_block">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                            <div class="tour_list_block_info">
+                                <div class="tour_list_block_text">
+                                 6 дней<span>|</span>Тур по Астане
+                                </div>
+                            </div>         
+                        </div>
+                        <div class="tour_list_block__bottom">
+                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                        </div>
+                    </a>
+                    <a href="#" class="tour_list_block">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                            <div class="tour_list_block_info">
+                                <div class="tour_list_block_text">
+                                 6 дней<span>|</span>Тур по Астане
+                                </div>
+                            </div>         
+                        </div>
+                        <div class="tour_list_block__bottom">
+                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                        </div>
+                    </a>
+                    <a href="#" class="tour_list_block">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                            <div class="tour_list_block_info">
+                                <div class="tour_list_block_text">
+                                 6 дней<span>|</span>Тур по Астане
+                                </div>
+                            </div>         
+                        </div>
+                        <div class="tour_list_block__bottom">
+                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                        </div>
+                    </a>
+                    <a href="#" class="tour_list_block">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                            <div class="tour_list_block_info">
+                                <div class="tour_list_block_text">
+                                 6 дней<span>|</span>Тур по Астане
+                                </div>
+                            </div>         
+                        </div>
+                        <div class="tour_list_block__bottom">
+                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                        </div>
+                    </a>
+                    <a href="#" class="tour_list_block">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                            <div class="tour_list_block_info">
+                                <div class="tour_list_block_text">
+                                 6 дней<span>|</span>Тур по Астане
+                                </div>
+                            </div>         
+                        </div>
+                        <div class="tour_list_block__bottom">
+                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                        </div>
+                    </a>
+
+                    <div class="clear"></div>
                 </div>
-            </div>
-            <div class="category_block" style="background-image: url(./assets/i/cat3.png);">
-                <div class="category_block__name"><span class="montserrat_bold">О еде</span></div>
-                <div class="category_block__container">
-                    <div class="category_block__bg">
-                        <span class="montserrat_regular">О еде<img src="./assets/i/triangle.png" alt=""></span>
+                <div class="tour_pagination">
+                    <div class="pagination">
+                        <div class="first_page_arrow">
+                            <img src="./assets/i/d_arrow_left.png" alt="first-page">
+                        </div>
+                        <div class="prev_page_arrow">
+                            <img src="./assets/i/arrow_blue_left.png" alt="Prev-page">
+                        </div>
+                        <div class="pagination__container">
+                            <div class="pagination__first_blocks">
+                                <div class="pagination__page pagination__page--active">
+                                    <span>1</span>
+                                </div>
+                                <div class="pagination__page">
+                                    <span>2</span>
+                                </div>
+                                <div class="pagination__page">
+                                    <span>3</span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="pagination__dot"><span>...</span></div>
+                            <div class="pagination__last_blocks">
+                                <div class="pagination__page">
+                                    <span>11</span>
+                                </div>
+                                <div class="pagination__page">
+                                    <span>12</span>
+                                </div>
+                                <div class="pagination__page">
+                                    <span>13</span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="next_page_arrow">
+                            <img src="./assets/i/arrow_blue_right.png" alt="Next-page">
+                        </div>
+                        <div class="last_page_arrow">
+                            <img src="./assets/i/d_arrow_right.png" alt="last-page">
+                        </div>
+                        <div class="clear"></div>
                     </div>
-                    <div class="category_block__down"></div>
-                </div>
-            </div>
-            <div class="category_block" style="background-image: url(./assets/i/cat4.png);">
-                <div class="category_block__name"><span class="montserrat_bold">Узбекистан</span></div>
-                <div class="category_block__container">
-                    <div class="category_block__bg">
-                        <span class="montserrat_regular">Узбекистан<img src="./assets/i/triangle.png" alt=""></span>
-                    </div>
-                    <div class="category_block__down"></div>
-                </div>
-            </div>
-            <div class="category_block" style="background-image: url(./assets/i/cat5.png);">
-                <div class="category_block__name"><span class="montserrat_bold">Казахстан</span></div>
-                <div class="category_block__container">
-                    <div class="category_block__bg">
-                        <span class="montserrat_regular">Казахстан<img src="./assets/i/triangle.png" alt=""></span>
-                    </div>
-                    <div class="category_block__down"></div>
-                </div>
-            </div>
-            <div class="category_block" style="background-image: url(./assets/i/cat6.png);">
-                <div class="category_block__name"><span class="montserrat_bold">Кыргызстан</span></div>
-                <div class="category_block__container">
-                    <div class="category_block__bg">
-                        <span class="montserrat_regular">Кыргызстан<img src="./assets/i/triangle.png" alt=""></span>
-                    </div>
-                    <div class="category_block__down"></div>
                 </div>
             </div>
             <div class="clear"></div>
         </section>
-
-        <section class="articles_list">
-            <div class="articles_list__container">
-
-                <div class="articles_list__block articles_list__block--first" style="background-image: url(./assets/i/article4.png);">
-                    <div class="articles_list__descr">
-                        <div class="articles_list__name">
-                            <h4 class="montserrat_black">Животный мир Казахстана</h4>
-                        </div>
-                        <div class="articles_list__info">
-                            <div class="articles_list__date">
-                                <span class="articles_list__text">
-                                    окт 14, 2018
-                                </span>
-                            </div>
-                            <div class="articles_list__views">
-                                <div class="articles_list__ico articles_list__ico--eye"></div>
-                                <span class="articles_list__text">12345</span>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               <div class="articles_list__block" style="background-image: url(./assets/i/article5.png);">
-                    <div class="articles_list__descr">
-                        <div class="articles_list__name">
-                            <h4 class="montserrat_black">Животный мир Казахстана<br>в две строчки</h4>
-                        </div>
-                        <div class="articles_list__info">
-                            <div class="articles_list__date">
-                                <span class="articles_list__text">
-                                    окт 14, 2018
-                                </span>
-                            </div>
-                            <div class="articles_list__views">
-                                <div class="articles_list__ico articles_list__ico--eye"></div>
-                                <span class="articles_list__text">12345</span>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="articles_list__block" style="background-image: url(./assets/i/article6.png);">
-                    <div class="articles_list__descr">
-                        <div class="articles_list__name">
-                            <h4 class="montserrat_black">Животный мир Казахстана</h4>
-                        </div>
-                        <div class="articles_list__info">
-                            <div class="articles_list__date">
-                                <span class="articles_list__text">
-                                    окт 14, 2018
-                                </span>
-                            </div>
-                            <div class="articles_list__views">
-                                <div class="articles_list__ico articles_list__ico--eye"></div>
-                                <span class="articles_list__text">12345</span>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="articles_list__block articles_list__block--first" style="background-image: url(./assets/i/article4.png);">
-                    <div class="articles_list__descr">
-                        <div class="articles_list__name">
-                            <h4 class="montserrat_black">Животный мир Казахстана</h4>
-                        </div>
-                        <div class="articles_list__info">
-                            <div class="articles_list__date">
-                                <span class="articles_list__text">
-                                    окт 14, 2018
-                                </span>
-                            </div>
-                            <div class="articles_list__views">
-                                <div class="articles_list__ico articles_list__ico--eye"></div>
-                                <span class="articles_list__text">12345</span>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               <div class="articles_list__block" style="background-image: url(./assets/i/article5.png);">
-                    <div class="articles_list__descr">
-                        <div class="articles_list__name">
-                            <h4 class="montserrat_black">Животный мир Казахстана<br>в две строчки</h4>
-                        </div>
-                        <div class="articles_list__info">
-                            <div class="articles_list__date">
-                                <span class="articles_list__text">
-                                    окт 14, 2018
-                                </span>
-                            </div>
-                            <div class="articles_list__views">
-                                <div class="articles_list__ico articles_list__ico--eye"></div>
-                                <span class="articles_list__text">12345</span>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="articles_list__block" style="background-image: url(./assets/i/article6.png);">
-                    <div class="articles_list__descr">
-                        <div class="articles_list__name">
-                            <h4 class="montserrat_black">Животный мир Казахстана</h4>
-                        </div>
-                        <div class="articles_list__info">
-                            <div class="articles_list__date">
-                                <span class="articles_list__text">
-                                    окт 14, 2018
-                                </span>
-                            </div>
-                            <div class="articles_list__views">
-                                <div class="articles_list__ico articles_list__ico--eye"></div>
-                                <span class="articles_list__text">12345</span>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="articles_list__block articles_list__block--first" style="background-image: url(./assets/i/article4.png);">
-                    <div class="articles_list__descr">
-                        <div class="articles_list__name">
-                            <h4 class="montserrat_black">Животный мир Казахстана</h4>
-                        </div>
-                        <div class="articles_list__info">
-                            <div class="articles_list__date">
-                                <span class="articles_list__text">
-                                    окт 14, 2018
-                                </span>
-                            </div>
-                            <div class="articles_list__views">
-                                <div class="articles_list__ico articles_list__ico--eye"></div>
-                                <span class="articles_list__text">12345</span>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               <div class="articles_list__block" style="background-image: url(./assets/i/article5.png);">
-                    <div class="articles_list__descr">
-                        <div class="articles_list__name">
-                            <h4 class="montserrat_black">Животный мир Казахстана<br>в две строчки</h4>
-                        </div>
-                        <div class="articles_list__info">
-                            <div class="articles_list__date">
-                                <span class="articles_list__text">
-                                    окт 14, 2018
-                                </span>
-                            </div>
-                            <div class="articles_list__views">
-                                <div class="articles_list__ico articles_list__ico--eye"></div>
-                                <span class="articles_list__text">12345</span>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="articles_list__block articles_list__block--last" style="background-image: url(./assets/i/article6.png);">
-                    <div class="articles_list__descr">
-                        <div class="articles_list__name">
-                            <h4 class="montserrat_black">Животный мир Казахстана</h4>
-                        </div>
-                        <div class="articles_list__info">
-                            <div class="articles_list__date">
-                                <span class="articles_list__text">
-                                    окт 14, 2018
-                                </span>
-                            </div>
-                            <div class="articles_list__views">
-                                <div class="articles_list__ico articles_list__ico--eye"></div>
-                                <span class="articles_list__text">12345</span>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="clear"></div>
-            </div>
-            <div class="more">
-                <a class="montserrat_bold more__link" href="#">Показать больше <img src="./assets/i/arrow_blue.png" alt="all-tours"></a>
-            </div>
-        </section>
-        
 
                <footer class="main_footer">
                     <div class="subscribe_block">

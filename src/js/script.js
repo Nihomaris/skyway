@@ -11,6 +11,8 @@
 
 	GALLERY
 
+	BLOG
+
 	VISA
 --------------------------------------------------------------*/
 
@@ -42,12 +44,19 @@ jQuery(document).ready(function($) {
 	$('#menu_toggle, #menu_toggle_2').on('click', function() {
 		$('#main_menu').css('display', 'block');
 		$('body').css('overflow', 'hidden');
+		$('body').on('keydown', function(e) {
+			if(e.which === 27) {
+				$('#main_menu').css('display', 'none');
+				$('body').css('overflow', '');
+				$('body').off('keydown')
+			}
+		})
 
 	})
 	$('#close_main_menu').on('click', function() {
 		$('#main_menu').css('display', 'none');
 		$('body').css('overflow', '');
-
+		$('body').off('keydown')
 	})
    	
 	/* Фиксированный хэдер */
@@ -296,6 +305,29 @@ jQuery(document).ready(function($) {
 			this.init();
 	}
 
+
+	// Слайдер направлений
+	var slides = 3;
+
+	if($(window).width() < 992 && $(window).width() > 716) {
+		slides = 2;
+	} else if($(window).width() < 716) {
+		slides = 1;
+	}
+
+	$('#dest-block-slider').slick({
+		infinite: true,
+  		slidesToShow: slides,
+ 		slidesToScroll: 1
+ 	})
+
+ 	$('#dest-prev-slide').on('click', function() {
+		$('.slick-prev.slick-arrow').click();
+ 	})
+ 	$('#dest-next-slide').on('click', function() {
+		$('.slick-next.slick-arrow').click();
+ 	})
+
 });
 
 
@@ -434,6 +466,19 @@ jQuery(document).ready(function($) {
 
 
 /* ==========================================================================
+	BLOG
+========================================================================== */
+
+jQuery(document).ready(function($) {
+
+
+
+});
+
+
+
+
+/* ==========================================================================
 	VISA
 ========================================================================== */
 
@@ -446,9 +491,11 @@ jQuery(document).ready(function($) {
 		
 		if(status.length) {
 			$('#visa-filter').hide();
+			$('#sidebar-close').hide();
 			status.removeClass('top_banner_place--active');
 		} else {
 			$('#visa-filter').show();
+			$('#sidebar-close').show();
 			status.addClass('top_banner_place--active');
 		}
 		
