@@ -52,11 +52,17 @@
 		Filter
 		Tours list
 		Tours pagination
+		Tours lead
 
 	PLACE PAGE
 		Top place banner
 		About place
 		Places
+	
+	HOTEL PAGE
+		Hotel map
+		Hotel info
+		Hotel hall
 
 	GALLERY PAGE
 		Gallery showcase
@@ -534,7 +540,7 @@ li.sidebar__elem:before {
 	border: 1px solid #cdcdcd;
 	color: #448dbc;
 	font-size: 17px;
-	padding-top: 10px;
+	padding-top: 9px;
 	border-radius: 10px;
 	margin: 0 9px;
 }
@@ -572,6 +578,7 @@ li.sidebar__elem:before {
 
 .tags {}
 .tags a {
+	margin-right: 10px;
 	font-family: Montserrat;
 	font-weight: 800;
 	color: #ffffff;
@@ -2537,6 +2544,7 @@ li.sidebar__elem:before {
 .tour_list_blocks {
 	float: left;
 	width: 70%;
+	margin-bottom: 300px; 
 }
 
 .tour_list_blocks .content_header {
@@ -2614,6 +2622,92 @@ li.sidebar__elem:before {
 
 .tour_pagination {
 	margin: 30px 0;
+}
+
+
+/* 								Tours lead
+------------------------------------------------------------- */
+
+.tour_list_lead {
+	position: relative;
+	min-height: 256px;
+	background-color: #f5f8fb;
+}
+.tour_list_lead:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 299px;
+	height: 267px;
+	background-image: url(../../assets/i/operator.png);
+	background-repeat: no-repeat;
+	top: -155px;
+	right: 30%;
+}
+.tour_list_lead__container {
+	margin: 0 auto;
+	padding-top: 73px;
+	max-width: 690px;
+}
+.tour_list_lead__name {
+	position: relative;
+	font-family: Gilroy;
+	font-weight: 900;
+	font-size: 45px;
+	color: #09223a;
+	line-height: 40px;
+}
+.tour_list_lead__name:before {
+	content: '';
+    position: absolute;
+    top: -30px;
+    left: -40px;
+    width: 169px;
+    height: 112px;
+    background-image: url(../../assets/i/logo_title.png);
+}
+.tour_list_lead__text {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 17px;
+	color: #a4a3a3;
+	margin-top: 20px;
+}
+.tour_list_lead__left {
+	width: 390px;
+	float: left;
+}
+.tour_list_lead__right {
+	float: left;
+	width: 300px;
+}
+
+.tour_list_lead__input {
+	display: block;
+	width: 300px;
+	position: relative;
+	margin-top: 35px;
+}
+.tour_list_lead__input img {
+	position: absolute;
+	top: 17px;
+	right: 25px;
+}
+.tour_list_lead__input input {
+	width: 100%;
+	border-radius: 25px;
+	border: 1px solid #97a2ae;
+	padding: 15px 0 15px 25px;
+	background-color: rgba(255,255,255,0.6);
+}
+
+.tour_list_lead__input input[type="text"]{
+	font-size: 16px;
+	color: #97a2ae;
+}
+.tour_list_lead__input input[type="text"]::placeholder {
+	font-size: 16px;
+	color: #97a2ae;
 }
 
 /* ==========================================================================
@@ -2729,6 +2823,166 @@ li.sidebar__elem:before {
 
 .pop_place_block:hover .pop_place_block_info {
 	opacity: 1;
+}
+
+
+/* ==========================================================================
+	HOTEL PAGE
+========================================================================== */
+
+/* 								Hotel map
+------------------------------------------------------------- */
+
+.hotel_map {
+	
+}
+.hotel_map__container {
+	height: 385px;
+}
+
+/* 								Hotel info
+------------------------------------------------------------- */
+
+.hotel_info {
+	padding: 0 183px;
+	max-width: 1365px;
+	margin: 0 auto;
+}
+
+.hotel_info_banner {
+	position: relative;
+	float: left;
+	width: 50%;
+	min-height: 450px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px;
+}
+.hotel_info_banner__info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	/*height: 165px;*/
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+	background-color: rgba(9, 34, 58, 0.6);;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.hotel_info_banner__raiting {}
+
+.hotel_info_banner__name {
+	font-family: Montserrat;
+	font-weight: 800;
+	font-size: 21px;
+	color: #ffffff;
+	margin: 11px 0;
+}
+.hotel_info_banner__text {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+.hotel_info_descr { width: 50%; float: left; padding: 11px 34px;  }
+.hotel_info_descr__details {
+}
+.hotel_info_descr__detail {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 15px;
+	color: #5695be;
+	margin-bottom: 23px;
+	list-style: none;
+	column-count: 2;
+    column-gap: 20px;
+}
+.hotel_info_descr__value {
+	font-weight: 900;
+	color: #448dbc;
+	font-size: 17px;
+}
+.hotel_info_descr__services {
+	list-style: none;
+	column-count: 2;
+    column-gap: 20px;
+}
+.hotel_info_descr__service {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 13px;
+	color: #2b2a2a;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-bottom: 18px; 
+}
+.hotel_info_descr__service img {
+	margin-right: 15px;
+}
+
+/* 								Hotel hall
+------------------------------------------------------------- */
+
+.hotel_hall {
+	padding: 0 183px;
+	max-width: 1365px;
+	margin: 0 auto;
+}
+.hotel_hall_table {
+    overflow-x: scroll;
+}
+.hotel_hall_table table {
+	border-collapse: collapse;
+}
+.hotel_hall_table tr,
+.hotel_hall_table td,
+.hotel_hall_table th, {
+	border: 1px solid #dedfe5;
+}
+
+.hotel_hall_table thead td,
+.hotel_hall_table thead tr,
+.hotel_hall_table thead th {
+	border: none;
+}
+
+.hotel_hall_table td,
+.hotel_hall_table th {
+	padding: 5px 12px;
+}
+.hotel_hall_table__icon {
+	display: inline-block;
+    vertical-align: middle;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 45px;
+}
+.hotel_hall_table__name td, 
+.hotel_hall_table__name th {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 13px;
+	color: #2b2a2a;
+	text-align: center;
+	border: 1px solid #dedfe5;
+}
+.hotel_hall_table__name th {
+	font-weight: 900;
+	font-size: 17px;
+	color: #5695be;
+}
+.hotel_hall_table__room td, 
+.hotel_hall_table__room th {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 15px;
+	color: #5695be;
+	text-align: center;
 }
 
 /* ==========================================================================
@@ -3107,7 +3361,7 @@ li.gallery_nav__link:before {
 	margin: 30px 0;
 }
 .about_company_container {
-	max-width: 924;
+	max-width: 924px;
 	margin: 0 auto;
 }
 .about_company__parts {
@@ -3159,7 +3413,10 @@ li.gallery_nav__link:before {
 /* 								Services
 ------------------------------------------------------------- */
 
-.services {}
+.services {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 .services_section__header {
 	height: auto;
@@ -3209,17 +3466,17 @@ li.gallery_nav__link:before {
 }
 
 .services_section__descr {
-	min-height: 300px;
+	max-height: 427px;
 	background-color: rgba(0,0,0,0.5);
-	padding: 50px 12%;
+	padding: 90px 12%;
 }
 
 .services_section__block {
 	color: #ffffff;
-	display: inline-block;
+	display: block;
 	list-style: none;
-	margin-top: 20px;
-	margin-right: 40px;
+	column-count: 2;
+    column-gap: 20px;
 }
 .services_section__block li {
 	font-family: Montserrat;
@@ -3626,10 +3883,15 @@ li.gallery_nav__link:before {
 	.gallery_list { padding-left: 75px; padding-right: 75px; }
 	.gallery_nav { padding-left: 75px; padding-right: 75px; }
 	.tour_hotels { padding: 0 75px;	}
+	.hotel_info { padding: 0 75px;	}
+	.hotel_hall { padding: 0 75px;	}
 	.other_tours { padding-left: 75px; padding-right: 75px; }
 	.tour_hotel_banner { width: 100%; }
 	.tour_hotel_descr { width: 100%; margin-top: 43px; }
 	
+	.hotel_info_banner { width: 100%; margin-bottom: 35px;}
+	.hotel_info_descr { width: 100%; }
+
 	.article_intro { padding: 0 10%; max-width: 992px; }
 	.article_intro__container { padding: 130px 0; }
 	.article_content { padding: 0 10%; max-width: 992px; }
@@ -3734,6 +3996,8 @@ li.gallery_nav__link:before {
 	.tour_hotel_banner { width: 50%; }
 	.tour_hotel_descr { width: 50%; margin-top: 0; }
 	
+	.hotel_info_banner { width: 50%; }
+	.hotel_info_descr { width: 50%; }
 	
 	.gallery__slide_block { width: 50%; }
 
@@ -3793,6 +4057,8 @@ li.gallery_nav__link:before {
 	.tour_shedule { padding: 0 183px; }
 	.tour_includes { padding: 0 183px; }
 	.tour_hotels { padding: 0 183px; }
+	.hotel_info { padding: 0 183px; }
+	.hotel_hall { padding: 0 183px; }
 	.pop_places { padding-left: 183px; padding-right: 183px; }
 	.other_tours { padding-left: 183px; padding-right: 183px; }
 	.tour_gallery__header { padding-right: 183px; padding-left: 183px; }
@@ -3870,7 +4136,7 @@ li.gallery_nav__link:before {
 	}
 
 	.skyway_album { padding-right: 10%; padding-left: 10%; }
-	
+
 	.reviews { padding-right: 10%; padding-left: 10%; }
 	.reviews__block { width: 100%; }
 
@@ -3996,6 +4262,9 @@ li.gallery_nav__link:before {
 	.about_section__descr { padding-left: 10%; }
 	.about_section__parts { height: 407px; }
 
+	.services_section__block {	column-count: 1; }
+	.services_section__descr { max-height: 510px;}
+
 	.tour_shedule { padding-right: 10%; padding-left: 10%; }
 	.tour_shedule__name { font-size: 20px; padding-left: 22px; }
 	.tour_shedule__day_detail { padding-left: 22px; padding-right: 22px; }
@@ -4007,6 +4276,8 @@ li.gallery_nav__link:before {
 	.gallery_list { padding-left: 10%; padding-right: 10%; }
 	.gallery_nav { padding-left: 10%; padding-right: 10%; }
 	.tour_hotels { padding: 0 10%; }
+	.hotel_info { padding: 0 10%; }
+	.hotel_hall { padding: 0 10%; }
 	.other_tours { padding-left: 10%; padding-right: 10%; }
 	.pop_places { padding-left: 10%; padding-right: 10%; }
 	.tour_hotel_banner { width: 100%; }
@@ -4014,6 +4285,9 @@ li.gallery_nav__link:before {
 	
 	.tour_gallery__header { padding-right: 10%; padding-left: 10%; }
 	
+	.hotel_info_banner { width: 100%; margin-bottom: 35px;}
+	.hotel_info_descr { width: 100%; }
+
 	.article_intro { padding: 0 10%; }
 	.article_intro__container { padding-right: 0; padding-left: 0; }
 	.article_intro__title { padding-left: 0; padding-right: 0; }
@@ -4050,6 +4324,9 @@ li.gallery_nav__link:before {
 	.filter { width: 20%; display: none; }
 	.tour_list_blocks { width: 100%; }
 	.tours_list { width: 100%; padding: 0 10%; }
+	.tour_list_lead__container { padding-left: 10%; padding-right: 10%; padding-bottom: 75px; }
+	.tour_list_lead__left { width: 100%; }
+	.tour_list_lead__right { width: 100%; }
 
 	.pagination__first_blocks .pagination__page:nth-child(3) { display: none; }
 	.pagination__last_blocks .pagination__page:nth-child(1) { display: none; }
@@ -4210,6 +4487,8 @@ li.gallery_nav__link:before {
 	.tour_shedule { padding-left: 5%; padding-right: 5%; }
 	.tour_includes { padding-left: 5%; padding-right: 5%; }
 	.tour_hotels { padding-left: 5%; padding-right: 5%; }
+	.hotel_info { padding-left: 5%; padding-right: 5%; }
+	.hotel_hall { padding-left: 5%; padding-right: 5%; }
 	.other_tours { padding-left: 5%; padding-right: 5%; }
 	.pop_places { padding-left: 5%; padding-right: 5%; }
 	.reviews { padding-left: 5%; padding-right: 5%; }
@@ -4234,6 +4513,9 @@ li.gallery_nav__link:before {
 	.tour_hotel_banner { min-height: 330px; }
 	.tour_hotel_banner__info { height: 120px; }
 	.tour_arrow_switch { display: none; }
+	
+	.hotel_info_descr__services { column-count: 1; }
+	.hotel_info_descr { padding-left: 5px; padding-right: 5px; }
 
 	.main_footer__menu { height: 840px; }
 }
@@ -4309,6 +4591,12 @@ li.gallery_nav__link:before {
 	.tour_hotel_banner { min-height: 270px; }
 	.tour_hotel_banner__info { padding-top: 23px; padding-left: 23px; }
 	
+	.hotel_info_banner__info { height: 100%; }
+
+	.tour_list_lead__name { font-size: 35px; }
+	.tour_list_lead:after { right: unset; }
+	.tour_list_lead__input { width: 250px; }
+
 	.gallery__container { height: 280px; }
 
 	.subscribe_block { padding: 0; }
