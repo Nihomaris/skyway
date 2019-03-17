@@ -271,7 +271,6 @@ input[type="text"]:focus {
 
 .switch_container {}
 .switcher {
-	cursor: pointer;
     box-sizing: border-box;
     display: inline-block;
     vertical-align: middle;
@@ -307,7 +306,7 @@ input[type="text"]:focus {
 
 
 .rating_stars { display: inline-block; }
-.rating_star {  }
+.rating_star { display: inline-block; }
 
 /* 								Info icons
 ------------------------------------------------------------- */
@@ -2324,15 +2323,29 @@ li.sidebar__elem:before {
 	max-width: 1365px;
 	margin: 0 auto;
 }
-
+/*.tour_hotels__slider {
+	overflow: hidden;
+}*/
 .tour_hotel_banner {
 	position: relative;
 	float: left;
 	width: 50%;
 	min-height: 450px;
 	background-repeat: no-repeat;
-	background-size: cover;
 	border-radius: 10px;
+	overflow: hidden;
+}
+.tour_hotels__photo_slider {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+.tour_hotels__photo {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
 }
 .tour_hotel_banner__info {
 	position: absolute;
@@ -3042,10 +3055,16 @@ li.sidebar__elem:before {
 }
 
 .gallery__bg:hover { opacity: 1; }
-.gallery__photo--half_row { height: 50%; } 
-.gallery__photo--full_row { height: 100%; }
-.gallery__photo--full_col { width: 100%; }
-.gallery__photo--half_col { width: 50%; float: left; }
+
+.gallery__photo:nth-child(2) {
+	height: 100%; width: 50%; float: right;
+}
+.gallery__photo:nth-child(1),
+.gallery__photo:nth-child(3) {
+	height: 50%; width: 50%; float: left;
+}
+
+
 
 
 /* 								Gallery nav

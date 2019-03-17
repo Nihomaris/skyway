@@ -147,33 +147,35 @@
             <div class="gallery__container">
                 <div id="gallery-slider" class="gallery__slide_container">
                     <div class="gallery__slide_block">
-                        <div class="gallery__photos_col">
-                            <div style="background-image: url(./assets/i/gallery1.png);" class="gallery__photo gallery__photo--half_row"><a rel="group1" href="./assets/i/gallery1.png"><div class="gallery__bg"></div></a></div>
-                            <div style="background-image: url(./assets/i/gallery2.png);" class="gallery__photo gallery__photo--half_row"><a rel="group1" href="./assets/i/gallery2.png"><div class="gallery__bg"></div></a></div>
-                        </div>
-                        <div class="gallery__photos_col">
-                            <div style="background-image: url(./assets/i/gallery3.png);" class="gallery__photo gallery__photo--full_row"><a rel="group1" href="./assets/i/gallery3.png"><div class="gallery__bg"></div></a></div>
-                        </div>
+                        
+                        <div style="background-image: url(./assets/i/gallery1.png);" class="gallery__photo"><a rel="group1" href="./assets/i/gallery1.png"><div class="gallery__bg"></div></a></div>
+                        
+                         <div style="background-image: url(./assets/i/gallery3.png);" class="gallery__photo"><a rel="group1" href="./assets/i/gallery3.png"><div class="gallery__bg"></div></a></div>
+        
+                        <div style="background-image: url(./assets/i/gallery2.png);" class="gallery__photo"><a rel="group1" href="./assets/i/gallery2.png"><div class="gallery__bg"></div></a></div>
+                    
+                       
                         <div class="clear"></div>
                     </div>
                     <div class="gallery__slide_block">
-                        <div class="gallery__photos_row">
-                            <div style="background-image: url(./assets/i/gallery4.png);" class="gallery__photo gallery__photo--full_col"><a rel="group1" href="./assets/i/gallery4.png"><div class="gallery__bg"></div></a></div>
-                        </div>
-                        <div class="gallery__photos_row">
-                            <div style="background-image: url(./assets/i/gallery5.png);" class="gallery__photo gallery__photo--half_col"><a rel="group1" href="./assets/i/gallery5.png"><div class="gallery__bg"></div></a></div>
-                            <div style="background-image: url(./assets/i/gallery6.png);" class="gallery__photo gallery__photo--half_col"><a rel="group1" href="./assets/i/gallery6.png"><div class="gallery__bg"></div></a></div>
+                            <div style="background-image: url(./assets/i/gallery4.png);" class="gallery__photo"><a rel="group1" href="./assets/i/gallery4.png"><div class="gallery__bg"></div></a></div>
+                        
+                            <div style="background-image: url(./assets/i/gallery5.png);" class="gallery__photo"><a rel="group1" href="./assets/i/gallery5.png"><div class="gallery__bg"></div></a></div>
+        
+                            <div style="background-image: url(./assets/i/gallery6.png);" class="gallery__photo"><a rel="group1" href="./assets/i/gallery6.png"><div class="gallery__bg"></div></a></div>
+        
                             <div class="clear"></div>
-                        </div>
+                    
                     </div>
                     <div class="gallery__slide_block">
-                        <div class="gallery__photos_col">
-                            <div style="background-image: url(./assets/i/gallery1.png);" class="gallery__photo gallery__photo--half_row"><a rel="group1" href="./assets/i/gallery1.png"><div class="gallery__bg"></div></a></div>
-                            <div style="background-image: url(./assets/i/gallery2.png);" class="gallery__photo gallery__photo--half_row"><a rel="group1" href="./assets/i/gallery2.png"><div class="gallery__bg"></div></a></div>
-                        </div>
-                        <div class="gallery__photos_col">
-                            <div style="background-image: url(./assets/i/gallery3.png);" class="gallery__photo gallery__photo--full_row"><a rel="group1" href="./assets/i/gallery3.png"><div class="gallery__bg"></div></a></div>
-                        </div>
+                        
+                        <div style="background-image: url(./assets/i/gallery1.png);" class="gallery__photo"><a rel="group1" href="./assets/i/gallery1.png"><div class="gallery__bg"></div></a></div>
+                        
+                         <div style="background-image: url(./assets/i/gallery3.png);" class="gallery__photo"><a rel="group1" href="./assets/i/gallery3.png"><div class="gallery__bg"></div></a></div>
+        
+                        <div style="background-image: url(./assets/i/gallery2.png);" class="gallery__photo"><a rel="group1" href="./assets/i/gallery2.png"><div class="gallery__bg"></div></a></div>
+                    
+                       
                         <div class="clear"></div>
                     </div>
                    
@@ -352,63 +354,176 @@
                     <h2 class="content_header__name"><nobr>Dostyk hotel</nobr></h2>
                 </div>
                 <div class="content_header__right">
-                    <div class="content_header__arrow content_header__arrow--disable"><img src="./assets/i/arrow_blue_left_disable.png" alt=""></div>
-                    <div class="content_header__arrow"><img src="./assets/i/arrow_blue_right.png" alt=""></div>
-                </div>
+                <div id="hotel-prev-slide" class="content_header__arrow content_header__arrow--left"></div>
+                <div id="hotel-next-slide" class="content_header__arrow content_header__arrow--right"></div>
+            </div>
             </header>
-            
-            <div class="tour_hotels__container">
-                <div class="tour_hotel_banner" style="background-image: url(./assets/i/hotel1.png);">
-                    <div class="tour_hotel_banner__info">
-                        <div class="tour_hotel_banner__raiting">
-                            <div class="tour_hotel_banner__label">
-                                <p class="montserrat_black">Рейтинг:</p>
+            <div id="tour-hotel-slider" class="tour_hotels__slider">
+                <div class="tour_hotels__container">
+                    <div class="tour_hotel_banner">
+                        <div id="hotels-photo-slider" class="tour_hotels__photo_slider">
+                            <div class="tour_hotels__photo" style="background-image: url(./assets/i/hotel1.png);"></div>
+                            <div class="tour_hotels__photo" style="background-image: url(./assets/i/hotel1.png);"></div>
+                            <div class="tour_hotels__photo" style="background-image: url(./assets/i/hotel1.png);"></div>
+                        </div>
+                        <div class="tour_hotel_banner__info">
+                            <div class="tour_hotel_banner__raiting">
+                                <div class="tour_hotel_banner__label">
+                                    <p class="montserrat_black">Рейтинг:</p>
+                                </div>
+                                <div class="rating_stars">
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                </div>
                             </div>
-                            <div class="rating_stars">
-                                <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
-                                <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
-                                <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
-                                <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
-                                <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                            <div id="hotel-photo-switchers" class="switch_container tour_switch">
+                                
                             </div>
-                        </div>
-                        <div class="switch_container tour_switch">
-                            <span class="switcher switcher--active"></span>
-                            <span class="switcher"></span>
-                            <span class="switcher"></span>
-                            <span class="switcher"></span>
-                        </div>
 
-                        <div class="arrow_switch_container tour_arrow_switch">
-                            <div class="arrow_switcher"><img src="./assets/i/arrow_l.png" alt="Prev"></div>
-                            <div class="arrow_switcher"><img src="./assets/i/arrow_r.png" alt="Next"></div>
-                        </div>
+                            <div class="arrow_switch_container tour_arrow_switch">
+                                <div id="photo-prev-slide" class="arrow_switcher"><img src="./assets/i/arrow_l.png" alt="Prev"></div>
+                                <div id="photo-next-slide" class="arrow_switcher"><img src="./assets/i/arrow_r.png" alt="Next"></div>
+                            </div>
 
+                        </div>
                     </div>
+                    <div class="tour_hotel_descr">
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Расположение:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Алматы</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Интернет:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Wi-Fi бесплатно</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Еда:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Бар Bastau, ресторан Orange</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Основное:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">72 номера, круглосуточный сервис, банкомат, лифт, сувенирный магазин, камера хранения, хона для курящих</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Описание отеля Dostyk hotel:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="tour_hotel_descr">
-                    <div class="tour_hotel_descr__block">
-                        <h4 class="montserrat_black tour_hotel_descr__label">Расположение:</h4>
-                        <p class="montserrat_light tour_hotel_descr__text">Алматы</p>
+                <div class="tour_hotels__container">
+                    <div class="tour_hotel_banner">
+                        <div id="hotels-photo-slider" class="tour_hotels__photo_slider">
+                            <div class="tour_hotels__photo" style="background-image: url(./assets/i/hotel1.png);"></div>
+                            <div class="tour_hotels__photo" style="background-image: url(./assets/i/hotel1.png);"></div>
+                            <div class="tour_hotels__photo" style="background-image: url(./assets/i/hotel1.png);"></div>
+                        </div>
+                        <div class="tour_hotel_banner__info">
+                            <div class="tour_hotel_banner__raiting">
+                                <div class="tour_hotel_banner__label">
+                                    <p class="montserrat_black">Рейтинг:</p>
+                                </div>
+                                <div class="rating_stars">
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                </div>
+                            </div>
+                            <div id="hotel-photo-switchers" class="switch_container tour_switch">
+                                
+                            </div>
+
+                            <div class="arrow_switch_container tour_arrow_switch">
+                                <div id="photo-prev-slide" class="arrow_switcher"><img src="./assets/i/arrow_l.png" alt="Prev"></div>
+                                <div id="photo-next-slide" class="arrow_switcher"><img src="./assets/i/arrow_r.png" alt="Next"></div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="tour_hotel_descr__block">
-                        <h4 class="montserrat_black tour_hotel_descr__label">Интернет:</h4>
-                        <p class="montserrat_light tour_hotel_descr__text">Wi-Fi бесплатно</p>
+                    <div class="tour_hotel_descr">
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Расположение:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Алматы</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Интернет:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Wi-Fi бесплатно</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Еда:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Бар Bastau, ресторан Orange</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Основное:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">72 номера, круглосуточный сервис, банкомат, лифт, сувенирный магазин, камера хранения, хона для курящих</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Описание отеля Dostyk hotel:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        </div>
                     </div>
-                    <div class="tour_hotel_descr__block">
-                        <h4 class="montserrat_black tour_hotel_descr__label">Еда:</h4>
-                        <p class="montserrat_light tour_hotel_descr__text">Бар Bastau, ресторан Orange</p>
-                    </div>
-                    <div class="tour_hotel_descr__block">
-                        <h4 class="montserrat_black tour_hotel_descr__label">Основное:</h4>
-                        <p class="montserrat_light tour_hotel_descr__text">72 номера, круглосуточный сервис, банкомат, лифт, сувенирный магазин, камера хранения, хона для курящих</p>
-                    </div>
-                    <div class="tour_hotel_descr__block">
-                        <h4 class="montserrat_black tour_hotel_descr__label">Описание отеля Dostyk hotel:</h4>
-                        <p class="montserrat_light tour_hotel_descr__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                    </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
+                <div class="tour_hotels__container">
+                    <div class="tour_hotel_banner">
+                        <div id="hotels-photo-slider" class="tour_hotels__photo_slider">
+                            <div class="tour_hotels__photo" style="background-image: url(./assets/i/hotel1.png);"></div>
+                            <div class="tour_hotels__photo" style="background-image: url(./assets/i/hotel1.png);"></div>
+                            <div class="tour_hotels__photo" style="background-image: url(./assets/i/hotel1.png);"></div>
+                        </div>
+                        <div class="tour_hotel_banner__info">
+                            <div class="tour_hotel_banner__raiting">
+                                <div class="tour_hotel_banner__label">
+                                    <p class="montserrat_black">Рейтинг:</p>
+                                </div>
+                                <div class="rating_stars">
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                    <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                </div>
+                            </div>
+                            <div id="hotel-photo-switchers" class="switch_container tour_switch">
+                                
+                            </div>
+
+                            <div class="arrow_switch_container tour_arrow_switch">
+                                <div id="photo-prev-slide" class="arrow_switcher"><img src="./assets/i/arrow_l.png" alt="Prev"></div>
+                                <div id="photo-next-slide" class="arrow_switcher"><img src="./assets/i/arrow_r.png" alt="Next"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tour_hotel_descr">
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Расположение:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Алматы</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Интернет:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Wi-Fi бесплатно</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Еда:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Бар Bastau, ресторан Orange</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Основное:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">72 номера, круглосуточный сервис, банкомат, лифт, сувенирный магазин, камера хранения, хона для курящих</p>
+                        </div>
+                        <div class="tour_hotel_descr__block">
+                            <h4 class="montserrat_black tour_hotel_descr__label">Описание отеля Dostyk hotel:</h4>
+                            <p class="montserrat_light tour_hotel_descr__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
             </div>
         </section>
 

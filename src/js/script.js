@@ -322,10 +322,10 @@ jQuery(document).ready(function($) {
  	})
 
  	$('#dest-prev-slide').on('click', function() {
-		$('.slick-prev.slick-arrow').click();
+		$('#dest-block-slider .slick-prev').click();
  	})
  	$('#dest-next-slide').on('click', function() {
-		$('.slick-next.slick-arrow').click();
+		$('#dest-block-slider .slick-next').click();
  	})
 
 });
@@ -356,9 +356,7 @@ jQuery(document).ready(function($) {
 			$arrow.addClass('tour_shedule__arrow--active');
 			$detailBlock.css('display', 'block').addClass('tour_shedule__day_detail--open');
 			$separator.css('display', 'block');
-		}
-		
-		
+		}	
 	})
 	/* Раскрыть все детали */
 	$('#all_tour_btn').on('click', function() {
@@ -399,6 +397,87 @@ jQuery(document).ready(function($) {
 		$('#lead-form').hide();
 	})
 
+
+
+	// Слайдер фотографий в блоке отеля
+	var photoBlocks = $('#hotels-photo-slider').children();
+	var activePhotoNum = 0;
+    var photoObject = [];
+
+    if(photoBlocks.length) {
+
+		if(photoBlocks.length > 1) {
+			
+			/* Отображаем контроллеры */
+			$('#main-tour-switchers').show();
+			$('#main-tour-controller').show();
+
+			photoBlocks.map(function(i, item) { 				
+				/* Созд */
+				var switcher = $('<span class="switcher main_tour_block_switcher"></span>');
+				if(i === 0) { switcher.addClass('switcher--active'); }
+
+				$('#hotel-photo-switchers').append(switcher);
+				photoObject.push({switcher: switcher})
+			})
+
+			$('#hotels-photo-slider').slick({
+				infinite: true,
+		  		slidesToShow: 1,
+		 		slidesToScroll: 1
+		 	})
+
+			$('#photo-prev-slide, #photo-next-slide').on('click', function() {
+		
+				var id = $(this).attr('id');
+				var currenPhotoNum = activePhotoNum;
+				var currentPhoto = photoObject;
+				var nextPhotoNum; 
+
+				if(id === 'photo-prev-slide') {
+
+					if(activePhotoNum === 0) {
+						nextPhotoNum = currentPhoto.length - 1;
+					} else {
+						nextPhotoNum = currenPhotoNum - 1; 
+					}
+					$('#hotels-photo-slider .slick-prev').click();
+
+				} 
+				if (id === 'photo-next-slide') {
+
+					if(activePhotoNum === currentPhoto.length - 1) {
+						nextPhotoNum = 0;
+					} else {
+						nextPhotoNum = currenPhotoNum + 1;
+					}
+					$('#hotels-photo-slider .slick-next').click();
+				} 
+
+				currentPhoto[currenPhotoNum].switcher.removeClass('switcher--active');
+				currentPhoto[nextPhotoNum].switcher.addClass('switcher--active');
+
+				activePhotoNum = nextPhotoNum;
+			})
+		}
+	}
+
+	// Слайдер блоков отелей
+	$('#tour-hotel-slider').slick({
+		infinite: true,
+  		slidesToShow: 1,
+ 		slidesToScroll: 1
+ 	})
+	
+	$('#hotel-prev-slide').on('click', function() {
+		$('#tour-hotel-slider .slick-prev').click();
+	})
+	$('#hotel-next-slide').on('click', function() {
+		$('#tour-hotel-slider .slick-next').click();
+	})
+	
+	
+
 });
 
 
@@ -427,10 +506,10 @@ jQuery(document).ready(function($) {
  	})
 
 	 	$('#gallery-prev-slide').on('click', function() {
-			$('.slick-prev.slick-arrow').click();
+			$('#gallery-slider .slick-prev').click();
 	 	})
 	 	$('#gallery-next-slide').on('click', function() {
-			$('.slick-next.slick-arrow').click();
+			$('#gallery-slider .slick-next').click();
 	 	})
 
 });
