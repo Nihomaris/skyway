@@ -41,7 +41,7 @@
                         <span class="banner__path banner__path--current">Туры и экскурсии</span>
                     </div>
                     <div class="banner_slider_container">
-                        <img src=s"./assets/i/logo_title_small.png" alt="">
+                        <img src="./assets/i/logo_title_small.png" alt="">
                         <h1 class="gilroy_bolder banner_slider__name">Туры и экскурсии</h1>
                         <div class="banner__separator"></div>                     
                     </div>                               
@@ -71,48 +71,51 @@
         </section>
 
         <section class="tours_list">
-            <aside class="filter">
+             <div id="tour-filter-btn" class="filter_toggle">
+                <p>Открыть параметры поиска</p>
+            </div>
+            <aside id="tour-filter" class="filter">
                 <div class="filter__container">
                     <div class="filter__block">
 
-                        <a class="filter__elem filter__elem--title filter__elem--active" href="javascript:void(0);">Туры</a>
-                        <a class="filter__elem filter__elem--title filter__elem--disable" href="javascript:void(0);">Экскурсии</a>
+                        <a class="filter__elem filter__elem--title filter__elem--active" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Туры</span></a>
+                        <a class="filter__elem filter__elem--title filter__elem--disable" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Экскурсии</span></a>
 
                         <div class="filter__space"></div>
                         
                         <ul>
-                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);">Казахстан</a></li>
-                            <li><a class="filter__elem filter__elem--active" href="javascript:void(0);">Астана</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Алматы</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Шымкент</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Туркестан</a></li>
+                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Казахстан</span></a></li>
+                            <li><a class="filter__elem filter__elem--active" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Астана</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Алматы</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Шымкент</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Туркестан</span></a></li>
                         </ul>
                         <ul>
-                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);">Узбекистан</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Ташкент</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Самарканд</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Бухара</a></li>
+                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Узбекистан</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Ташкент</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Самарканд</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Бухара</span></a></li>
                         </ul>
                         <ul>
-                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);">Кыргызстан</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Бишкек</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Ош</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Алаколь</a></li>
+                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Кыргызстан</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Бишкек</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Ош</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Алаколь</span></a></li>
                         </ul>
                         
                         <div class="filter__space"></div>
 
                         <ul>
-                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);">Тип тура</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Eco</a></li>
-                            <li><a class="filter__elem filter__elem--active" href="javascript:void(0);">Culture</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">City</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Active</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">History</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Gastro</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Science</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Religion</a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);">Event</a></li>
+                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Тип тура</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Eco</span></a></li>
+                            <li><a class="filter__elem filter__elem--active" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Culture</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>City</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Active</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>History</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Gastro</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Science</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Religion</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Event</span></a></li>
                         </ul>
                         
                     </div>
@@ -280,14 +283,14 @@
         
            <div class="blog_section__acticles">
                <div class="blog_section__acticle">
+                  <div class="blog_section__date">
+                       11/01/2018
+                   </div>
                    <div class="blog_section__image" style="background-image: url(./assets/i/article1.png);">
                        <div class="blog_section__btn">Читать статью <img src="./assets/i/arrow_r.png" alt="arrow"></div>
                    </div>
                    <div class="blog_section__name">
                         Что должен знать<br>турист, выезжая в тур
-                   </div>
-                   <div class="blog_section__date">
-                       11/01/2018
                    </div>
                    <div class="blog_section__descr">
                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
@@ -296,14 +299,14 @@
           
          
                <div class="blog_section__acticle">
+                   <div class="blog_section__date">
+                       11/01/2018
+                   </div>
                    <div class="blog_section__image" style="background-image: url(./assets/i/article2.png);">
                        <div class="blog_section__btn">Читать статью <img src="./assets/i/arrow_r.png" alt="arrow"></div>
                    </div>
                    <div class="blog_section__name">
                         Как выжить в лесу<br>Полезные советы
-                   </div>
-                   <div class="blog_section__date">
-                       11/01/2018
                    </div>
                    <div class="blog_section__descr">
                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
@@ -312,14 +315,14 @@
            
           
                <div class="blog_section__acticle blog_section__acticle--last">
+                    <div class="blog_section__date">
+                        11/01/2018
+                    </div>
                    <div class="blog_section__image" style="background-image: url(./assets/i/article3.png);">
                        <div class="blog_section__btn">Читать статью <img src="./assets/i/arrow_r.png" alt="arrow"></div>
                    </div>
                    <div class="blog_section__name">
                         Отдых вместе с детьми<br>Полезно знать
-                   </div>
-                   <div class="blog_section__date">
-                       11/01/2018
                    </div>
                    <div class="blog_section__descr">
                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>

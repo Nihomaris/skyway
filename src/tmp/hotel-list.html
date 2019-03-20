@@ -17,11 +17,11 @@
                     <div class="banner__breadcrumbs">
                         <span class="banner__path">Главная</span>
                         <span class="banner__path_ico"><img src="./assets/i/triangle.png" alt=""></span>
-                        <span class="banner__path banner__path--current">Туры и экскурсии</span>
+                        <span class="banner__path banner__path--current">Отели</span>
                     </div>
                     <div class="banner_slider_container">
-                        <img src="./assets/i/logo_title_small.png" alt="">
-                        <h1 class="gilroy_bolder banner_slider__name">Туры и экскурсии</h1>
+                        <img src=s"./assets/i/logo_title_small.png" alt="">
+                        <h1 class="gilroy_bolder banner_slider__name">Отели</h1>
                         <div class="banner__separator"></div>                     
                     </div>                               
                 </div>
@@ -32,18 +32,20 @@
         </section>
 
         <section class="tours_list">
-             <div id="tour-filter-btn" class="filter_toggle">
-                <p>Открыть параметры поиска</p>
-            </div>
-            <aside id="tour-filter" class="filter">
+            <aside class="filter">
                 <div class="filter__container">
                     <div class="filter__block">
 
-                        <a class="filter__elem filter__elem--title filter__elem--active" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Туры</span></a>
-                        <a class="filter__elem filter__elem--title filter__elem--disable" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Экскурсии</span></a>
+                        <ul>
+                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Количество звезд</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>2*</span></a></li>
+                            <li><a class="filter__elem filter__elem--active" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>3*</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>4*</span></a></li>
+                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>5*</span></a></li>
+                        </ul>
 
                         <div class="filter__space"></div>
-                        
+
                         <ul>
                             <li><a class="filter__elem filter__elem--title" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Казахстан</span></a></li>
                             <li><a class="filter__elem filter__elem--active" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Астана</span></a></li>
@@ -64,21 +66,6 @@
                             <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Алаколь</span></a></li>
                         </ul>
                         
-                        <div class="filter__space"></div>
-
-                        <ul>
-                            <li><a class="filter__elem filter__elem--title" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Тип тура</span></a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Eco</span></a></li>
-                            <li><a class="filter__elem filter__elem--active" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Culture</span></a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>City</span></a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Active</span></a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>History</span></a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Gastro</span></a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Science</span></a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Religion</span></a></li>
-                            <li><a class="filter__elem" href="javascript:void(0);"><input class="filter__input" type="checkbox"><span>Event</span></a></li>
-                        </ul>
-                        
                     </div>
                 </div>
                 <div id="sidebar-close" class="filter_close">x</div>
@@ -87,81 +74,117 @@
                 <header class="content_header">
                     <div class="content_header__left">
                         <h3 class="content_header__intro">Skyway</h3>
-                        <h2 class="content_header__name">Туры и экскурсии</h2>
+                        <h2 class="content_header__name">Отели</h2>
                     </div>
                 </header>
                 <div class="tour_list_blocks__container">
 
                     <a href="#" class="tour_list_block">
-                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/hotel1.png);">
                             <div class="tour_list_block_info">
                                 <div class="tour_list_block_text">
-                                 6 дней<span>|</span>Тур по Астане
+                                 <div class="rating_stars">
+                                     <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                     <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                     <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                     <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                     <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                 </div><span>|</span>Туркестан
                                 </div>
                             </div>         
                         </div>
                         <div class="tour_list_block__bottom">
-                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                            <h2 class="tour_list_block__name">InterContinental Almaty</h2>
                         </div>
                     </a>
                     <a href="#" class="tour_list_block">
-                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/hotel1.png);">
                             <div class="tour_list_block_info">
                                 <div class="tour_list_block_text">
-                                 6 дней<span>|</span>Тур по Астане
+                                 <div class="rating_stars">
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                  </div><span>|</span>Астана
                                 </div>
                             </div>         
                         </div>
                         <div class="tour_list_block__bottom">
-                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                            <h2 class="tour_list_block__name">InterContinental Almaty</h2>
                         </div>
                     </a>
                     <a href="#" class="tour_list_block">
-                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/hotel1.png);">
                             <div class="tour_list_block_info">
                                 <div class="tour_list_block_text">
-                                 6 дней<span>|</span>Тур по Астане
+                                 <div class="rating_stars">
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                  </div><span>|</span>Алматы
                                 </div>
                             </div>         
                         </div>
                         <div class="tour_list_block__bottom">
-                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                            <h2 class="tour_list_block__name">InterContinental Almaty</h2>
                         </div>
                     </a>
                     <a href="#" class="tour_list_block">
-                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/hotel1.png);">
                             <div class="tour_list_block_info">
                                 <div class="tour_list_block_text">
-                                 6 дней<span>|</span>Тур по Астане
+                                 <div class="rating_stars">
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                  </div><span>|</span>Астана
                                 </div>
                             </div>         
                         </div>
                         <div class="tour_list_block__bottom">
-                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                            <h2 class="tour_list_block__name">InterContinental Almaty</h2>
                         </div>
                     </a>
                     <a href="#" class="tour_list_block">
-                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/hotel1.png);">
                             <div class="tour_list_block_info">
                                 <div class="tour_list_block_text">
-                                 6 дней<span>|</span>Тур по Астане
+                                 <div class="rating_stars">
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                  </div><span>|</span>Шымкент
                                 </div>
                             </div>         
                         </div>
                         <div class="tour_list_block__bottom">
-                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                            <h2 class="tour_list_block__name">InterContinental Almaty</h2>
                         </div>
                     </a>
                     <a href="#" class="tour_list_block">
-                        <div class="tour_list_block__top" style="background-image: url(./assets/i/banner3.png);">
+                        <div class="tour_list_block__top" style="background-image: url(./assets/i/hotel1.png);">
                             <div class="tour_list_block_info">
                                 <div class="tour_list_block_text">
-                                 6 дней<span>|</span>Тур по Астане
+                                 <div class="rating_stars">
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                      <span class="rating_star"><img src="./assets/i/star.png" alt="star"></span>
+                                  </div><span>|</span>Астана
                                 </div>
                             </div>         
                         </div>
                         <div class="tour_list_block__bottom">
-                            <h2 class="tour_list_block__name">Астана - Сердце Казахстана</h2>
+                            <h2 class="tour_list_block__name">InterContinental Almaty</h2>
                         </div>
                     </a>
 

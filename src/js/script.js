@@ -400,66 +400,86 @@ jQuery(document).ready(function($) {
 
 
 	// Слайдер фотографий в блоке отеля
-	var photoBlocks = $('#hotels-photo-slider').children();
-	var activePhotoNum = 0;
-    var photoObject = [];
+	$('.tour_hotels__photo_slider').each(function(i, item) {
 
-    if(photoBlocks.length) {
+		var photoContainer = $(item).parent();
+		var photoBlocks = $(item).children();
+		var activePhotoNum = 0;
+	    var photoObject = [];
 
-		if(photoBlocks.length > 1) {
-			
-			/* Отображаем контроллеры */
-			$('#main-tour-switchers').show();
-			$('#main-tour-controller').show();
+	    if(photoBlocks.length) {
 
-			photoBlocks.map(function(i, item) { 				
-				/* Созд */
-				var switcher = $('<span class="switcher main_tour_block_switcher"></span>');
-				if(i === 0) { switcher.addClass('switcher--active'); }
+			if(photoBlocks.length > 1) {
+				
+				/* Отображаем контроллеры */
+				photoContainer.find('.hotel_switch').show();
+				photoContainer.find('.hotel_arrow_switch').show();
 
-				$('#hotel-photo-switchers').append(switcher);
-				photoObject.push({switcher: switcher})
-			})
+				photoBlocks.map(function(i, item) { 				
+					/* Созд */
+					var switcher = $('<span class="switcher main_tour_block_switcher"></span>');
+					if(i === 0) { switcher.addClass('switcher--active'); }
 
-			$('#hotels-photo-slider').slick({
-				infinite: true,
-		  		slidesToShow: 1,
-		 		slidesToScroll: 1
-		 	})
+					photoContainer.find('.hotel_switch').append(switcher);
+					photoObject.push({switcher: switcher})
+				})
 
-			$('#photo-prev-slide, #photo-next-slide').on('click', function() {
-		
-				var id = $(this).attr('id');
-				var currenPhotoNum = activePhotoNum;
-				var currentPhoto = photoObject;
-				var nextPhotoNum; 
+				photoContainer.find('.tour_hotels__photo_slider').slick({
+					infinite: true,
+			  		slidesToShow: 1,
+			 		slidesToScroll: 1
+			 	})
 
-				if(id === 'photo-prev-slide') {
+				photoContainer.find('.arrow_switcher--left').on('click', function() {
+					photoContainer.find('.slick-prev').click();
+					activePhotoNum = prevHotelPhoto(activePhotoNum, photoObject);
+					
+				})
 
-					if(activePhotoNum === 0) {
-						nextPhotoNum = currentPhoto.length - 1;
-					} else {
-						nextPhotoNum = currenPhotoNum - 1; 
-					}
-					$('#hotels-photo-slider .slick-prev').click();
-
-				} 
-				if (id === 'photo-next-slide') {
-
-					if(activePhotoNum === currentPhoto.length - 1) {
-						nextPhotoNum = 0;
-					} else {
-						nextPhotoNum = currenPhotoNum + 1;
-					}
-					$('#hotels-photo-slider .slick-next').click();
-				} 
-
-				currentPhoto[currenPhotoNum].switcher.removeClass('switcher--active');
-				currentPhoto[nextPhotoNum].switcher.addClass('switcher--active');
-
-				activePhotoNum = nextPhotoNum;
-			})
+				photoContainer.find('.arrow_switcher--right').on('click', function() {
+					photoContainer.find('.slick-next').click();
+					activePhotoNum = nextHotelPhoto(activePhotoNum, photoObject)
+					
+				})
+			}
 		}
+	
+	})
+
+	function prevHotelPhoto(activePhotoNum, photoObject) {
+
+		var currenPhotoNum = activePhotoNum;
+		var currentPhoto = photoObject;
+		var nextPhotoNum; 
+
+		if(activePhotoNum === 0) {
+			nextPhotoNum = currentPhoto.length - 1;
+		} else {
+			nextPhotoNum = currenPhotoNum - 1; 
+		}
+
+		currentPhoto[currenPhotoNum].switcher.removeClass('switcher--active');
+		currentPhoto[nextPhotoNum].switcher.addClass('switcher--active');
+
+		return nextPhotoNum;
+	}
+
+	function nextHotelPhoto(activePhotoNum, photoObject) {
+
+		var currenPhotoNum = activePhotoNum;
+		var currentPhoto = photoObject;
+		var nextPhotoNum; 
+
+		if(activePhotoNum === currentPhoto.length - 1) {
+			nextPhotoNum = 0;
+		} else {
+			nextPhotoNum = currenPhotoNum + 1;
+		}
+			
+		currentPhoto[currenPhotoNum].switcher.removeClass('switcher--active');
+		currentPhoto[nextPhotoNum].switcher.addClass('switcher--active');
+
+		return nextPhotoNum;
 	}
 
 	// Слайдер блоков отелей
@@ -555,6 +575,38 @@ jQuery(document).ready(function($) {
 });
 
 
+
+
+/* ==========================================================================
+	TOUR LIST
+========================================================================== */
+
+
+jQuery(document).ready(function($) {
+
+	// Переключение окна фильтров туров
+	$('#tour-filter-btn').on('click', function() {
+		
+		var status = $(this).find('.top_banner_place--active');
+		
+		if(status.length) {
+			$('#tour-filter').hide();
+			$('#sidebar-close').hide();
+			status.removeClass('top_banner_place--active');
+		} else {
+			$('#tour-filter').show();
+			$('#sidebar-close').show();
+			status.addClass('top_banner_place--active');
+		}
+		
+	})
+
+	$('#sidebar-close').on('click', function() {
+		$('#tour-filter').hide();
+		$('#tour-filter-btn').removeClass('top_banner_place--active');
+	})
+	
+})
 
 
 /* ==========================================================================
