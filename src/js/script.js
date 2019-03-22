@@ -13,6 +13,12 @@
 
 	BLOG
 
+	PLACE LIST
+
+	HOTEL LIST
+
+	TOUR LIST
+
 	VISA
 --------------------------------------------------------------*/
 
@@ -575,7 +581,66 @@ jQuery(document).ready(function($) {
 });
 
 
+/* ==========================================================================
+	HOTEL LIST
+========================================================================== */
 
+
+jQuery(document).ready(function($) {
+
+	// Переключение окна фильтров туров
+	$('#place-filter-btn').on('click', function() {
+		
+		var active = $(this).hasClass('filter_toggle--active');
+	
+		if(active) {
+			$('#place-filter').hide();
+			$('#sidebar-close').hide();
+			$(this).removeClass('filter_toggle--active');
+			$(this).find('p').text('Открыть параметры поиска');
+		} else {
+			$('#place-filter').show();
+			$('#sidebar-close').show();
+			$(this).addClass('filter_toggle--active');
+			$(this).find('p').text('Закрыть параметры поиска');
+		}
+		
+	})
+
+
+	
+})
+
+
+/* ==========================================================================
+	HOTEL LIST
+========================================================================== */
+
+
+jQuery(document).ready(function($) {
+
+	// Переключение окна фильтров туров
+	$('#hotel-filter-btn').on('click', function() {
+		
+		var active = $(this).hasClass('filter_toggle--active');
+	
+		if(active) {
+			$('#hotel-filter').hide();
+			$('#sidebar-close').hide();
+			$(this).removeClass('filter_toggle--active');
+			$(this).find('p').text('Открыть параметры поиска');
+		} else {
+			$('#hotel-filter').show();
+			$('#sidebar-close').show();
+			$(this).addClass('filter_toggle--active');
+			$(this).find('p').text('Закрыть параметры поиска');
+		}
+		
+	})
+
+
+	
+})
 
 /* ==========================================================================
 	TOUR LIST
@@ -587,24 +652,23 @@ jQuery(document).ready(function($) {
 	// Переключение окна фильтров туров
 	$('#tour-filter-btn').on('click', function() {
 		
-		var status = $(this).find('.top_banner_place--active');
-		
-		if(status.length) {
+		var active = $(this).hasClass('filter_toggle--active');
+	
+		if(active) {
 			$('#tour-filter').hide();
 			$('#sidebar-close').hide();
-			status.removeClass('top_banner_place--active');
+			$(this).removeClass('filter_toggle--active');
+			$(this).find('p').text('Открыть параметры поиска');
 		} else {
 			$('#tour-filter').show();
 			$('#sidebar-close').show();
-			status.addClass('top_banner_place--active');
+			$(this).addClass('filter_toggle--active');
+			$(this).find('p').text('Закрыть параметры поиска');
 		}
 		
 	})
 
-	$('#sidebar-close').on('click', function() {
-		$('#tour-filter').hide();
-		$('#tour-filter-btn').removeClass('top_banner_place--active');
-	})
+
 	
 })
 
@@ -618,24 +682,22 @@ jQuery(document).ready(function($) {
 	// Переключение окна фильтров стран
 	$('#visa-filter-btn').on('click', function() {
 		
-		var status = $(this).find('.top_banner_place--active');
+		var active = $(this).hasClass('top_banner_place--active');
 		
-		if(status.length) {
+		if(active) {
 			$('#visa-filter').hide();
 			$('#sidebar-close').hide();
-			status.removeClass('top_banner_place--active');
+			$(this).removeClass('top_banner_place--active');
+			$(this).find('p').text('Открыть список стран');
 		} else {
 			$('#visa-filter').show();
 			$('#sidebar-close').show();
-			status.addClass('top_banner_place--active');
+			$(this).addClass('top_banner_place--active');
+			$(this).find('p').text('Закрыть список стран');
 		}
 		
 	})
 
-	$('#sidebar-close').on('click', function() {
-		$('#visa-filter').hide();
-		$('#visa-filter-btn').removeClass('top_banner_place--active');
-	})
-	
+
 
 });
