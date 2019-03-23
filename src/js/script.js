@@ -80,35 +80,136 @@ jQuery(document).ready(function($) {
     
     /* Слайдер */
 
-    $("#country-uz, #country-kz, #country-kg").on('click', function() {
+    var countryObj = {
+    	'country-uz': 'top_section--uz',
+    	'country-kz': 'top_section--kz',
+    	'country-kg': 'top_section--kg',    	
+    }
 
-    	if($(this).hasClass('main_slider_country--active')) { return false; }
+    bindControlHandle('country-kz');
+    changeDescrContainer('country-kz');
+    changeBgContainer('country-kz');
+	
+    $(".main_slider_country").on('click', function() {
+
+	  	if($(this).hasClass('main_slider_country--active')) { return false; }
+
+		var	oldCountry = $('.main_slider_country--active'),
+			newCountry = $(this);
+
+  		var id = $(this).attr('id'),
+			countryClass = countryObj[id];
+
 		
-		var id = $(this).attr('id');
-		var oldDescr = $('.main_banner__description_container--active');
-		var newDescr = $('#'+id+'-descr');
-
-    	$('.main_slider_country--active').removeClass('main_slider_country--active');
-    	$(this).addClass('main_slider_country--active');
+    	toggleCountry(newCountry, oldCountry);
 		
-		oldDescr.removeClass('main_banner__description_container--active');
-		
-		if($(window).width() > 768) {
+	    moveAndChangeColorBg(countryClass);
 
-	    	$("#header-slider-bg, #body-slider-bg, #bottom-slider-bg").animate({
-				right: '-100%'
-	    	}, 1000).animate({ 
-				right: '0'
-	    	}, 1000, function() {
-	    		newDescr.addClass('main_banner__description_container--active');
-	    	})
+	    changeDescrContainer(id);
 
-	    } else {
-	    	newDescr.addClass('main_banner__description_container--active');
-	    }
+	    changeBgContainer(id);
 
+	    bindControlHandle(id);
 		 
     })
+
+
+    function toggleCountry(newCountry, prevCountry) {
+		prevCountry.removeClass('main_slider_country--active');
+		newCountry.addClass('main_slider_country--active');
+    }
+
+    function moveAndChangeColorBg(newClass) {
+
+		var container = $('#top-section');
+		var secondClass = container.attr('class').split(' ')[1];
+
+    	$("#header-slider-bg, #body-slider-bg, #bottom-slider-bg")
+    	.animate({
+			right: '-100%'
+    	}, 1000, function() { container.removeClass(secondClass).addClass(newClass) })
+    	.animate({ 
+			right: '0'
+    	}, 1000, function() { })
+    }
+
+    function changeDescrContainer(id) {
+
+    	var oldContainer = $('.main_banner__description_container--active'),
+    		newContainer = $('#'+id+'-descr');
+		
+		if(oldContainer.length) {
+			oldContainer.removeClass('main_banner__description_container--active');
+	    	oldContainer.children().each( function(i, item) { $(item).hide(); } )
+		}
+		
+		newContainer.children().first().show();
+		newContainer.addClass('main_banner__description_container--active');
+
+
+		return newContainer;
+    }
+	
+	function changeBgContainer(id) {
+		var oldContainer = $('.top_section__country_bg--active'),
+			newContainer = $('#'+id+'-bg');
+		
+		if(oldContainer.length) {
+			oldContainer.removeClass('top_section__country_bg--active');
+	    	oldContainer.children().each( function(i, item) { $(item).removeClass('top_section__bg_container--active') } )
+		}
+		
+    	newContainer.children().first().addClass('top_section__bg_container--active')
+    	newContainer.addClass('top_section__country_bg--active');
+	}
+
+    function bindControlHandle(id) {
+		
+		var controller = $('#banner-slider-control'),
+	   	    descriptions = $('#'+id+'-descr').children(),
+	   	    backgrounds = $('#'+id+'-bg').children();
+		
+		// Удаляем предыдущие контроллеры
+	   	controller.html('');
+
+    	if(descriptions.length < 2) { return false; }
+			   	
+		descriptions.each(function(i, item) {
+			
+			var control = renderController(i, controller),
+				descr = $(item),
+				bg = $(backgrounds[i]);
+			
+			control.on('click', function() {
+
+				// скрываем элементы
+			   	descriptions.each( function(i, item) { $(item).hide(); } )
+			   	$('.top_section__bg_container--active').removeClass('top_section__bg_container--active'); 
+			   	$('.main_banner__slide_control--active').removeClass('main_banner__slide_control--active');
+
+				// отображаем новые
+				$(this).addClass('main_banner__slide_control--active')
+				descr.show();
+				bg.addClass('top_section__bg_container--active');
+			})
+	
+		})
+    }
+
+    function renderController(i, controller) {
+		
+		var name = i + 1;
+		var control = $('<span></span>');
+
+		if(i === 0) {
+			controller.append(control.addClass('main_banner__slide_control--active').html('0'+name));
+		} else {
+			controller.append(control.html('0'+name));
+		}
+
+		return control;
+
+    }
 
     /* Переключение блоков стран в меню */
 

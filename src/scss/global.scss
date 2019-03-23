@@ -613,6 +613,7 @@ li.sidebar__elem:before {
 .main_header {
 	overflow: hidden;
 	position: relative;
+	z-index: 2;
 	width: 100%;
 	height: 107px;
 	border-bottom: 1px solid rgba(255,255,255,0.8);
@@ -621,6 +622,7 @@ li.sidebar__elem:before {
 
 .main_header__line {
 	position: absolute;
+	z-index: 300;
 	background-color: #ffffff;
 	width: 45px;
 	height: 3px;
@@ -966,14 +968,73 @@ li.sidebar__elem:before {
 ------------------------------------------------------------- */
 
 .top_section {
-	background-image: url(../../assets/i/main_img.png);
+	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
 	height: auto;
+	overflow: hidden;
 }
+/*.top_section--kz .main_contacts_left { background-color: rgba(0,124,186,.5); }
+.top_section--uz .main_contacts_left { background-color: rgba(83, 146, 9,.5); }
+.top_section--kg .main_contacts_left { background-color: rgba(224, 56, 23,.5); }*/
 
+.top_section--kz .main_banner__bg { background-color: rgba(0,124,186,.5); }
+.top_section--uz .main_banner__bg { background-color: rgba(83, 146, 9,.5); }
+.top_section--kg .main_banner__bg { background-color: rgba(224, 56, 23,.5); }
+
+.top_section--kz .main_header__bg { background-color: rgba(0,124,186,.5); }
+.top_section--uz .main_header__bg { background-color: rgba(83, 146, 9,.5); }
+.top_section--kg .main_header__bg { background-color: rgba(224, 56, 23,.5); }
+
+.top_section--kz .main_slider__bg { background-color: rgba(0,124,186,.5); }
+.top_section--uz .main_slider__bg { background-color: rgba(83, 146, 9,.5); }
+.top_section--kg .main_slider__bg { background-color: rgba(224, 56, 23,.5); }
+
+.top_section__bg {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+.top_section__bg_container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	transition: opacity 0.3s ease-out;
+}
+.top_section__bg_container--active {
+	opacity: 1;
+}
+.top_section__country_bg {
+	position: relative;
+	display: none;
+	height: 100%;
+}
+.top_section__country_bg--active {
+	display: block;
+}
+.top_section__country_bg_video {
+	border: none;
+	vertical-align: top;
+	height: auto !important;
+	max-width: 100% !important;
+}
+.top_section__country_bg_image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
 .main_banner {
+	position: relative;
+	z-index: 2;
 	border-bottom: 1px solid #ffffff;
 	height: 548px;
 	background-color: rgba(0,0,0,0.4);
@@ -1042,6 +1103,10 @@ li.sidebar__elem:before {
 	box-sizing: border-box;
 	overflow: hidden;
 }
+
+.main_banner__description_slide {
+	display: none;
+}
 .main_banner__bg {
 	position: absolute;
 	top: 0;
@@ -1092,6 +1157,8 @@ li.sidebar__elem:before {
 	color: #09223a;
 }
 .main_banner__slide_control {
+	position: absolute;
+	z-index: 300;
 	display: inline-block;
 	margin-left: 24%;
 }
@@ -1104,6 +1171,8 @@ li.sidebar__elem:before {
 	color: #fefeff;
 }
 .main_bottom {
+	position: relative;
+	z-index: 2;
 	width: 100%;
 	height: 117px;
 	background-color: rgba(0,0,0,0.4);
@@ -1144,25 +1213,64 @@ li.sidebar__elem:before {
 	float: right;
 	overflow: hidden;
 }
-.main_slider_country, .main_slider_more {
+.main_slider_country__container {
+	width: 75%;
+	height: 100%;
+	float: left;
+}
+.main_slider_country {
 	position: relative;
 	display: block;
+	width: 33.3%;
+	height: 100%;
 	cursor: pointer;
 	float: left;
-	width: 25%;
-	height: 100%;
 	font-family: Montserrat; 
 	font-weight: 100;
 	font-size: 14px;
 	color: #fefeff;
 	text-align: center;
-	padding-top: 50px;
-	background-size: cover;
-	background-repeat: no-repeat;
 	z-index: 80;
 }
-.main_slider_country__name { z-index: 90; }
-.main_slider_country--active { background-image: none!important; }
+.main_slider_country img {
+	transition: opacity 0.3s ease-out;
+}
+.main_slider_more {
+	position: relative;
+	display: block;
+	width: 25%;
+	height: 100%;
+	cursor: pointer;
+	float: left;
+	font-family: Montserrat; 
+	font-weight: 100;
+	font-size: 14px;
+	color: #fefeff;
+	text-align: center;
+	z-index: 80;
+}
+.main_slider_country__img { 
+	position: absolute;
+	z-index: 80;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	background-size: cover;
+	background-repeat: no-repeat; 
+	transition: opacity 0.3s ease-out;
+}
+.main_slider_country__name { 
+	position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: -7px auto 0 auto;
+    z-index: 90;
+}
+.main_slider_country--active .main_slider_country__img{ opacity: 0; }
+.main_slider_country--active img { opacity: 0; }
 .main_slider_country img, .main_slider_more img {
 	margin-left: 12px;
 }
@@ -2531,16 +2639,21 @@ li.sidebar__elem:before {
 	margin-left: 30px;
 	margin-bottom: 30px;
 }
-.filter__block {}
+.filter__block label { 
+	cursor: pointer; 
+}
 .filter__block li { list-style: none; }
 .filter__elem {
 	cursor: pointer;
-	display: block;
+	display: inline-block;
 	position: relative;
 	list-style: none;
 	margin-left: 30px;
 	padding: 5px 0;
 	font-size: 13px;
+}
+.filter__elem:hover {
+	color: #66a1c8;
 }
 .filter__input {
 	display: none;
@@ -2549,6 +2662,16 @@ li.sidebar__elem:before {
 	font-family: Montserrat;
 	font-weight: 800;
 	color: #09223a;
+}
+.filter__elem--passive {
+	cursor: default;
+}
+.filter__elem--passive:before {
+	content: '';
+	display: none;
+}
+.filter__elem--passive:hover {
+	color: #09223a
 }
 .filter__elem--disable {
 	cursor: default;
@@ -2748,35 +2871,68 @@ li.sidebar__elem:before {
 	float: left;
 	width: 300px;
 }
-
 .tour_list_lead__input {
 	display: block;
 	width: 300px;
 	position: relative;
 	margin-top: 35px;
 }
-.tour_list_lead__input img {
-	position: absolute;
-	top: 17px;
-	right: 25px;
-}
-.tour_list_lead__input input {
-	width: 100%;
-	border-radius: 25px;
-	border: 1px solid #97a2ae;
-	padding: 15px 0 15px 25px;
-	background-color: rgba(255,255,255,0.6);
-}
 
+.tour_list_lead__input input[type="submit"]{
+	position: absolute;
+	top: 4px;
+	right: 5px;
+	border: none;
+	background: none;
+	padding: 12px 14px 14px 12px;
+}
+.tour_list_lead__input input[type="submit"]:hover {
+	color: #0f5f96;
+}
+.tour_list_lead__input input[type="submit"] + span {
+	position: absolute;
+	top: 18px;
+	right: -27px;
+}
 .tour_list_lead__input input[type="text"]{
 	font-size: 16px;
 	color: #97a2ae;
+	width: 100%;
+	border-radius: 25px;
+	border: 1px solid #97a2ae;
+	padding: 15px 110px 15px 25px;
+	background-color: rgba(255,255,255,0.6);
 }
 .tour_list_lead__input input[type="text"]::placeholder {
 	font-size: 16px;
 	color: #97a2ae;
 }
 
+.tour_list_lead__input input[type="text"] + span {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 14px;
+	color: #ff3f3f;
+	text-align: center;
+	width: 100%;
+	display: block;
+	margin-top: 5px;
+}
+
+.tour_list_lead__input .wpcf7-mail-sent-ok {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 14px;
+	color: #2a883b;
+	text-align: center;
+	width: 100%;
+	display: block;
+	margin-top: 5px;
+	border: none;
+}
+.tour_list_lead__input .wpcf7-validation-errors {
+	display: none!important;
+}
 /* ==========================================================================
 	PLACE PAGE
 ========================================================================== */
