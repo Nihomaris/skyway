@@ -110,6 +110,8 @@ jQuery(document).ready(function($) {
 	    changeBgContainer(id);
 
 	    bindControlHandle(id);
+
+	    renderVideoController($('.top_section__bg_container--active'))
 		 
     })
 
@@ -191,6 +193,9 @@ jQuery(document).ready(function($) {
 				$(this).addClass('main_banner__slide_control--active')
 				descr.show();
 				bg.addClass('top_section__bg_container--active');
+
+				// управление видео
+				renderVideoController(bg);
 			})
 	
 		})
@@ -208,7 +213,54 @@ jQuery(document).ready(function($) {
 		}
 
 		return control;
+		
+    }
 
+    function renderVideoController(video) {
+
+		var container = $('#video-control');
+		var playBtn = $('<div class="main_banner__start_btn main_banner__start_btn--active"></div>');
+        var volumeBtn = $('<div class="main_banner__speaker"></div>');
+		var video = video.children();
+		
+		// удаляем старые контроллеры видео
+        container.html('')
+
+        if(video.prop('tagName') !== 'VIDEO') { return false; }
+		
+		// вешаем обработчики
+		playBtn.on('click', function() {
+
+			if($(this).hasClass('main_banner__start_btn--active')) {
+				video[0].play();
+				$(this).removeClass('main_banner__start_btn--active');
+			} else {
+				video[0].pause();
+				$(this).addClass('main_banner__start_btn--active');
+			}
+
+		})
+		volumeBtn.on('click', function() {
+			
+			if($(this).hasClass('main_banner__speaker--active')) {
+				video.prop('muted', false);
+				$(this).removeClass('main_banner__speaker--active');
+			} else {
+				video.prop('muted', true);
+				$(this).addClass('main_banner__speaker--active');
+			}
+
+		})
+
+		// Добавляем
+        container.append(playBtn);
+        container.append(volumeBtn);
+
+
+		// Запуск видео
+		video.prop('muted', false);
+		video[0].play();
+		
     }
 
     /* Переключение блоков стран в меню */

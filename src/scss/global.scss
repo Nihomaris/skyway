@@ -1081,19 +1081,28 @@ li.sidebar__elem:before {
 .main_banner__start_btn {
 	cursor: pointer;
 	display: inline-block;
-	background-image: url(../../assets/i/play-button.png);
+	background-image: url(../../assets/i/vector/controllers/pause.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 11px;
 	height: 16px;
 }
 .main_banner__speaker {
 	cursor: pointer;
 	display: inline-block;
-	background-image: url(../../assets/i/speaker.png);
-	width: 16px;
+	background-image: url(../../assets/i/vector/controllers/volume_off.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 20px;
 	height: 17px;
 	margin-left: 20px;
 }
-
+.main_banner__start_btn--active {
+	background-image: url(../../assets/i/vector/controllers/play.svg);
+}
+.main_banner__speaker--active {
+	background-image: url(../../assets/i/vector/controllers/volume_on.svg);
+}
 .main_banner__description { 
 	position: relative;
 	display: block; 
@@ -1158,6 +1167,8 @@ li.sidebar__elem:before {
 }
 .main_banner__slide_control {
 	position: absolute;
+	bottom: 60px;
+	left: 50%;
 	z-index: 300;
 	display: inline-block;
 	margin-left: 24%;
