@@ -12,7 +12,7 @@
             
             <header class="main_header">
                 <div class="main_header__left">
-                    <a href="#"><img class="main_header__logo" src="./assets/i/sky_logo.png"></a>
+                    <a href="#"><div class="main_header__logo" style="background-image: url(./assets/i/vector/logo_w.svg);"></div></a>
                     <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
                 </div>
                 <div class="main_header__right">
@@ -26,7 +26,7 @@
             </header>
             <header style="display: none;" id="header_spy" class="main_header main_header--spy">
                 <div class="main_header__left main_header__left--spy">
-                    <a href="#"><img class="main_header__logo" src="./assets/i/sky_logo.png"></a>
+                    <a href="#"><div class="main_header__logo" style="background-image: url(./assets/i/vector/logo_w.svg);"></div></a>
                     <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
                 </div>
                 <div class="main_header__right main_header__right--spy">
@@ -115,6 +115,16 @@
                             </div>
                         </article>
 
+                        <article class="main_banner__description_slide">
+                            <h3 class="main_banner__intro" >Прекрасен!</h3>
+                            <h1 class="main_banner__country">Кыргызстан</h1>
+                            <p class="main_banner__text" >Знакомство с южной столицей Казахстана, ее<br>прошлым и настоящим, уникальной природой и любимыми<br>меставми отдыха горожан - все это в одной экскурсии<br>на инновационном виде транспорта - экологически<br>чистом, полностью электрическом автобусе!</p>
+                            <div class="main_banner__descr_bottom">
+                                <a class="btn main_banner__detail" href="#"><div class="anim"></div>
+                                    <span>Подробнее<img src="./assets/i/triangle.png" alt=""></span></a>
+                            </div>
+                        </article>
+
                     </section>
 
                     <div id="banner-slider-control" class="main_banner__slide_control"></div>
@@ -165,19 +175,23 @@
 
             <div class="top_section__bg">
                 <section id="country-uz-bg" class="top_section__country_bg">
-                    <article class="top_section__bg_container">
-                        <video class="top_section__country_bg_video" muted preload="auto" loop poster="//d3hne3c382ip58.cloudfront.net/media/set4/video-fallbacks/img1.jpg" width="100%" height="100%">
-                            <source src="//d3hne3c382ip58.cloudfront.net/media/set4/bookmundi.mp4">
+                    <article class="element-with-video-bg jquery-background-video-wrapper top_section__bg_container">
+                        <video class="my-background-video jquery-background-video" muted playsinline loop poster="//html5backgroundvideos.com/wp-content/uploads/2015/09/beach-soccer.jpg">
+                            <source src="//d2ezlykacdqcnj.cloudfront.net/beach-soccer/beach-soccer.mp4">
                             Your browser does not support the video tag.
                         </video>
                     </article>
+
                     <article class="top_section__bg_container">
                         <div class="top_section__country_bg_image" style="background-image: url(./assets/i/main_img.png);"></div>
                     </article>
                 </section>
                 <section id="country-kz-bg" class="top_section__country_bg">
-                    <article class="top_section__bg_container">
-                        <div class="top_section__country_bg_image" style="background-image: url(./assets/i/main_img.png);"></div>
+                    <article class="element-with-video-bg jquery-background-video-wrapper top_section__bg_container">
+                        <video class="my-background-video jquery-background-video" muted playsinline loop poster="//html5backgroundvideos.com/wp-content/uploads/2015/09/rainforest-walking-track-still.jpg">
+                            <source src="//d2ezlykacdqcnj.cloudfront.net/rainforest-walking-track-still/rainforest-walking-track-still.mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </article>
                     <article class="top_section__bg_container">
                         <div class="top_section__country_bg_image" style="background-image: url(./assets/i/country_bg.png);"></div>
@@ -187,6 +201,12 @@
                     </article>
                 </section>
                 <section id="country-kg-bg" class="top_section__country_bg">
+                    <article class="element-with-video-bg jquery-background-video-wrapper top_section__bg_container">
+                        <video class="my-background-video jquery-background-video" muted playsinline loop poster="//html5backgroundvideos.com/wp-content/uploads/2015/09/seagulls-following-boat.jpg">
+                            <source src="//d2ezlykacdqcnj.cloudfront.net/seagulls-following-boat/seagulls-following-boat.mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </article>
                     <article class="top_section__bg_container">
                         <div class="top_section__country_bg_image" style="background-image: url(./assets/i/country_bg.png);"></div>
                     </article>
@@ -337,7 +357,7 @@
                 </div>
             </div>
             <div class="about_section__descr">
-                <img src="./assets/i/sky_logo.png" alt="skyway-logo" class="about_section__descr_logo">
+                <div class="about_section__descr_logo" style="background-image: url(./assets/i/vector/logo_w.svg);"></div>
                 <p class="montserrat_light about_section__descr_text">Знакомство с южной столицей Казахстана, ее прошлым и настоящим, уникальной природой и любимыми местами отдыха горожан — все это в одной экскурсии на инновационном виде транспорта – экологически  чистом, полностью электрическом автобусе!</p>
                 <a href="#" class="btn btn__transparent about_section__descr_btn"><div class="anim"></div><span>Подробнее<img src="./assets/i/triangle.png" alt=""></span></a>
             </div>
@@ -410,7 +430,7 @@
 
                <footer class="main_footer">
                     <div class="subscribe_block">
-                        <img class="subscribe_block__logo" src="./assets/i/sky_logo.png" alt="">
+                        <div class="subscribe_block__logo" style="background-image: url(./assets/i/vector/logo_w.svg);"></div>
                         <div class="subscribe_block__title">
                             <h3>Skyway всегда с Вами</h3>
                             <h2>Подписка на рассылку</h2>
@@ -503,7 +523,7 @@
                     <section class="main_menu_left">
         
                         <header class="main_menu_header">
-                            <img class="main_menu_header__logo" alt="Skyway" src="./assets/i/sky_logo_black.png">
+                            <div class="main_menu_header__logo" style="background-image: url(./assets/i/vector/logo_s.svg);"></div>
                             <div class="main_menu_header__leng">
                                 <span>ENG</span>
                                 <span class="main_menu_header__leng--active">RU</span>
@@ -540,7 +560,7 @@
                                         <div class="main_menu__country_link"><a href="#">О стране</a></div>
                                     </div>
                                 </article>
-                                <article class="mobile_menu_right__country mobile_menu_right__country--hidden" style="background-image: url(./assets/i/uz_menu.png);">
+                                <article class="mobile_menu_right__country" style="background-image: url(./assets/i/uz_menu.png);">
                                     <div class="main_menu__country_link_container">
                                         <div class="main_menu__country_link"><a href="#">Туры</a></div>
                                         <div class="main_menu__country_link"><a href="#">Места</a></div>                                
@@ -549,7 +569,6 @@
                                         <div class="main_menu__country_link"><a href="#">О стране</a></div>
                                     </div>
                                 </article>
-                                <div class="clear"></div>
                             </div>
                             <article id="menu-more-btn" class="mobile_menu__more">
                                 <div class="montserrat_bold mobile_menu__more_link">

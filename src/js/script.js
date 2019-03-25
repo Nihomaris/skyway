@@ -28,6 +28,13 @@
 
 jQuery(document).ready(function($) {
 
+	/* Адаптивность видео */
+	$('.my-background-video').bgVideo({
+		fullScreen: false,
+		showPausePlay: false,
+		fadeIn: 1000, 
+	});
+
 	/* Декоративная бегующая полоска под хэдэром */
     $('#top-section').on('mousemove', function(e) {
 		var lineWidth = parseInt($('#header-line').css('width'))/2,
@@ -57,7 +64,27 @@ jQuery(document).ready(function($) {
 				$('body').off('keydown')
 			}
 		})
+		
+		if(!$('#menu-country-blocks').hasClass('slick-initialized') && $(window).width() < 768) {
+			
+			var slides = 2
 
+			if($(window).width() < 480) { slides = 1; }
+		  	
+		  	$('#menu-country-blocks').slick({
+				infinite: true,
+		  		slidesToShow: slides,
+		 		slidesToScroll: 1
+		  	})
+
+	  	    /* Переключение блоков стран в меню */
+
+	  	    $('#menu-more-btn').on('click', function() {
+	  	    	$('#menu-country-blocks .slick-next').click();
+	  	    })
+
+		}
+	  	
 	})
 	$('#close_main_menu').on('click', function() {
 		$('#main_menu').css('display', 'none');
@@ -89,6 +116,8 @@ jQuery(document).ready(function($) {
     bindControlHandle('country-kz');
     changeDescrContainer('country-kz');
     changeBgContainer('country-kz');
+    console.log($('.top_section__bg_container--active'))
+    renderVideoController($('.top_section__bg_container--active'))
 	
     $(".main_slider_country").on('click', function() {
 
@@ -177,7 +206,6 @@ jQuery(document).ready(function($) {
     	if(descriptions.length < 2) { return false; }
 			   	
 		descriptions.each(function(i, item) {
-			
 			var control = renderController(i, controller),
 				descr = $(item),
 				bg = $(backgrounds[i]);
@@ -205,7 +233,7 @@ jQuery(document).ready(function($) {
 		
 		var name = i + 1;
 		var control = $('<span></span>');
-
+	
 		if(i === 0) {
 			controller.append(control.addClass('main_banner__slide_control--active').html('0'+name));
 		} else {
@@ -225,7 +253,7 @@ jQuery(document).ready(function($) {
 		
 		// удаляем старые контроллеры видео
         container.html('')
-
+		
         if(video.prop('tagName') !== 'VIDEO') { return false; }
 		
 		// вешаем обработчики
@@ -263,21 +291,7 @@ jQuery(document).ready(function($) {
 		
     }
 
-    /* Переключение блоков стран в меню */
-
-    $('#menu-more-btn').on('click', function() {
-    	var container = $('#menu-country-blocks');
-		var hiddenCountry = container.find('.mobile_menu_right__country--hidden');
-    	
-    	var nextHiddenCountry = hiddenCountry.next('.mobile_menu_right__country');
-
-    	if(!nextHiddenCountry.length) {
-    		nextHiddenCountry = container.find('.mobile_menu_right__country').first();
-    	}
-
-    	nextHiddenCountry.addClass('mobile_menu_right__country--hidden');
-		hiddenCountry.removeClass('mobile_menu_right__country--hidden');
-    })
+      	
 
     /* Переключение текста в главном туре на витрине */
     var descrBlocks = $('#main-tour-descr-block').children();
