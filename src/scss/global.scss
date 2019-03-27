@@ -15,7 +15,8 @@
 		Sidebar
 		Pagination
 		Tag
-		Containers		
+		Containers	
+		Tables	
 
 	MAIN HEADER
 
@@ -296,13 +297,13 @@ input[type="text"]:focus {
     border-radius: 100%;
     background-color: rgba(255,255,255,.3);
     text-align: center;
-    padding-top: 15px;
+    padding-top: 18px;
     transition: all 0.3s ease-out;
 }
 .arrow_switcher:hover {
 	background-color: rgba(255,255,255,.4);
 }
-.arrow_switcher img { margin-left: auto; margin-right: auto; }
+.arrow_switcher img { display: block; margin-left: auto; margin-right: auto; }
 
 
 
@@ -498,42 +499,20 @@ li.sidebar__elem:before {
 /* 								Pagination
 ------------------------------------------------------------- */
 
-
-.first_page_arrow,
-.prev_page_arrow,
-.next_page_arrow,
-.last_page_arrow {
-	display: inline-block;
-	cursor: pointer;
+.tour_pagination {
+	height: 38px;
+	max-width: 360px;
+	margin: 0 auto;
+	text-align: center;
 }
-.pagination__first_blocks,
-.pagination__page,
-.pagination__dot,
-.pagination__last_blocks,
- {
+
+.tour_pagination .page-numbers {
 	display: block;
 	float: left;
 }
 
-.pagination {
-	height: 38px;
-	max-width: 500px;
-	margin: 0 auto;
-	text-align: center;
-}
-.first_page_arrow { 
-	vertical-align: top; 
-	margin: 15px 5px 0 5px;
-}
-.prev_page_arrow { 
-	vertical-align: top; 
-	margin: 15px 5px 0 5px;
-}
-.pagination__container {
-	display: inline-block;
-}
-.pagination__first_blocks {}
-.pagination__page {
+.tour_pagination a.page-numbers,
+.tour_pagination .page-numbers.current {
 	cursor: pointer;
 	text-align: center;
 	width: 38px;
@@ -545,31 +524,35 @@ li.sidebar__elem:before {
 	border-radius: 10px;
 	margin: 0 9px;
 }
-.pagination__page--active {
+
+.tour_pagination .page-numbers.current {
 	background-color:  #448dbc;
 	color: #ffffff;
 	border: 1px solid #448dbc;
 }
-.pagination__dot {
-	cursor: pointer;
+
+.tour_pagination .dots {
 	margin: 0 5px;
 	padding-top: 5px;
-}
-
-.pagination__dot span {
 	color:  #cdcdcd;
 	font-size: 45px;
 	line-height: 0;
 }
-.pagination__last_blocks {}
 
-.next_page_arrow { 
+.tour_pagination a.prev,
+.tour_pagination a.next { 
 	vertical-align: top; 
 	margin: 15px 5px 0 5px;
+	background-image: url(../../assets/i/arrow_blue_left.png);
+	background-repeat: no-repeat;
+    width: 22px;
+    height: 15px;
+    padding-top: 0;
+    border: none;
 }
-.last_page_arrow { 
-	vertical-align: top; 
-	margin: 15px 5px 0 5px;
+
+.tour_pagination a.next{ 
+	background-image: url(../../assets/i/arrow_blue_right.png);
 }
 
 
@@ -587,6 +570,121 @@ li.sidebar__elem:before {
 }
 
 
+
+
+
+/* 								Tables
+------------------------------------------------------------- */
+table {
+    background-color: transparent
+}
+th {
+    text-align: left
+}
+
+.table {
+    border-collapse: collapse!important
+}
+.table td,
+.table th {
+    background-color: #fff!important
+}
+.table-bordered td,
+.table-bordered th {
+    border: 1px solid #ddd!important
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border: 1px solid #ddd
+}
+
+.table>thead>tr>th {
+	text-align: center;
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+
+.table>caption+thead>tr:first-child>td,
+.table>caption+thead>tr:first-child>th,
+.table>colgroup+thead>tr:first-child>td,
+.table>colgroup+thead>tr:first-child>th,
+.table>thead:first-child>tr:first-child>td,
+.table>thead:first-child>tr:first-child>th {
+    border-top: 0
+}
+
+.table>tbody+tbody {
+    border-top: 2px solid #ddd
+}
+
+.table .table {
+    background-color: #fff
+}
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto
+}
+
+@media screen and (max-width:767px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd
+    }
+    .table-responsive>.table {
+        margin-bottom: 0
+    }
+    .table-responsive>.table>tbody>tr>td,
+    .table-responsive>.table>tbody>tr>th,
+    .table-responsive>.table>tfoot>tr>td,
+    .table-responsive>.table>tfoot>tr>th,
+    .table-responsive>.table>thead>tr>td,
+    .table-responsive>.table>thead>tr>th {
+        white-space: nowrap
+    }
+    .table-responsive>.table-bordered {
+        border: 0
+    }
+    .table-responsive>.table-bordered>tbody>tr>td:first-child,
+    .table-responsive>.table-bordered>tbody>tr>th:first-child,
+    .table-responsive>.table-bordered>tfoot>tr>td:first-child,
+    .table-responsive>.table-bordered>tfoot>tr>th:first-child,
+    .table-responsive>.table-bordered>thead>tr>td:first-child,
+    .table-responsive>.table-bordered>thead>tr>th:first-child {
+        border-left: 0
+    }
+    .table-responsive>.table-bordered>tbody>tr>td:last-child,
+    .table-responsive>.table-bordered>tbody>tr>th:last-child,
+    .table-responsive>.table-bordered>tfoot>tr>td:last-child,
+    .table-responsive>.table-bordered>tfoot>tr>th:last-child,
+    .table-responsive>.table-bordered>thead>tr>td:last-child,
+    .table-responsive>.table-bordered>thead>tr>th:last-child {
+        border-right: 0
+    }
+    .table-responsive>.table-bordered>tbody>tr:last-child>td,
+    .table-responsive>.table-bordered>tbody>tr:last-child>th,
+    .table-responsive>.table-bordered>tfoot>tr:last-child>td,
+    .table-responsive>.table-bordered>tfoot>tr:last-child>th {
+        border-bottom: 0
+    }
+}
 
 
 
@@ -642,6 +740,7 @@ li.sidebar__elem:before {
 .main_header__logo {
 	width: 189px;
     height: 50px;
+    float: left;
     display: block;
     background-size: cover;
     background-repeat: no-repeat;
@@ -653,17 +752,24 @@ li.sidebar__elem:before {
 	display: block;
 	margin: 45px 45px 0 0;
 }
-.main_header__leng span {
+.main_header__leng a {
+	list-style: none;
 	cursor: pointer;
 	color: #ffffff;
 	font-size: 15px;
+	text-transform: uppercase;
 }
-.main_header__leng span:last-child {
+.main_header__leng li {
+	display: block;
+	float: left;
+}
+.main_header__leng li:last-child {
 	margin-left: 10px;
 }
-.main_header__leng--active {
+.main_header__leng li.active {
 	font-weight: 800;
 }
+
 .main_header__right {
 	position: relative;
 	display: block;
@@ -780,23 +886,32 @@ li.sidebar__elem:before {
     background-position: center;
 	margin: 28px 0 0 13%;
 }
+
 .main_menu_header__leng {
 	float: right;
 	display: block;
 	margin: 45px 45px 0 0;
 }
-.main_menu_header__leng span {
+.main_menu_header__leng a {
+	list-style: none;
 	cursor: pointer;
-	color: #68717a;
+	color: #ffffff;
 	font-size: 15px;
+	text-transform: uppercase;
 }
-.main_menu_header__leng span:last-child {
+.main_menu_header__leng li {
+	display: block;
+	float: left;
+}
+.main_menu_header__leng li:last-child {
 	margin-left: 10px;
 }
-.main_menu_header__leng--active {
+.main_menu_header__leng li.active {
 	font-weight: 800;
 }
-
+.main_menu_header__leng--silver a {
+	color: #68717a;
+}
 .main_menu_body {
     width: 100%;
     height: 50%;
@@ -902,6 +1017,7 @@ li.sidebar__elem:before {
 	font-size: 30px;
 	font-weight: 900;
 	margin: 30px 0;
+	color: #ffffff;
 }
 .main_menu__country_link a, .main_menu__country_name a {
 	color: #ffffff;
@@ -991,17 +1107,17 @@ li.sidebar__elem:before {
 .top_section--uz .main_contacts_left { background-color: rgba(83, 146, 9,.5); }
 .top_section--kg .main_contacts_left { background-color: rgba(224, 56, 23,.5); }*/
 
-.top_section--kz .main_banner__bg { background-color: rgba(0,124,186,.5); }
-.top_section--uz .main_banner__bg { background-color: rgba(83, 146, 9,.5); }
-.top_section--kg .main_banner__bg { background-color: rgba(224, 56, 23,.5); }
+.top_section--kz .main_banner__bg { background-color: rgba(0,124,186,.4); }
+.top_section--uz .main_banner__bg { background-color: rgba(83, 146, 9,.3); }
+.top_section--kg .main_banner__bg { background-color: rgba(224, 56, 23,.3); }
 
-.top_section--kz .main_header__bg { background-color: rgba(0,124,186,.5); }
-.top_section--uz .main_header__bg { background-color: rgba(83, 146, 9,.5); }
-.top_section--kg .main_header__bg { background-color: rgba(224, 56, 23,.5); }
+.top_section--kz .main_header__bg { background-color: rgba(0,124,186,.4); }
+.top_section--uz .main_header__bg { background-color: rgba(83, 146, 9,.3); }
+.top_section--kg .main_header__bg { background-color: rgba(224, 56, 23,.3); }
 
-.top_section--kz .main_slider__bg { background-color: rgba(0,124,186,.5); }
-.top_section--uz .main_slider__bg { background-color: rgba(83, 146, 9,.5); }
-.top_section--kg .main_slider__bg { background-color: rgba(224, 56, 23,.5); }
+.top_section--kz .main_slider__bg { background-color: rgba(0,124,186,.4); }
+.top_section--uz .main_slider__bg { background-color: rgba(83, 146, 9,.3); }
+.top_section--kg .main_slider__bg { background-color: rgba(224, 56, 23,.3); }
 
 .top_section__bg {
 	position: absolute;
@@ -2806,6 +2922,9 @@ li.sidebar__elem:before {
 	/*margin-left: auto;
 	margin-right: auto;*/
 }
+.filter__init input {
+	display: none;
+}
 /* 								Tours list
 ------------------------------------------------------------- */
 
@@ -2889,7 +3008,7 @@ li.sidebar__elem:before {
 ------------------------------------------------------------- */
 
 .tour_pagination {
-	margin: 30px 0;
+	margin: 30px auto 30px auto;
 }
 
 
@@ -3236,15 +3355,16 @@ li.sidebar__elem:before {
 	margin: 0 auto;
 }
 .hotel_hall_table {
-    overflow-x: scroll;
+    /*overflow-x: hidden;*/
 }
-.hotel_hall_table table {
+/*.hotel_hall_table table {
+    width: 100%;
 	border-collapse: collapse;
-}
+}*/
 .hotel_hall_table tr,
 .hotel_hall_table td,
 .hotel_hall_table th, {
-	border: 1px solid #dedfe5;
+/*	border: 1px solid #dedfe5;*/
 }
 
 .hotel_hall_table thead td,
@@ -3255,7 +3375,7 @@ li.sidebar__elem:before {
 
 .hotel_hall_table td,
 .hotel_hall_table th {
-	padding: 5px 12px;
+	text-align: center;
 }
 .hotel_hall_table__icon {
 	display: inline-block;
@@ -3271,7 +3391,7 @@ li.sidebar__elem:before {
 	font-size: 13px;
 	color: #2b2a2a;
 	text-align: center;
-	border: 1px solid #dedfe5;
+	/*border: 1px solid #dedfe5;*/
 }
 .hotel_hall_table__name th {
 	font-weight: 900;
@@ -3991,16 +4111,25 @@ li.gallery_nav__link:before {
 	width: 300px;
 	position: relative;
 }
-.subscribe_block__input img {
-	position: absolute;
-	top: 17px;
-	right: 25px;
-}
-.subscribe_block__input input {
+
+.subscribe_block__input input[type="text"] {
 	width: 100%;
 	border-radius: 25px;
 	padding: 15px 0 15px 25px;
 	background-color: rgba(255,255,255,0.6);
+}
+
+.subscribe_block__input input[type="submit"] {
+	cursor: pointer;
+	background-color: transparent;
+	border: 0;
+	background-image: url(../../assets/i/arrow_r.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 17px;
+	right: 25px;
+	width: 20px;
+	height: 12px;
 }
 
 .subscribe_block__input input[type="text"]{

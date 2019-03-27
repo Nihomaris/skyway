@@ -14,7 +14,12 @@
                 <header class="main_header main_header--country">
                     <div class="main_header__left main_header__left--country">
                         <a href="#"><div class="main_header__logo" style="background-image: url(./assets/i/vector/logo_w.svg);"></div></a>
-                        <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
+                        <div class="main_header__leng">
+                            <ul class="language-chooser language-chooser-custom qtranxs_language_chooser" id="qtranslate-chooser">
+                                <li class="language-chooser-item language-chooser-item-ru"><a href="https://new.skyway.kz/ru/" title="Русский (ru)">ru</a></li>
+                                <li class="language-chooser-item language-chooser-item-en active"><a href="https://new.skyway.kz/en/" title="English (en)">en</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="main_header__right main_header__right--country">
                         <div class="main_header__search"><input type="text" placeholder="Найти..." class="main_header__search_input"></div>
@@ -25,7 +30,12 @@
                 <header style="display: none;" id="header_spy" class="main_header main_header--spy">
                     <div class="main_header__left main_header__left--spy">
                         <a href="#"><div class="main_header__logo" style="background-image: url(./assets/i/vector/logo_w.svg);"></div></a>
-                        <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
+                        <div class="main_header__leng">
+                            <ul class="language-chooser language-chooser-custom qtranxs_language_chooser" id="qtranslate-chooser">
+                                <li class="language-chooser-item language-chooser-item-ru"><a href="https://new.skyway.kz/ru/" title="Русский (ru)">ru</a></li>
+                                <li class="language-chooser-item language-chooser-item-en active"><a href="https://new.skyway.kz/en/" title="English (en)">en</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="main_header__right main_header__right--spy">
                         <div class="main_header__search"><input type="text" placeholder="Найти..." class="main_header__search_input"></div>
@@ -372,10 +382,15 @@
                             <h3>Skyway всегда с Вами</h3>
                             <h2>Подписка на рассылку</h2>
                         </div>
-                        <div class="subscribe_block__input">
-                            <input type="text" placeholder="Email">
-                            <img src="./assets/i/arrow_r.png" alt="">
-                        </div>
+                    
+                        <form class="subscribe_block__input" action="http://skyway.tourservice.net/Mailer/add" method="POST" accept-charset="utf-8">
+                            <input type="text" name="email" placeholder="Email">
+                            <input type="submit" value="">
+                            <input type="hidden" name="mid" value="91">
+                        </form>
+        
+                      
+        
                         
                     </div>
         
@@ -461,9 +476,11 @@
         
                         <header class="main_menu_header">
                             <div class="main_menu_header__logo" style="background-image: url(./assets/i/vector/logo_s.svg);"></div>
-                            <div class="main_menu_header__leng">
-                                <span>ENG</span>
-                                <span class="main_menu_header__leng--active">RU</span>
+                            <div class="main_menu_header__leng main_menu_header__leng--silver">
+                                <ul class="language-chooser language-chooser-custom qtranxs_language_chooser" id="qtranslate-chooser">
+                                    <li class="language-chooser-item language-chooser-item-ru"><a href="https://new.skyway.kz/ru/" title="Русский (ru)">ru</a></li>
+                                    <li class="language-chooser-item language-chooser-item-en active"><a href="https://new.skyway.kz/en/" title="English (en)">en</a></li>
+                                </ul>
                             </div> 
                         </header>
                        

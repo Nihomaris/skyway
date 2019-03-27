@@ -14,7 +14,12 @@
                 <header class="main_header main_header--country">
                     <div class="main_header__left main_header__left--country">
                         <a href="#"><div class="main_header__logo" style="background-image: url(./assets/i/vector/logo_w.svg);"></div></a>
-                        <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
+                        <div class="main_header__leng">
+                            <ul class="language-chooser language-chooser-custom qtranxs_language_chooser" id="qtranslate-chooser">
+                                <li class="language-chooser-item language-chooser-item-ru"><a href="https://new.skyway.kz/ru/" title="Русский (ru)">ru</a></li>
+                                <li class="language-chooser-item language-chooser-item-en active"><a href="https://new.skyway.kz/en/" title="English (en)">en</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="main_header__right main_header__right--country">
                         <div class="main_header__search"><input type="text" placeholder="Найти..." class="main_header__search_input"></div>
@@ -25,7 +30,12 @@
                 <header style="display: none;" id="header_spy" class="main_header main_header--spy">
                     <div class="main_header__left main_header__left--spy">
                         <a href="#"><div class="main_header__logo" style="background-image: url(./assets/i/vector/logo_w.svg);"></div></a>
-                        <div class="main_header__leng"><span>ENG</span><span class="main_header__leng--active">RU</span></div>
+                        <div class="main_header__leng">
+                            <ul class="language-chooser language-chooser-custom qtranxs_language_chooser" id="qtranslate-chooser">
+                                <li class="language-chooser-item language-chooser-item-ru"><a href="https://new.skyway.kz/ru/" title="Русский (ru)">ru</a></li>
+                                <li class="language-chooser-item language-chooser-item-en active"><a href="https://new.skyway.kz/en/" title="English (en)">en</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="main_header__right main_header__right--spy">
                         <div class="main_header__search"><input type="text" placeholder="Найти..." class="main_header__search_input"></div>
@@ -240,9 +250,14 @@
                                 </label>
                             </li>
                         </ul>
-                        <a class="btn filter__init" href="javascript:void(0);">
+                        <label class="btn filter__init">
                             <div class="anim"></div>
                             <span>Поиск<img src="./assets/i/triangle_b.png" alt=""></span>
+                            <input type="submit">
+                        </label>
+                        <a href="/tours" class="btn filter__init">
+                            <div class="anim"></div>
+                            <span>Сбросить</span>
                         </a>
                     </div>
                 </div>
@@ -331,50 +346,23 @@
 
                     <div class="clear"></div>
                 </div>
+
                 <div class="tour_pagination">
-                    <div class="pagination">
-                        <div class="first_page_arrow">
-                            <img src="./assets/i/d_arrow_left.png" alt="first-page">
-                        </div>
-                        <div class="prev_page_arrow">
-                            <img src="./assets/i/arrow_blue_left.png" alt="Prev-page">
-                        </div>
-                        <div class="pagination__container">
-                            <div class="pagination__first_blocks">
-                                <div class="pagination__page pagination__page--active">
-                                    <span>1</span>
-                                </div>
-                                <div class="pagination__page">
-                                    <span>2</span>
-                                </div>
-                                <div class="pagination__page">
-                                    <span>3</span>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="pagination__dot"><span>...</span></div>
-                            <div class="pagination__last_blocks">
-                                <div class="pagination__page">
-                                    <span>11</span>
-                                </div>
-                                <div class="pagination__page">
-                                    <span>12</span>
-                                </div>
-                                <div class="pagination__page">
-                                    <span>13</span>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="next_page_arrow">
-                            <img src="./assets/i/arrow_blue_right.png" alt="Next-page">
-                        </div>
-                        <div class="last_page_arrow">
-                            <img src="./assets/i/d_arrow_right.png" alt="last-page">
-                        </div>
-                        <div class="clear"></div>
-                    </div>
+
+                    <a class="prev page-numbers" href="https://new.skyway.kz/tours/"></a>
+
+                    <span aria-current="page" class="page-numbers current">1</span>
+
+                    <a class="page-numbers" href="https://new.skyway.kz/tours/page/2/">2</a>
+                    <a class="page-numbers" href="https://new.skyway.kz/tours/page/3/">3</a>
+
+                    <span class="page-numbers dots">…</span>
+                    <a class="page-numbers" href="https://new.skyway.kz/tours/page/5/">5</a>
+
+                    <a class="next page-numbers" href="https://new.skyway.kz/tours/page/2/"></a> 
+
                 </div>
+
             </div>
             <div class="clear"></div>
         </section>
@@ -475,10 +463,15 @@
                             <h3>Skyway всегда с Вами</h3>
                             <h2>Подписка на рассылку</h2>
                         </div>
-                        <div class="subscribe_block__input">
-                            <input type="text" placeholder="Email">
-                            <img src="./assets/i/arrow_r.png" alt="">
-                        </div>
+                    
+                        <form class="subscribe_block__input" action="http://skyway.tourservice.net/Mailer/add" method="POST" accept-charset="utf-8">
+                            <input type="text" name="email" placeholder="Email">
+                            <input type="submit" value="">
+                            <input type="hidden" name="mid" value="91">
+                        </form>
+        
+                      
+        
                         
                     </div>
         
@@ -564,9 +557,11 @@
         
                         <header class="main_menu_header">
                             <div class="main_menu_header__logo" style="background-image: url(./assets/i/vector/logo_s.svg);"></div>
-                            <div class="main_menu_header__leng">
-                                <span>ENG</span>
-                                <span class="main_menu_header__leng--active">RU</span>
+                            <div class="main_menu_header__leng main_menu_header__leng--silver">
+                                <ul class="language-chooser language-chooser-custom qtranxs_language_chooser" id="qtranslate-chooser">
+                                    <li class="language-chooser-item language-chooser-item-ru"><a href="https://new.skyway.kz/ru/" title="Русский (ru)">ru</a></li>
+                                    <li class="language-chooser-item language-chooser-item-en active"><a href="https://new.skyway.kz/en/" title="English (en)">en</a></li>
+                                </ul>
                             </div> 
                         </header>
                        

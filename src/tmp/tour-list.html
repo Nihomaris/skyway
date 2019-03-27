@@ -201,9 +201,14 @@
                                 </label>
                             </li>
                         </ul>
-                        <a class="btn filter__init" href="javascript:void(0);">
+                        <label class="btn filter__init">
                             <div class="anim"></div>
                             <span>Поиск<img src="./assets/i/triangle_b.png" alt=""></span>
+                            <input type="submit">
+                        </label>
+                        <a href="/tours" class="btn filter__init">
+                            <div class="anim"></div>
+                            <span>Сбросить</span>
                         </a>
                     </div>
                 </div>
@@ -292,50 +297,23 @@
 
                     <div class="clear"></div>
                 </div>
+
                 <div class="tour_pagination">
-                    <div class="pagination">
-                        <div class="first_page_arrow">
-                            <img src="./assets/i/d_arrow_left.png" alt="first-page">
-                        </div>
-                        <div class="prev_page_arrow">
-                            <img src="./assets/i/arrow_blue_left.png" alt="Prev-page">
-                        </div>
-                        <div class="pagination__container">
-                            <div class="pagination__first_blocks">
-                                <div class="pagination__page pagination__page--active">
-                                    <span>1</span>
-                                </div>
-                                <div class="pagination__page">
-                                    <span>2</span>
-                                </div>
-                                <div class="pagination__page">
-                                    <span>3</span>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="pagination__dot"><span>...</span></div>
-                            <div class="pagination__last_blocks">
-                                <div class="pagination__page">
-                                    <span>11</span>
-                                </div>
-                                <div class="pagination__page">
-                                    <span>12</span>
-                                </div>
-                                <div class="pagination__page">
-                                    <span>13</span>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="next_page_arrow">
-                            <img src="./assets/i/arrow_blue_right.png" alt="Next-page">
-                        </div>
-                        <div class="last_page_arrow">
-                            <img src="./assets/i/d_arrow_right.png" alt="last-page">
-                        </div>
-                        <div class="clear"></div>
-                    </div>
+
+                    <a class="prev page-numbers" href="https://new.skyway.kz/tours/"></a>
+
+                    <span aria-current="page" class="page-numbers current">1</span>
+
+                    <a class="page-numbers" href="https://new.skyway.kz/tours/page/2/">2</a>
+                    <a class="page-numbers" href="https://new.skyway.kz/tours/page/3/">3</a>
+
+                    <span class="page-numbers dots">…</span>
+                    <a class="page-numbers" href="https://new.skyway.kz/tours/page/5/">5</a>
+
+                    <a class="next page-numbers" href="https://new.skyway.kz/tours/page/2/"></a> 
+
                 </div>
+
             </div>
             <div class="clear"></div>
         </section>
