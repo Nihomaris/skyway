@@ -469,15 +469,16 @@
                 </header>
 
                 <form action="">
-                    <input class="tour_lead__input" type="text" placeholder="Имя и Фамилия...">
-                    <input class="tour_lead__input" type="text" placeholder="Телефон или Email...">
+                    <form action="/tours/astana-serdtse-kazahstana/#wpcf7-f42-p9-o1" method="post" class="wpcf7-form invalid" novalidate="novalidate">
+                
+                    <span class="wpcf7-form-control-wrap fio"><input type="text" name="fio" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required tour_lead__input wpcf7-not-valid" aria-required="true" aria-invalid="true" placeholder="Имя и Фамилия..."><span role="alert" class="wpcf7-not-valid-tip">Поле обязательно для заполнения.</span></span>
 
-                    <button class="btn tour_lead__btn">
-                        <div class="anim"></div>
-                        <span>
-                            Отправить<img src="./assets/i/triangle.png" alt="">
-                        </span>
-                    </button>
+                    <span class="wpcf7-form-control-wrap tel"><input type="text" name="tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required tour_lead__input wpcf7-not-valid" aria-required="true" aria-invalid="true" placeholder="Телефон или Email..."><span role="alert" class="wpcf7-not-valid-tip">Поле обязательно для заполнения.</span></span>
+                    
+                    <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit btn">
+
+                    <span class="ajax-loader"></span>
+                    <div class="wpcf7-response-output wpcf7-display-none wpcf7-mail-sent-ok" role="alert">Спасибо за Ваше сообщение. Оно успешно отправлено.</div>
                 </form>
             </div>
             <div class="tour_lead__bg"></div>

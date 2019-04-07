@@ -28,6 +28,18 @@
 
 jQuery(document).ready(function($) {
 
+	// Share кнопки
+	$('#share-facebook').on('click', function() {
+		$('.ya-share2__item_service_facebook .ya-share2__icon').click()
+	})
+	$('#share-skype').on('click', function() {
+		$('.ya-share2__item_service_skype .ya-share2__icon').click()
+	})
+	$('#share-whatsapp').on('click', function() {
+		$('.ya-share2__item_service_whatsapp .ya-share2__icon').click()
+	})
+
+
 	/* Адаптивность видео */
 	$('.my-background-video').bgVideo({
 		fullScreen: false,
@@ -116,7 +128,7 @@ jQuery(document).ready(function($) {
     bindControlHandle('country-kz');
     changeDescrContainer('country-kz');
     changeBgContainer('country-kz');
-    console.log($('.top_section__bg_container--active'))
+    
     renderVideoController($('.top_section__bg_container--active'))
 	
     $(".main_slider_country").on('click', function() {
@@ -566,7 +578,7 @@ jQuery(document).ready(function($) {
 		$('#lead-form').show();
 	})
 
-	$('#close-lead').on('click', function() {
+	$('#close-lead, .tour_lead__bg').on('click', function() {
 		$('#lead-form').hide();
 	})
 
