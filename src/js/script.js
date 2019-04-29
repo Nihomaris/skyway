@@ -298,8 +298,8 @@ jQuery(document).ready(function($) {
 
 
 		// Запуск видео
-		video.prop('muted', false);
-		video[0].play();
+		// video.prop('muted', false);
+		// video[0].play();
 		
     }
 

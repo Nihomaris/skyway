@@ -85,10 +85,14 @@
 		Reviews
 		Skyway album
 
+	CONTACTS PAGE
+		Address
+
 	VISA PAGE
 		Side nav
 
-	VISA PAGE
+	SITE MAP
+		Link map
 
 	RESPONSIVE
 
@@ -563,6 +567,7 @@ li.sidebar__elem:before {
 
 .tags {}
 .tags a {
+	display: inline-block;
 	margin-right: 10px;
 	font-family: Montserrat;
 	font-weight: 800;
@@ -3431,7 +3436,7 @@ th {
 /* 								Gallery showcase
 ------------------------------------------------------------- */
 
-.gallery { height: auto; margin-bottom: 220px; }
+.gallery { height: auto; margin-bottom: 220px}
 .gallery__container { height: 558px; margin-top: 64px; overflow: hidden;}
 .gallery__slide_container { height: 100%; width: 100%; }
 .gallery__slide_block { width: 50%; height: 100%; float: left; }
@@ -3546,7 +3551,9 @@ li.gallery_nav__link:before {
 	max-width: 1365px;
 	margin: 0 auto;
 }
-.gallery_list__container {}
+.gallery_list__container {
+	margin-top: 50px;
+}
 .gallery_list__photo {
 	overflow: hidden;
 	background-size: cover; 
@@ -3707,16 +3714,16 @@ a.category_block:hover .category_block__bg{
 }
 .articles_list__ico {
 	float: left;
-	width: 40px;
-	height: 40px;
+	width: 20px;
+	height: 20px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-left: 10px;
+	margin-right: 5px;
 }
 .articles_list__text {
 	float: left;
 	color: #ffffff;
-	margin-top: 10px;
 }
 .articles_list__ico--eye {
 	background-image: url(../../assets/i/vector/icons/eye_w.svg);
@@ -3868,6 +3875,7 @@ a.category_block:hover .category_block__bg{
 .services {
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 
 .services_section__header {
@@ -4004,6 +4012,22 @@ a.category_block:hover .category_block__bg{
 	padding: 0 183px;
 	padding-bottom: 75px;
 }
+
+/* ==========================================================================
+	CONTACTS PAGE
+========================================================================== */
+
+/* 								Address
+------------------------------------------------------------- */
+
+
+.contacts_content {
+	max-width: 1365px;
+	padding: 0 183px;
+	margin: 100px auto;
+	height: auto;
+}
+
 
 /* ==========================================================================
 	VISA PAGE
@@ -4277,6 +4301,22 @@ a.category_block:hover .category_block__bg{
 
 
 /* ==========================================================================
+	SITE MAP
+========================================================================== */
+
+/* 								Link map
+------------------------------------------------------------- */
+
+.site_map {
+	max-width: 1365px;
+	margin: 0 auto;
+	padding-left: 183px;
+	padding-right: 183px;
+}
+.site_map__container {}
+.site_map__title {}
+
+/* ==========================================================================
 	RESPONSIVE
 ========================================================================== */
 
@@ -4370,6 +4410,7 @@ a.category_block:hover .category_block__bg{
 	.article_intro { padding: 0 10%; max-width: 992px; }
 	.article_intro__container { padding: 130px 0; }
 	.article_content { padding: 0 10%; max-width: 992px; }
+	.contacts_content { padding: 0 10%; max-width: 992px; }
 
 	.blog_section__acticle { width: 49%; }
 	.blog_section__acticle:nth-child(3) { display: none; }
@@ -4535,6 +4576,7 @@ a.category_block:hover .category_block__bg{
 	.article_intro { padding: 0 183px; max-width: 1365px;}
 	.article_intro__container { padding: 130px 76px 100px 76px; }
 	.article_content { max-width: 1365px; }
+	.contacts_content { max-width: 1365px; }
 	.reviews { padding-right: 183px; padding-left: 183px; }
 	.skyway_album { padding-right: 183px; padding-left: 183px; }
 	.about_company { padding-left: 183px; padding-right: 183px; }
@@ -4765,6 +4807,7 @@ a.category_block:hover .category_block__bg{
 	.article_intro__container { padding-right: 0; padding-left: 0; }
 	.article_intro__title { padding-left: 0; padding-right: 0; }
 	.article_content { padding: 0 10%; max-width: 992px; }
+	.contacts_content { padding: 0 10%; max-width: 992px; }
 	
 	.share {  }
 	.share__container { height: auto; padding: 36px 20px; }
