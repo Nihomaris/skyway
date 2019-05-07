@@ -94,6 +94,8 @@
 	SITE MAP
 		Link map
 
+	LANDING PAGE
+
 	RESPONSIVE
 
 --------------------------------------------------------------*/
@@ -4315,6 +4317,335 @@ a.category_block:hover .category_block__bg{
 }
 .site_map__container {}
 .site_map__title {}
+
+
+/* ==========================================================================
+	LANDING PAGE
+========================================================================== */
+
+/* 								Landing main	
+------------------------------------------------------------- */
+
+body .landing  {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.landing h2 {}
+.landing h3 {}
+.landing h4 {}
+.landing p {}
+
+.lending_arrow {
+	display: inline-block;
+	background-image: url(../../assets/i/landing/arrow.svg);
+	width: 18px;
+	height: 8px; 
+	margin-left: 19px;
+}
+
+/* 								Landing header	
+------------------------------------------------------------- */
+
+.landing_header {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	height: 100px;
+	background-color: #ffffff;
+}
+
+.landing_header__logo {
+	cursor: pointer;
+	background-image: url(../../assets/i/landing/logo.svg);
+	background-repeat: no-repeat;
+	width: 193px;
+	height: 57px;
+	float: left;
+	margin-top: 20px;
+}
+
+.landing_header__nav {
+	float: left;
+	margin-top: 40px;
+    margin-left: 5%;
+}
+
+.landing_header__nav_link {
+	display: inline-block;
+	cursor: pointer;
+	font-family: Roboto;
+	font-style: normal;
+	font-size: 12px;
+	color: #7D7D7D;
+	width: 80px;
+	text-align: center;
+}
+
+.landing_header__nav_link:hover {
+	font-weight: bold;
+	color: #458AB6;
+}
+
+.landing_header__social {
+	float: right;
+	margin-top: 37px;
+    margin-right: 5%;
+}
+
+.landing_header__vk {
+	cursor: pointer;
+	display: inline-block;
+	background-image: url(../../assets/i/landing/vk.svg);
+	background-repeat: no-repeat;
+	width: 23px;
+	height: 25px;
+}
+
+.landing_header__od {
+	cursor: pointer;
+	display: inline-block;
+	background-image: url(../../assets/i/landing/odnoklassniki.svg);
+	background-repeat: no-repeat;
+	width: 27px;
+	height: 25px;
+}
+
+.landing_header__facebook {
+	cursor: pointer;
+	display: inline-block;
+	background-image: url(../../assets/i/landing/facebook.svg);
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 25px;
+}
+
+.landing_header__contacts {
+	float: right;
+}
+
+.landing_header__phone {
+	display: block;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 23px;
+	text-align: center;
+	color: #458AB6;
+	margin-top: 7px;
+}
+.landing_header__call_lead {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+	color: #373737;
+	display: block;
+	border: 1px solid #458AB6;
+	box-sizing: border-box;
+	border-radius: 100px;
+	padding: 5px 0;
+	margin-top: 5px;
+}
+.landing_header__call_lead:hover {
+	box-shadow: 1px 1px 1px #d6c9c9;
+}
+.landing_header__call_lead:focus {
+	box-shadow: none;
+}
+.landing_header__text_lead {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+	color: #373737;
+	display: block;
+	border: 1px solid #458AB6;
+	box-sizing: border-box;
+	border-radius: 100px;
+	padding: 5px 0;
+	margin-top: 5px;
+}
+.landing_header__text_lead:hover {
+	box-shadow: 1px 1px 1px #d6c9c9;
+}
+.landing_header__text_lead:focus {
+	box-shadow: none;
+}
+/* 								Landing banner	
+------------------------------------------------------------- */
+
+.landing_banner {
+	position: relative;
+	width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+}
+.landing_banner__bg {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 500px;
+	height: 100%;
+	background: linear-gradient(117.9deg, rgba(25, 78, 95, 0.8) 14.15%, rgba(0, 0, 0, 0) 79.51%);
+	padding: 70px 154px 70px 154px;
+}
+.landing_banner__name {
+	font-weight: 600;
+	font-size: 39px;
+	line-height: 30px;
+	letter-spacing: -0.03em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.landing_banner__name span {
+	font-size: 25px;
+	font-weight: normal;
+}
+
+.landing_banner__descr_block {
+	padding-top: 40px;
+	padding-left: 50px;
+	width: 470px;
+}
+
+.landing_banner__descr {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #E5E5E5;
+}
+
+.landing_banner__link {
+	background: #FFFFFF;
+	border-radius: 48px;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22px;
+	text-transform: uppercase;
+	color: #458AB6;
+	padding: 17px 30px 17px 50px;
+    display: inline-block;
+    margin-top: 70px;
+}
+
+
+/* 								Landing responsible	
+------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+	.landing_banner__descr_block {
+		padding-left: 0;
+	}
+
+	.landing_banner__name {
+		font-size: 32px;
+	}
+
+	.landing_banner__name span {
+	    font-size: 20px;
+	}
+
+}
+
+@media (max-width: 992px) {
+
+	.landing_header__nav {
+		margin-left: 1%;
+	}
+
+	.landing_header__nav_link {
+		width: 70px;
+	}
+
+	.landing_header__social {
+		display: none;
+	}
+
+	.landing_banner__bg {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
+
+
+@media (max-width: 768px) {
+
+	.landing_header__nav {
+		display: none;
+	}
+	
+	.landing_header {
+		padding: 0 10%;
+	}
+
+	.landing_banner__name {
+		font-size: 25px;
+	}
+
+	.landing_banner__name span {
+		font-size: 17px;
+	}
+
+	.landing_banner__descr_block {
+		width: 100%;
+	}
+}
+
+@media (max-width: 470px) {
+
+	.landing_header {
+		padding: 0 10px;
+		height: 87px;
+	}
+	
+	.landing_header__logo {
+		background-size: cover;
+		width: 170px;
+		height: 50px;
+		margin-top: 16px;
+	}
+
+	.landing_header__phone {
+		margin-top: 16px;
+	}
+
+	.landing_header__call_lead {
+		display: none;
+	}
+}
+
+@media (max-width: 375px) {
+	
+	.landing_header__phone {
+		font-size: 14px;
+        margin-top: 30px;
+	}
+
+	.landing_header__text_lead {
+		display: none;
+	}
+
+}
 
 /* ==========================================================================
 	RESPONSIVE
