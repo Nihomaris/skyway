@@ -198,6 +198,40 @@
 	font-style: normal;
 }
 
+/* 								Roboto
+------------------------------------------------------------- */
+
+@font-face { 
+	font-family: Roboto;
+	src: url('../../assets/fonts/landing/Roboto-Regular.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face { 
+	font-family: Roboto;
+	src: url('../../assets/fonts/landing/Roboto-Light.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face { 
+	font-family: Roboto;
+	src: url('../../assets/fonts/landing/Roboto-Medium.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face { 
+	font-family: Roboto;
+	src: url('../../assets/fonts/landing/Roboto-Bold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face { 
+	font-family: Roboto;
+	src: url('../../assets/fonts/landing/Roboto-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
 .line_through {text-decoration: line-through;color: rgba(255,255,255,0.3);}
 
 .gilroy_lighter {font-family: Gilroy; font-weight: 100;}
@@ -4645,7 +4679,7 @@ body .landing  {
 }
 
 .landing_tours {
-	
+	position: relative;
 	padding-top: 47px;
 
 	&__title {
@@ -4681,9 +4715,8 @@ body .landing  {
 	position: relative;
 	display: block;
 	background-image: url(../../assets/i/landing/map.png);
-	width: 80%;
-	max-width: 800px;
-	height: 430px;
+	max-width: 1365px;
+    height: 768px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -4694,20 +4727,98 @@ body .landing  {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 40px;
-		height: 58px;
-		background: url(../../assets/i/landing/geotag_g.svg);
+		width: 46px;
+		height: 68px;
+
+		&--burabay {
+			top: 9%;
+			left: 55%;
+		}
+
+		&--turk {
+			top: unset;
+			bottom: 18%;
+			left: 51%;
+		}
+
+		&--almaty {
+			top: unset;
+			left: unset;
+			right: 21%;
+			bottom: 23%;
+		}
+
+		&:hover {
+
+			.landing_map__name {
+				font-weight: bold;
+			}
+
+			.landing_map__icon {
+				background-size: 100%;
+			}
+
+		}
+
+
 	}
 
 	&__icon {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&--purple {
+			background-image: url(../../assets/i/landing/geotag_p.svg);
+		}
+
+		&--blue {
+			background-image: url(../../assets/i/landing/geotag_b.svg);
+		}
+
+		&--green {
+			background-image: url(../../assets/i/landing/geotag_g.svg);
+		}
 
 	}
 
 	&__name {
-
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		line-height: 14px;
+		text-align: center;
+		color: #000000;
 	}
 
 }
+
+/* 								Landing slider	
+------------------------------------------------------------- */
+
+.landing_tours_block {
+	position: relative;
+
+	&__tour {}
+	
+	&__block {}
+	
+	&__left {}
+	
+	&__right {}
+	
+	&__title {}
+	
+	&__price {}
+	
+	&__deys {}
+	
+	&__more {}
+}
+
 
 
 /* 								Landing about	
@@ -5181,6 +5292,7 @@ body .landing  {
 ------------------------------------------------------------- */
 
 .landing_popup {
+	display: block;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -5212,6 +5324,7 @@ body .landing  {
 
 .landing_tour_popup {
 	position: relative;
+	padding-bottom: 28px;
 }
 
 .landing_slider {	
@@ -5709,10 +5822,116 @@ body .landing  {
 }
 
 
+/* 								Landing questions	
+------------------------------------------------------------- */
+
+.landing_questions {
+	padding: 28px 0;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+
+	&__container {
+		max-width: 443px;
+		margin: 0 auto;
+	}
+
+	&__left {
+		width: 50%;
+		float: left;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		color: #000000;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 19px;
+		color: #717171;
+	}
+
+	&__right {
+		width: 50%;
+		float: left;
+	}
+
+	&__chat {
+		width: 52px;
+		height: 52px;
+		margin-left: 16px;
+		float: left;
+		border-radius: 100%;
+		background-color: #F0F0F0;
+	}
+
+	&__icon {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&--viber {
+			background-image: url(../../assets/i/landing/viber.svg);
+		}
+		&--whatsapp {
+			background-image: url(../../assets/i/landing/whatsapp.svg);
+		}
+		&--telegram {
+			background-image: url(../../assets/i/landing/telegram.svg);
+		}
+	}
+}
+
+
 /* 								Landing responsible	
 ------------------------------------------------------------- */
 
+@media (max-width: 1440px) {
+
+	.landing_map {
+		max-width: 1024px;
+	    height: 522px;
+	}
+
+	.landing_map {
+
+		&__geotag {
+
+			&--burabay {
+				top: 0;
+				left: 55%;
+			}
+
+			&--turk {
+				top: unset;
+				bottom: 18%;
+				left: 51%;
+			}
+
+			&--almaty {
+				top: unset;
+				left: unset;
+				right: 20%;
+				bottom: 22%;
+			}
+		}
+
+	}
+
+}
+
 @media (max-width: 1365px) {
+
+	.landing_map {
+		max-width: 800px;
+		height: 430px;
+	}
 
 	.landing_services {
 
@@ -5784,6 +6003,11 @@ body .landing  {
 
 @media (max-width: 992px) {
 
+	.landing_map {
+		max-width: 768px;
+		height: 415px;
+	}
+
 	.landing_header__nav {
 		margin-left: 1%;
 	}
@@ -5825,6 +6049,10 @@ body .landing  {
 
 
 @media (max-width: 768px) {
+
+	.landing_map {
+		display: none;
+	}
 
 	.landing_header__nav {
 		display: none;
